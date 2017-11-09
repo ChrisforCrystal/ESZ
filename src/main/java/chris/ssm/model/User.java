@@ -3,7 +3,7 @@ package chris.ssm.model;
 import java.util.Date;
 
 /**
- * Created by Zhangxq on 2016/7/15.
+ * Created by Chris on 2016/7/15.
  */
 public class User {
 
