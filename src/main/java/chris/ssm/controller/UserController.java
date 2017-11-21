@@ -1,11 +1,14 @@
 package chris.ssm.controller;
 
+import chris.ssm.model.Result;
 import chris.ssm.model.User;
 import chris.ssm.service.UserService;
 import org.apache.log4j.Logger;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.ResponseBody;
 
 import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
@@ -34,16 +37,19 @@ public class UserController {
         return "/showUser";
     }
 
-    @RequestMapping("/sindex")
-    public String showIndex(HttpServletRequest request, Model model){
-        System.out.println("heihei");
+    @RequestMapping("/userloginForm")
+    @ResponseBody
+    public Result showIndex(HttpServletRequest request, Model model, @RequestParam("username") String username, @RequestParam("password") Integer password){
+        Result result =new Result();
+        result.setCode(1000);
+        result.setMsg("登录成功");
+        log.info("用户名"+username +"  密码"+password);
         log.info("你好");
-        return "login";
+        return result;
     }
-    @RequestMapping("/logined")
+    @RequestMapping("/indexIn")
     public String finishLog(HttpServletRequest request, Model model){
-        System.out.println("heihei");
-        log.info("你好 logined");
+        log.info("你好,欢迎您！");
         return "index";
     }
 
