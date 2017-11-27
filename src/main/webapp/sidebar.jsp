@@ -35,112 +35,112 @@
 
                 <b class="arrow"></b>
             </li>
-            <li class="">
-                <a href="typography.html">
-                    <i class="menu-icon fa fa-caret-right"></i>
-                    排版
-                </a>
+            <%--<li class="">--%>
+                <%--<a href="typography.html">--%>
+                    <%--<i class="menu-icon fa fa-caret-right"></i>--%>
+                    <%--排版--%>
+                <%--</a>--%>
 
-                <b class="arrow"></b>
-            </li>
+                <%--<b class="arrow"></b>--%>
+            <%--</li>--%>
 
 
-            <li class="">
-                <a href="elements.html">
-                    <i class="menu-icon fa fa-caret-right"></i>
-                    UI元素
-                </a>
+            <%--<li class="">--%>
+                <%--<a href="elements.html">--%>
+                    <%--<i class="menu-icon fa fa-caret-right"></i>--%>
+                    <%--UI元素--%>
+                <%--</a>--%>
 
-                <b class="arrow"></b>
-            </li>
+                <%--<b class="arrow"></b>--%>
+            <%--</li>--%>
 
-            <li class="">
-                <a href="buttons.html">
-                    <i class="menu-icon fa fa-caret-right"></i>
-                    按钮 &amp; 图标
-                </a>
+            <%--<li class="">--%>
+                <%--<a href="buttons.html">--%>
+                    <%--<i class="menu-icon fa fa-caret-right"></i>--%>
+                    <%--按钮 &amp; 图标--%>
+                <%--</a>--%>
 
-                <b class="arrow"></b>
-            </li>
+                <%--<b class="arrow"></b>--%>
+            <%--</li>--%>
 
-            <li class="">
-                <a href="treeview.html">
-                    <i class="menu-icon fa fa-caret-right"></i>
-                    树状结构
-                </a>
+            <%--<li class="">--%>
+                <%--<a href="treeview.html">--%>
+                    <%--<i class="menu-icon fa fa-caret-right"></i>--%>
+                    <%--树状结构--%>
+                <%--</a>--%>
 
-                <b class="arrow"></b>
-            </li>
+                <%--<b class="arrow"></b>--%>
+            <%--</li>--%>
 
-            <li class="">
-                <a href="jquery-ui.html">
-                    <i class="menu-icon fa fa-caret-right"></i>
-                    jQuery UI
-                </a>
+            <%--<li class="">--%>
+                <%--<a href="jquery-ui.html">--%>
+                    <%--<i class="menu-icon fa fa-caret-right"></i>--%>
+                    <%--jQuery UI--%>
+                <%--</a>--%>
 
-                <b class="arrow"></b>
-            </li>
+                <%--<b class="arrow"></b>--%>
+            <%--</li>--%>
 
-            <li class="">
-                <a href="nestable-list.html">
-                    <i class="menu-icon fa fa-caret-right"></i>
-                    可拖拽列表
-                </a>
+            <%--<li class="">--%>
+                <%--<a href="nestable-list.html">--%>
+                    <%--<i class="menu-icon fa fa-caret-right"></i>--%>
+                    <%--可拖拽列表--%>
+                <%--</a>--%>
 
-                <b class="arrow"></b>
-            </li>
+                <%--<b class="arrow"></b>--%>
+            <%--</li>--%>
 
-            <li class="">
-                <a href="#" class="dropdown-toggle">
-                    <i class="menu-icon fa fa-caret-right"></i>
-                    三级菜单
-                    <b class="arrow fa fa-angle-down"></b>
-                </a>
+            <%--<li class="">--%>
+                <%--<a href="#" class="dropdown-toggle">--%>
+                    <%--<i class="menu-icon fa fa-caret-right"></i>--%>
+                    <%--三级菜单--%>
+                    <%--<b class="arrow fa fa-angle-down"></b>--%>
+                <%--</a>--%>
 
-                <b class="arrow"></b>
+                <%--<b class="arrow"></b>--%>
 
-                <ul class="submenu">
-                    <li class="">
-                        <a href="#">
-                            <i class="menu-icon fa fa-leaf green"></i>
-                            第一级
-                        </a>
+                <%--<ul class="submenu">--%>
+                    <%--<li class="">--%>
+                        <%--<a href="#">--%>
+                            <%--<i class="menu-icon fa fa-leaf green"></i>--%>
+                            <%--第一级--%>
+                        <%--</a>--%>
 
-                        <b class="arrow"></b>
-                    </li>
+                        <%--<b class="arrow"></b>--%>
+                    <%--</li>--%>
 
-                    <li class="">
-                        <a href="#" class="dropdown-toggle">
-                            <i class="menu-icon fa fa-pencil orange"></i>
+                    <%--<li class="">--%>
+                        <%--<a href="#" class="dropdown-toggle">--%>
+                            <%--<i class="menu-icon fa fa-pencil orange"></i>--%>
 
-                            第四级
-                            <b class="arrow fa fa-angle-down"></b>
-                        </a>
+                            <%--第四级--%>
+                            <%--<b class="arrow fa fa-angle-down"></b>--%>
+                        <%--</a>--%>
 
-                        <b class="arrow"></b>
+                        <%--<b class="arrow"></b>--%>
 
-                        <ul class="submenu">
-                            <li class="">
-                                <a href="#">
-                                    <i class="menu-icon fa fa-plus purple"></i>
-                                    添加商品
-                                </a>
+                        <%--<ul class="submenu">--%>
+                            <%--<li class="">--%>
+                                <%--<a href="#">--%>
+                                    <%--<i class="menu-icon fa fa-plus purple"></i>--%>
+                                    <%--添加商品--%>
+                                <%--</a>--%>
 
-                                <b class="arrow"></b>
-                            </li>
+                                <%--<b class="arrow"></b>--%>
+                            <%--</li>--%>
 
-                            <li class="">
-                                <a href="#">
-                                    <i class="menu-icon fa fa-eye pink"></i>
-                                    查看商品
-                                </a>
+                            <%--<li class="">--%>
+                                <%--<a href="#">--%>
+                                    <%--<i class="menu-icon fa fa-eye pink"></i>--%>
+                                    <%--查看商品--%>
+                                <%--</a>--%>
 
-                                <b class="arrow"></b>
-                            </li>
-                        </ul>
-                    </li>
-                </ul>
-            </li>
+                                <%--<b class="arrow"></b>--%>
+                            <%--</li>--%>
+                        <%--</ul>--%>
+                    <%--</li>--%>
+                <%--</ul>--%>
+            <%--</li>--%>
         </ul>
     </li>
 
@@ -163,23 +163,23 @@
 
                 <b class="arrow"></b>
             </li>
-            <li class="">
-                <a href="tables.html">
-                    <i class="menu-icon fa fa-caret-right"></i>
-                    简单通用表格
-                </a>
+            <%--<li class="">--%>
+                <%--<a href="tables.html">--%>
+                    <%--<i class="menu-icon fa fa-caret-right"></i>--%>
+                    <%--简单通用表格--%>
+                <%--</a>--%>
 
-                <b class="arrow"></b>
-            </li>
+                <%--<b class="arrow"></b>--%>
+            <%--</li>--%>
 
-            <li class="">
-                <a href="jqgrid.html">
-                    <i class="menu-icon fa fa-caret-right"></i>
-                    jqGrid插件表格
-                </a>
+            <%--<li class="">--%>
+                <%--<a href="jqgrid.html">--%>
+                    <%--<i class="menu-icon fa fa-caret-right"></i>--%>
+                    <%--jqGrid插件表格--%>
+                <%--</a>--%>
 
-                <b class="arrow"></b>
-            </li>
+                <%--<b class="arrow"></b>--%>
+            <%--</li>--%>
         </ul>
     </li>
 
@@ -210,67 +210,67 @@
 
                 <b class="arrow"></b>
             </li>
-            <li class="">
-                <a href="form-elements.html">
-                    <i class="menu-icon fa fa-caret-right"></i>
-                    表单组件
-                </a>
+            <%--<li class="">--%>
+                <%--<a href="form-elements.html">--%>
+                    <%--<i class="menu-icon fa fa-caret-right"></i>--%>
+                    <%--表单组件--%>
+                <%--</a>--%>
 
-                <b class="arrow"></b>
-            </li>
+                <%--<b class="arrow"></b>--%>
+            <%--</li>--%>
 
-            <li class="">
-                <a href="form-wizard.html">
-                    <i class="menu-icon fa fa-caret-right"></i>
-                    向导提示 &amp; 验证
-                </a>
+            <%--<li class="">--%>
+                <%--<a href="form-wizard.html">--%>
+                    <%--<i class="menu-icon fa fa-caret-right"></i>--%>
+                    <%--向导提示 &amp; 验证--%>
+                <%--</a>--%>
 
-                <b class="arrow"></b>
-            </li>
+                <%--<b class="arrow"></b>--%>
+            <%--</li>--%>
 
-            <li class="">
-                <a href="wysiwyg.html">
-                    <i class="menu-icon fa fa-caret-right"></i>
-                    编辑器
-                </a>
+            <%--<li class="">--%>
+                <%--<a href="wysiwyg.html">--%>
+                    <%--<i class="menu-icon fa fa-caret-right"></i>--%>
+                    <%--编辑器--%>
+                <%--</a>--%>
 
-                <b class="arrow"></b>
-            </li>
+                <%--<b class="arrow"></b>--%>
+            <%--</li>--%>
 
 
         </ul>
     </li>
 
-    <li class="">
-        <a href="widgets.html">
-            <i class="menu-icon fa fa-list-alt"></i>
-            <span class="menu-text"> 插件 </span>
-        </a>
+    <%--<li class="">--%>
+        <%--<a href="widgets.html">--%>
+            <%--<i class="menu-icon fa fa-list-alt"></i>--%>
+            <%--<span class="menu-text"> 插件 </span>--%>
+        <%--</a>--%>
 
-        <b class="arrow"></b>
-    </li>
+        <%--<b class="arrow"></b>--%>
+    <%--</li>--%>
 
-    <li class="">
-        <a href="calendar.html">
-            <i class="menu-icon fa fa-calendar"></i>
+    <%--<li class="">--%>
+        <%--<a href="calendar.html">--%>
+            <%--<i class="menu-icon fa fa-calendar"></i>--%>
 
-            <span class="menu-text">
-								日历
+            <%--<span class="menu-text">--%>
+								<%--日历--%>
 
-                <!-- #section:basics/sidebar.layout.badge -->
-								<span class="badge badge-transparent tooltip-error" title="有2件重要事件">
-									<i class="ace-icon fa fa-exclamation-triangle red bigger-130"></i>
-								</span>
+                <%--<!-- #section:basics/sidebar.layout.badge -->--%>
+								<%--<span class="badge badge-transparent tooltip-error" title="有2件重要事件">--%>
+									<%--<i class="ace-icon fa fa-exclamation-triangle red bigger-130"></i>--%>
+								<%--</span>--%>
 
-                <!-- /section:basics/sidebar.layout.badge -->
-							</span>
-        </a>
+                <%--<!-- /section:basics/sidebar.layout.badge -->--%>
+							<%--</span>--%>
+        <%--</a>--%>
 
-        <b class="arrow"></b>
-    </li>
+        <%--<b class="arrow"></b>--%>
+    <%--</li>--%>
 
-    <li class="">
-        <a href="gallery.html">
+    <li class="" id="userGallery">
+        <a href="gallery.jsp">
             <i class="menu-icon fa fa-picture-o"></i>
             <span class="menu-text"> 相册 </span>
         </a>
@@ -313,35 +313,35 @@
 
                 <b class="arrow"></b>
             </li>
-            <li class="">
-                <a href="pricing.html">
-                    <i class="menu-icon fa fa-caret-right"></i>
-                    售价单
-                </a>
+            <%--<li class="">--%>
+                <%--<a href="pricing.html">--%>
+                    <%--<i class="menu-icon fa fa-caret-right"></i>--%>
+                    <%--售价单--%>
+                <%--</a>--%>
 
-                <b class="arrow"></b>
-            </li>
-
-
-
-            <li class="">
-                <a href="timeline.html">
-                    <i class="menu-icon fa fa-caret-right"></i>
-                    时间轴
-                </a>
-
-                <b class="arrow"></b>
-            </li>
+                <%--<b class="arrow"></b>--%>
+            <%--</li>--%>
 
 
-            <li class="">
-                <a href="login.html">
-                    <i class="menu-icon fa fa-caret-right"></i>
-                    登录注册
-                </a>
 
-                <b class="arrow"></b>
-            </li>
+            <%--<li class="">--%>
+                <%--<a href="timeline.html">--%>
+                    <%--<i class="menu-icon fa fa-caret-right"></i>--%>
+                    <%--时间轴--%>
+                <%--</a>--%>
+
+                <%--<b class="arrow"></b>--%>
+            <%--</li>--%>
+
+
+            <%--<li class="">--%>
+                <%--<a href="login.html">--%>
+                    <%--<i class="menu-icon fa fa-caret-right"></i>--%>
+                    <%--登录注册--%>
+                <%--</a>--%>
+
+                <%--<b class="arrow"></b>--%>
+            <%--</li>--%>
         </ul>
     </li>
 
@@ -383,31 +383,31 @@
 
                 <b class="arrow"></b>
             </li>
-            <li class="">
-                <a href="faq.html">
-                    <i class="menu-icon fa fa-caret-right"></i>
-                    帮助页面
-                </a>
+            <%--<li class="">--%>
+                <%--<a href="faq.html">--%>
+                    <%--<i class="menu-icon fa fa-caret-right"></i>--%>
+                    <%--帮助页面--%>
+                <%--</a>--%>
 
-                <b class="arrow"></b>
-            </li>
-            <li class="">
-                <a href="grid.html">
-                    <i class="menu-icon fa fa-caret-right"></i>
-                    网格
-                </a>
+                <%--<b class="arrow"></b>--%>
+            <%--</li>--%>
+            <%--<li class="">--%>
+                <%--<a href="grid.html">--%>
+                    <%--<i class="menu-icon fa fa-caret-right"></i>--%>
+                    <%--网格--%>
+                <%--</a>--%>
 
-                <b class="arrow"></b>
-            </li>
+                <%--<b class="arrow"></b>--%>
+            <%--</li>--%>
 
-            <li class="">
-                <a href="blank.html">
-                    <i class="menu-icon fa fa-caret-right"></i>
-                    空白页面
-                </a>
+            <%--<li class="">--%>
+                <%--<a href="blank.html">--%>
+                    <%--<i class="menu-icon fa fa-caret-right"></i>--%>
+                    <%--空白页面--%>
+                <%--</a>--%>
 
-                <b class="arrow"></b>
-            </li>
+                <%--<b class="arrow"></b>--%>
+            <%--</li>--%>
         </ul>
     </li>
 </ul><!-- /.nav-list -->

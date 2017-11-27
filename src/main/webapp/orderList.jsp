@@ -76,10 +76,10 @@
                     <a href="index.jsp">UI库首页</a>
                 </li>
                 <li>
-                    <a href="javascript:void(0)">表格</a>
+                    <a href="javascript:void(0)">订单</a>
                 </li>
                 <li>
-                    <a href="elements.html">简单通用表格</a>
+                    <a href="elements.html">订单列表</a>
                 </li>
             </ul><!-- /.breadcrumb -->
 

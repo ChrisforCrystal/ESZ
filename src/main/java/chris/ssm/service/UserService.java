@@ -2,6 +2,7 @@ package chris.ssm.service;
 
 
 import chris.ssm.model.User;
+import org.apache.ibatis.annotations.Param;
 
 import java.util.List;
 
@@ -10,9 +11,14 @@ import java.util.List;
  */
 public interface UserService {
 
-    List<User> getAllUser();
+    public List<User> getAllUser();
 
-    User getUserByPhoneOrEmail(String emailOrPhone, Short state);
+    public User getUserByPhoneOrEmail(String emailOrPhone, Short state);
 
-    User getUserById(Long userId);
+    public User getUserById(Long userId);
+
+    User getUserByUP(String username, String password);
+
+    public  boolean update(User user);
+
 }

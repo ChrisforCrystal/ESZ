@@ -31,7 +31,7 @@
             <ul class="breadcrumb">
                 <li>
                     <i class="ace-icon fa fa-home home-icon"></i>
-                    <a href="index.jsp">UI库首页</a>
+                    <a href="index.jsp">用户信息</a>
                 </li>
                 <li>
                     <a href="javascript:void(0)">用户个人资料</a>
@@ -103,7 +103,7 @@
 
                                             <div class="col-xs-12 col-sm-9">
                                                 <h4 class="blue">
-                                                    <span class="middle">王小胖</span>
+                                                    <span class="middle">洺皓</span>
 
                                                     <span class="label label-purple arrowed-in-right">
 																	<i class="icon-circle smaller-80 align-middle"></i>

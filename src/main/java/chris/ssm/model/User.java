@@ -16,8 +16,42 @@ public class User {
     private Date createTime;
     private Date modifyTime;
     private Short isDelete;
+    private String address;
+    private String nick;
+    private String sex;
+    private String intoduceSelf;
 
+    public String getIntoduceSelf() {
+        return intoduceSelf;
+    }
 
+    public void setIntoduceSelf(String intoduceSelf) {
+        this.intoduceSelf = intoduceSelf;
+    }
+
+    public String getSex() {
+        return sex;
+    }
+
+    public void setSex(String sex) {
+        this.sex = sex;
+    }
+
+    public String getNick() {
+        return nick;
+    }
+
+    public void setNick(String nick) {
+        this.nick = nick;
+    }
+
+    public String getAddress() {
+        return address;
+    }
+
+    public void setAddress(String address) {
+        this.address = address;
+    }
 
     public Long getId() {
         return id;

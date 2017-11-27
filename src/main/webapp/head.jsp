@@ -1,7 +1,8 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
 <meta charset="utf-8" />
-<title>首页 - 统一开发平台 - UI库</title>
+<title>医院物资管理网上超市系统</title>
 
 <meta name="description" content="This is page-header (.page-header &gt; h1)" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
@@ -20,4 +21,5 @@
 <!--[if lte IE 8]>
 <script src="assets/js/html5shiv.min.js"></script>
 <script src="assets/js/respond.min.js"></script>
+
 <![endif]-->

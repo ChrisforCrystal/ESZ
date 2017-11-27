@@ -11,7 +11,7 @@
     <!-- #section:basics/footer -->
     <div class="footer-content">
 						<span class="bigger-120">
-							 统一开发平台-UI库 &copy; 2014  更多模板：<a href="http://www.mycodes.net/" target="_blank">源码之家</a>
+							医院物资管理网上超市系统网站:<a href="#">点击登录</a>
 						</span>
     </div>
 

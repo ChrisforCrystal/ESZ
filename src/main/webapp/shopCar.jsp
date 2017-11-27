@@ -1,4 +1,5 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -73,13 +74,10 @@
             <ul class="breadcrumb">
                 <li>
                     <i class="ace-icon fa fa-home home-icon"></i>
-                    <a href="index.jsp">UI库首页</a>
+                    <a href="index.jsp">购物车列表</a>
                 </li>
                 <li>
-                    <a href="javascript:void(0)">表格</a>
-                </li>
-                <li>
-                    <a href="elements.html">简单通用表格</a>
+                    <a href="javascript:void(0)">购物车</a>
                 </li>
             </ul><!-- /.breadcrumb -->
 
@@ -113,6 +111,7 @@
                                 <td class="left">物品类别：</td>
                                 <td class="right">
                                     <select>
+                                        <option>全部</option>
                                         <option>文具</option>
                                         <option>电子</option>
                                         <option>生活</option>
@@ -192,98 +191,98 @@
                                         </td>
                                     </tr>
 
-                                    <tr>
-                                        <td class="center">
-                                            <label class="position-relative">
-                                                <input type="checkbox" class="ace"/>
-                                                <span class="lbl"></span>
-                                            </label>
-                                        </td>
+                                    <%--<tr>--%>
+                                        <%--<td class="center">--%>
+                                            <%--<label class="position-relative">--%>
+                                                <%--<input type="checkbox" class="ace"/>--%>
+                                                <%--<span class="lbl"></span>--%>
+                                            <%--</label>--%>
+                                        <%--</td>--%>
 
-                                        <td>
-                                            <a href="#">文具</a>
-                                        </td>
-                                        <td>钢笔</td>
-                                        <td>￥20</td>
+                                        <%--<td>--%>
+                                            <%--<a href="#">文具</a>--%>
+                                        <%--</td>--%>
+                                        <%--<td>钢笔</td>--%>
+                                        <%--<td>￥20</td>--%>
 
-                                        <td class="hidden-480">
-                                            <button onclick="minus()"><i class="fa fa-minus" aria-hidden="true"></i>
-                                            </button>
-                                            <span class="label label-sm label-warning">5</span>
-                                            <button onclick="plus()"><i class="fa fa-plus" aria-hidden="true"></i>
-                                            </button>
-                                        </td>
-                                        <td>
-                                            <div class="hidden-sm hidden-xs btn-group">
+                                        <%--<td class="hidden-480">--%>
+                                            <%--<button onclick="minus()"><i class="fa fa-minus" aria-hidden="true"></i>--%>
+                                            <%--</button>--%>
+                                            <%--<span class="label label-sm label-warning">5</span>--%>
+                                            <%--<button onclick="plus()"><i class="fa fa-plus" aria-hidden="true"></i>--%>
+                                            <%--</button>--%>
+                                        <%--</td>--%>
+                                        <%--<td>--%>
+                                            <%--<div class="hidden-sm hidden-xs btn-group">--%>
 
-                                                <button class="btn btn-xs btn-danger">
-                                                    <i class="ace-icon fa fa-trash-o bigger-120"></i>
-                                                </button>
-                                            </div>
-                                        </td>
-                                    </tr>
+                                                <%--<button class="btn btn-xs btn-danger">--%>
+                                                    <%--<i class="ace-icon fa fa-trash-o bigger-120"></i>--%>
+                                                <%--</button>--%>
+                                            <%--</div>--%>
+                                        <%--</td>--%>
+                                    <%--</tr>--%>
 
-                                    <tr>
-                                        <td class="center">
-                                            <label class="position-relative">
-                                                <input type="checkbox" class="ace"/>
-                                                <span class="lbl"></span>
-                                            </label>
-                                        </td>
+                                    <%--<tr>--%>
+                                        <%--<td class="center">--%>
+                                            <%--<label class="position-relative">--%>
+                                                <%--<input type="checkbox" class="ace"/>--%>
+                                                <%--<span class="lbl"></span>--%>
+                                            <%--</label>--%>
+                                        <%--</td>--%>
 
-                                        <td>
-                                            <a href="#">文具</a>
-                                        </td>
-                                        <td>圆珠笔</td>
-                                        <td>￥3</td>
+                                        <%--<td>--%>
+                                            <%--<a href="#">文具</a>--%>
+                                        <%--</td>--%>
+                                        <%--<td>圆珠笔</td>--%>
+                                        <%--<td>￥3</td>--%>
 
-                                        <td class="hidden-480">
-                                            <button onclick="minus()"><i class="fa fa-minus" aria-hidden="true"></i>
-                                            </button>
-                                            <span class="label label-sm label-warning">5</span>
-                                            <button onclick="plus()"><i class="fa fa-plus" aria-hidden="true"></i>
-                                            </button>
-                                        </td>
-                                        <td>
-                                            <div class="hidden-sm hidden-xs btn-group">
+                                        <%--<td class="hidden-480">--%>
+                                            <%--<button onclick="minus()"><i class="fa fa-minus" aria-hidden="true"></i>--%>
+                                            <%--</button>--%>
+                                            <%--<span class="label label-sm label-warning">5</span>--%>
+                                            <%--<button onclick="plus()"><i class="fa fa-plus" aria-hidden="true"></i>--%>
+                                            <%--</button>--%>
+                                        <%--</td>--%>
+                                        <%--<td>--%>
+                                            <%--<div class="hidden-sm hidden-xs btn-group">--%>
 
-                                                <button class="btn btn-xs btn-danger">
-                                                    <i class="ace-icon fa fa-trash-o bigger-120"></i>
-                                                </button>
-                                            </div>
-                                        </td>
-                                    </tr>
+                                                <%--<button class="btn btn-xs btn-danger">--%>
+                                                    <%--<i class="ace-icon fa fa-trash-o bigger-120"></i>--%>
+                                                <%--</button>--%>
+                                            <%--</div>--%>
+                                        <%--</td>--%>
+                                    <%--</tr>--%>
 
-                                    <tr>
-                                        <td class="center">
-                                            <label class="position-relative">
-                                                <input type="checkbox" class="ace"/>
-                                                <span class="lbl"></span>
-                                            </label>
-                                        </td>
+                                    <%--<tr>--%>
+                                        <%--<td class="center">--%>
+                                            <%--<label class="position-relative">--%>
+                                                <%--<input type="checkbox" class="ace"/>--%>
+                                                <%--<span class="lbl"></span>--%>
+                                            <%--</label>--%>
+                                        <%--</td>--%>
 
-                                        <td>
-                                            <a href="#">电子</a>
-                                        </td>
-                                        <td>USB3.0数据线</td>
-                                        <td>￥15</td>
+                                        <%--<td>--%>
+                                            <%--<a href="#">电子</a>--%>
+                                        <%--</td>--%>
+                                        <%--<td>USB3.0数据线</td>--%>
+                                        <%--<td>￥15</td>--%>
 
-                                        <td class="hidden-480">
-                                            <button onclick="minus()"><i class="fa fa-minus" aria-hidden="true"></i>
-                                            </button>
-                                            <span class="label label-sm label-warning">1</span>
-                                            <button onclick="plus()"><i class="fa fa-plus" aria-hidden="true"></i>
-                                            </button>
-                                        </td>
-                                        <td>
-                                            <div class="hidden-sm hidden-xs btn-group">
+                                        <%--<td class="hidden-480">--%>
+                                            <%--<button onclick="minus()"><i class="fa fa-minus" aria-hidden="true"></i>--%>
+                                            <%--</button>--%>
+                                            <%--<span class="label label-sm label-warning">1</span>--%>
+                                            <%--<button onclick="plus()"><i class="fa fa-plus" aria-hidden="true"></i>--%>
+                                            <%--</button>--%>
+                                        <%--</td>--%>
+                                        <%--<td>--%>
+                                            <%--<div class="hidden-sm hidden-xs btn-group">--%>
 
-                                                <button class="btn btn-xs btn-danger">
-                                                    <i class="ace-icon fa fa-trash-o bigger-120"></i>
-                                                </button>
-                                            </div>
-                                        </td>
-                                    </tr>
+                                                <%--<button class="btn btn-xs btn-danger">--%>
+                                                    <%--<i class="ace-icon fa fa-trash-o bigger-120"></i>--%>
+                                                <%--</button>--%>
+                                            <%--</div>--%>
+                                        <%--</td>--%>
+                                    <%--</tr>--%>
 
 
                                     </tbody>
@@ -291,7 +290,7 @@
                             </div><!-- /.span -->
                         </div><!-- /.row -->
                         <div style="text-align: right">
-                            <h4><strong>总价 : 138 元</strong></h4>
+                            <h4><strong>总价 : 8 元</strong></h4>
                             <button class="btn btn-danger " onclick="generateOrderList()">提交订单</button>
                         </div>
                     </div><!-- /.col -->

@@ -33,7 +33,7 @@
             <ul class="breadcrumb">
                 <li>
                     <i class="ace-icon fa fa-home home-icon"></i>
-                    <a href="index.jsp">UI库首页</a>
+                    <a href="index.jsp">订单</a>
                 </li>
                 <li>
                     <a href="javascript:void(0)">订单页</a>
@@ -89,7 +89,7 @@
                                         <div class="col-sm-6">
                                             <div class="row">
                                                 <div class="col-xs-11 label label-lg label-info arrowed-in arrowed-right">
-                                                    <b>机票信息</b>
+                                                    <b>用户信息</b>
                                                 </div>
                                             </div>
 
@@ -107,7 +107,7 @@
 
                                                     <li>
                                                         <i class="icon-caret-right blue"></i>
-                                                        省市陕西省西安市
+                                                        省市: 陕西省西安市
                                                     </li>
 
                                                     <li>
@@ -176,7 +176,7 @@
                                                     20元
                                                 </td>
                                                 <td class="hidden-480"> 1</td>
-                                                <td>￥20</td>
+                                                <td>20元</td>
                                             </tr>
 
                                             <tr>

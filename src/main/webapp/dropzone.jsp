@@ -4,7 +4,7 @@
 <head>
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
     <meta charset="utf-8" />
-    <title>文件上传 - 表单 - 统一开发平台 - UI库</title>
+    <title>文件上传 </title>
     <meta name="description" content="Restyling jQuery UI Widgets and Elements" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
     <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
@@ -42,11 +42,9 @@
             <ul class="breadcrumb">
                 <li>
                     <i class="ace-icon fa fa-home home-icon"></i>
-                    <a href="index.jsp">UI库首页</a>
+                    <a href="index.jsp">用户信息</a>
                 </li>
                 <li>
-                    <a href="javascript:void(0)">表单</a>
-                </li>
                 <li>
                     <a href="dropzone.jsp">文件上传</a>
                 </li>

@@ -31,7 +31,7 @@
             <ul class="breadcrumb">
                 <li>
                     <i class="ace-icon fa fa-home home-icon"></i>
-                    <a href="index.jsp">UI库首页</a>
+                    <a href="index.jsp">首页</a>
                 </li>
             </ul><!-- /.breadcrumb -->
 
@@ -54,243 +54,20 @@
             <div class="page-content-area">
 
                 <div class="row">
+
                     <div class="col-xs-12">
+                        <!-- PAGE CONTENT BEGINS -->
+                        <div class="row">
+                            <div class="col-sm-12" style="text-align: center">
+                                <h1>欢迎进入医院物资管理网上超市系统</h1>
+                                <h1 style="color: #1c6ca2">请按需求点击左侧菜单进行操作</h1>
+                            </div><!-- /.col -->
 
-                        <table id="sample-table-1" class="table table-striped table-bordered table-hover">
-                            <thead>
-                            <tr>
-                                <th class="center">
-                                    <label class="position-relative">
-                                        <input type="checkbox" class="ace"/>
-                                        <span class="lbl"></span>
-                                    </label>
-                                </th>
-                                <th>航班类型</th>
-                                <th>客舱级别</th>
-                                <th class="hidden-480">行李数量上限</th>
-                                <th>
-
-                                    每件尺寸限制
-                                </th>
-                                <th class="hidden-480">
-                                    <i class="ace-icon fa fa-clock-o bigger-110 hidden-480"></i>
-                                    每件重量上限
-                                </th>
-                                <th class="hidden-480">操作</th>
-                            </tr>
-                            </thead>
-
-                            <tbody>
-                            <tr>
-                                <td class="center">
-                                    <label class="position-relative">
-                                        <input type="checkbox" class="ace"/>
-                                        <span class="lbl"></span>
-                                    </label>
-                                </td>
-
-                                <td>
-                                    <a href="#">国内航班</a>
-                                </td>
-                                <td>头等舱</td>
-                                <td class="hidden-480">2件</td>
-                                <td>A+B+C<145cm</td>
-
-                                <td class="hidden-480">
-                                    <span class="label label-sm label-warning">5千克</span>
-                                </td>
-                                <td>
-                                    <div class="hidden-sm hidden-xs btn-group">
-                                        <button class="btn btn-xs btn-success" title="">
-                                            <i class="ace-icon fa fa-search-plus bigger-120"></i>
-                                        </button>
-
-                                        <button class="btn btn-xs btn-info">
-                                            <i class="ace-icon fa fa-pencil bigger-120"></i>
-                                        </button>
-
-                                        <button class="btn btn-xs btn-danger">
-                                            <i class="ace-icon fa fa-trash-o bigger-120"></i>
-                                        </button>
-
-                                        <button class="btn btn-xs btn-warning">
-                                            <i class="ace-icon fa fa-flag bigger-120"></i>
-                                        </button>
-
-                                        <button class="btn btn-xs btn-success">
-                                            <i class="ace-icon fa fa-check bigger-120"></i>
-                                        </button>
-                                    </div>
-                                </td>
-                            </tr>
-
-                            <tr>
-                                <td class="center">
-                                    <label class="position-relative">
-                                        <input type="checkbox" class="ace"/>
-                                        <span class="lbl"></span>
-                                    </label>
-                                </td>
-
-                                <td>
-                                    <a href="#">国内航班</a>
-                                </td>
-                                <td>头等舱</td>
-                                <td class="hidden-480">2件</td>
-                                <td>A+B+C<145cm</td>
-
-                                <td class="hidden-480">
-                                    <span class="label label-sm label-success">5千克</span>
-                                </td>
-                                <td>
-                                    <div class="hidden-sm hidden-xs btn-group">
-                                        <button class="btn btn-xs btn-success" title="">
-                                            <i class="ace-icon fa fa-search-plus bigger-120"></i>
-                                        </button>
-
-                                        <button class="btn btn-xs btn-info">
-                                            <i class="ace-icon fa fa-pencil bigger-120"></i>
-                                        </button>
-
-                                        <button class="btn btn-xs btn-danger">
-                                            <i class="ace-icon fa fa-trash-o bigger-120"></i>
-                                        </button>
-
-                                        <button class="btn btn-xs btn-warning">
-                                            <i class="ace-icon fa fa-flag bigger-120"></i>
-                                        </button>
-
-                                        <button class="btn btn-xs btn-success">
-                                            <i class="ace-icon fa fa-check bigger-120"></i>
-                                        </button>
-                                    </div>
-                                </td>
-                            </tr>
-
-                            <tr>
-                                <td class="center">
-                                    <label class="position-relative">
-                                        <input type="checkbox" class="ace"/>
-                                        <span class="lbl"></span>
-                                    </label>
-                                </td>
-
-                                <td>
-                                    <a href="#">国内航班</a>
-                                </td>
-                                <td>头等舱</td>
-                                <td class="hidden-480">2件</td>
-                                <td>A+B+C<145cm</td>
-
-                                <td class="hidden-480">
-                                    <span class="label label-sm label-inverse arrowed-in">5千克</span>
-                                </td>
-                                <td>
-                                    <div class="hidden-sm hidden-xs btn-group">
-                                        <button class="btn btn-xs btn-success" title="">
-                                            <i class="ace-icon fa fa-search-plus bigger-120"></i>
-                                        </button>
-
-                                        <button class="btn btn-xs btn-info">
-                                            <i class="ace-icon fa fa-pencil bigger-120"></i>
-                                        </button>
-
-                                        <button class="btn btn-xs btn-danger">
-                                            <i class="ace-icon fa fa-trash-o bigger-120"></i>
-                                        </button>
-
-                                        <button class="btn btn-xs btn-warning">
-                                            <i class="ace-icon fa fa-flag bigger-120"></i>
-                                        </button>
-
-                                        <button class="btn btn-xs btn-success">
-                                            <i class="ace-icon fa fa-check bigger-120"></i>
-                                        </button>
-                                    </div>
-                                </td>
-                            </tr>
-
-                            <tr>
-                                <td class="center">
-                                    <label class="position-relative">
-                                        <input type="checkbox" class="ace"/>
-                                        <span class="lbl"></span>
-                                    </label>
-                                </td>
-
-                                <td>
-                                    <a href="#">国内航班</a>
-                                </td>
-                                <td>头等舱</td>
-                                <td class="hidden-480">2件</td>
-                                <td>A+B+C<145cm</td>
-
-                                <td class="hidden-480">
-                                    <span class="label label-sm label-warning arrowed-right">5千克</span>
-                                </td>
-                                <td>
-                                    <div class="hidden-sm hidden-xs btn-group">
-                                        <button class="btn btn-xs btn-success" title="">
-                                            <i class="ace-icon fa fa-search-plus bigger-120"></i>
-                                        </button>
-
-                                        <button class="btn btn-xs btn-info">
-                                            <i class="ace-icon fa fa-pencil bigger-120"></i>
-                                        </button>
-
-                                        <button class="btn btn-xs btn-danger">
-                                            <i class="ace-icon fa fa-trash-o bigger-120"></i>
-                                        </button>
-
-                                        <button class="btn btn-xs btn-warning">
-                                            <i class="ace-icon fa fa-flag bigger-120"></i>
-                                        </button>
-
-                                        <button class="btn btn-xs btn-success">
-                                            <i class="ace-icon fa fa-check bigger-120"></i>
-                                        </button>
-                                    </div>
-                                </td>
-                            </tr>
-
-
-                            </tbody>
-                        </table>
-                        <div class="modal-footer no-margin-top">
-                            <button class="btn btn-sm btn-danger pull-left" data-dismiss="modal">
-                                <i class="ace-icon fa fa-times"></i>
-                                关闭
-                            </button>
-
-                            <ul class="pagination pull-right no-margin">
-                                <li class="prev disabled">
-                                    <a href="#">
-                                        <i class="ace-icon fa fa-angle-double-left"></i>
-                                    </a>
-                                </li>
-
-                                <li class="active">
-                                    <a href="#">1</a>
-                                </li>
-
-                                <li>
-                                    <a href="#">2</a>
-                                </li>
-
-                                <li>
-                                    <a href="#">3</a>
-                                </li>
-
-                                <li class="next">
-                                    <a href="#">
-                                        <i class="ace-icon fa fa-angle-double-right"></i>
-                                    </a>
-                                </li>
-                            </ul>
                         </div>
+                    </div><!-- /.page-content-area -->
 
-                    </div><!-- /.col -->
-                </div><!-- /.row -->
+
+                </div>
             </div><!-- /.page-content-area -->
         </div><!-- /.page-content -->
     </div><!-- /.main-content -->

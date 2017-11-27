@@ -124,7 +124,7 @@
                         <li class="divider"></li>
 
                         <li>
-                            <a href="#">
+                            <a href="./login.html">
                                 <i class="ace-icon fa fa-power-off"></i>
                                 登出
                             </a>

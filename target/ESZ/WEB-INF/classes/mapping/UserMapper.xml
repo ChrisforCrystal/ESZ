@@ -29,4 +29,8 @@
         SELECT * FROM t_user
     </select>
 
+    <select id="getUserByUP" resultMap="UserBaseMap">
+        SELECT * FROM t_user where user_name = #{username} and userPwd = #{password}
+    </select>
+
 </mapper>

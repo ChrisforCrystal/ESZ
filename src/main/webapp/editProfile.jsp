@@ -1,5 +1,6 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<!DOCTYPE html>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+        <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
@@ -42,14 +43,12 @@
             <ul class="breadcrumb">
                 <li>
                     <i class="ace-icon fa fa-home home-icon"></i>
-                    <a href="index.jsp">UI库首页</a>
+                    <a href="index.jsp">用户信息</a>
                 </li>
                 <li>
-                    <a href="javascript:void(0)">表单</a>
+                    <a href="javascript:void(0)">信息修改</a>
                 </li>
-                <li>
-                    <a href="form-wizard.html">向导提示&验证</a>
-                </li>
+
             </ul><!-- /.breadcrumb -->
 
             <!-- #section:basics/content.searchbox -->
@@ -75,7 +74,7 @@
 
                         <div class="widget-box">
                             <div class="widget-header widget-header-blue widget-header-flat">
-                                <h4 class="widget-title lighter">机票购买流程</h4>
+                                <h4 class="widget-title lighter">用户信息修改</h4>
                             </div>
 
                             <div class="widget-body">
@@ -92,7 +91,7 @@
                                     <!-- #section:plugins/fuelux.wizard.container -->
                                     <div class="step-content pos-rel" id="step-container">
                                         <div class="step-pane active" id="step1">
-                                            <h3 class="lighter block blue">请输入以下信息</h3>
+                                            <h3 class="lighter block blue">请修改以下信息</h3>
 
                                             <form class="form-horizontal " id="validation-form" method="get">
                                                 <div class="form-group">

@@ -10,24 +10,36 @@ import javax.annotation.Resource;
 import java.util.List;
 
 /**
- * Created by Zhangxq on 2016/7/15.
+ * Created by chris on 2016/7/15.
  */
 
 @Service
 @Transactional(rollbackFor = Exception.class)
 public class UserServiceImpl implements UserService {
-    
+
     @Resource
     private UserDao userDao;
 
     public User getUserById(Long userId) {
         return userDao.selectUserById(userId);
     }
-    
+
+    public User getUserByUP(String username, String password) {
+        return userDao.getUserByUP(username,password);
+    }
+
+    public boolean update(User user) {
+        return false;
+    }
+
+    public User getUserByUsername() {
+        return null;
+    }
+
     public User getUserByPhoneOrEmail(String emailOrPhone, Short state) {
         return userDao.selectUserByPhoneOrEmail(emailOrPhone,state);
     }
-    
+
     public List<User> getAllUser() {
         return userDao.selectAllUser();
     }
