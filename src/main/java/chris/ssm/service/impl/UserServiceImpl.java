@@ -43,4 +43,16 @@ public class UserServiceImpl implements UserService {
     public List<User> getAllUser() {
         return userDao.selectAllUser();
     }
+
+    public void registerUser(User user){ userDao.registerUser(user);}
+
+    public User selectUserByUserName(String userName){ return userDao.selectUserByUserName(userName);}
+
+    public User selectUserByUserEmail(String userEmail){ return userDao.selectUserByEmail(userEmail); }
+
+    public User selectUserByNick(String userNick) {  return userDao.selectUserByNick(userNick); }
+
+    public User selectUserByPhone(String userPhone) { return userDao.selectUserByPhone(userPhone);  }
+
+    public void updateUser(User user) {userDao.updateUser(user);  }
 }

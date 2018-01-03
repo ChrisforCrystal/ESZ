@@ -4,11 +4,11 @@ package chris.ssm.model;
  * Created by Chris on 2017/11/21
  */
 public class Goods extends Basepo {
-    private Long goodsId;
-    private double money;
-    private String goodsName;
-    private int spid;
-    private String picUrl;
+    private Long goodsId;   //商品id
+    private double money;   //商品价格
+    private String goodsName;   //商品名称
+    private int spid;   //
+    private String picUrl;  //图片地址
 
     public String getPicUrl() {
         return picUrl;

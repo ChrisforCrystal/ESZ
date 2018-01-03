@@ -1,4 +1,5 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ page isELIgnored="false" %>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -103,7 +104,7 @@
 
                                             <div class="col-xs-12 col-sm-9">
                                                 <h4 class="blue">
-                                                    <span class="middle">洺皓</span>
+                                                    <span class="middle"> ${sessionScope.user.nick}</span>
 
                                                     <span class="label label-purple arrowed-in-right">
 																	<i class="icon-circle smaller-80 align-middle"></i>
@@ -116,35 +117,35 @@
                                                         <div class="profile-info-name"> 用户名</div>
 
                                                         <div class="profile-info-value">
-                                                            <span>329430678</span>
+                                                            <span> ${sessionScope.user.userName}</span>
                                                         </div>
                                                     </div>
                                                     <div class="profile-info-row">
                                                         <div class="profile-info-name"> 姓名</div>
 
                                                         <div class="profile-info-value">
-                                                            <span>洺皓</span>
+                                                            <span> ${sessionScope.user.nick}</span>
                                                         </div>
                                                     </div>
                                                     <div class="profile-info-row">
                                                         <div class="profile-info-name"> 性别</div>
 
                                                         <div class="profile-info-value">
-                                                            <span>男</span>
+                                                            <span>${sessionScope.user.sex}</span>
                                                         </div>
                                                     </div>
                                                     <div class="profile-info-row">
                                                         <div class="profile-info-name"> 年龄</div>
 
                                                         <div class="profile-info-value">
-                                                            <span>18</span>
+                                                            <span>${sessionScope.user.age}</span>
                                                         </div>
                                                     </div>
                                                     <div class="profile-info-row">
                                                         <div class="profile-info-name"> 电话</div>
 
                                                         <div class="profile-info-value">
-                                                            <span>15309282654</span>
+                                                            <span> ${sessionScope.user.userPhone}</span>
                                                         </div>
 
                                                     </div>
@@ -152,7 +153,7 @@
                                                         <div class="profile-info-name"> 邮箱</div>
 
                                                         <div class="profile-info-value">
-                                                            <span>329430003@qq.com</span>
+                                                            <span> ${sessionScope.user.userEmail}</span>
                                                         </div>
 
                                                     </div>
@@ -161,12 +162,23 @@
 
                                                         <div class="profile-info-value">
                                                             <i class="icon-map-marker light-orange bigger-110"></i>
-                                                            <span>陕西省西安市,</span>
-                                                            <span>西安邮电大学</span>
+                                                            <span>${sessionScope.user.address}</span>
+
                                                         </div>
                                                     </div>
 
                                                 </div>
+
+                                            </div>
+
+                                            <div class="profile-info-row">
+                                                <div class="profile-info-name"> 最后登陆时间</div>
+
+                                                <div class="profile-info-value">
+                                                    <span> ${sessionScope.user.modifyTime}</span>
+                                                </div>
+
+                                            </div>
 
                                                 <div class="hr hr-8 dotted"></div>
 
@@ -189,7 +201,7 @@
                                                     <div class="widget-body">
                                                         <div class="widget-main">
                                                             <p>
-                                                                我是一名怀着远大理想的程序员
+                                                               ${sessionScope.user.introduceSelf}
                                                             </p>
 
                                                         </div>

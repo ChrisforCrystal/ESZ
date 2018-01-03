@@ -3,7 +3,7 @@
 <mapper namespace="chris.ssm.dao.UserDao">
 
     <resultMap id="UserBaseMap" type="chris.ssm.model.User">
-        <id column="id" property="id" jdbcType="BIGINT"/>
+        <id column="user_id" property="id" jdbcType="BIGINT"/>
         <result column="user_name" property="userName" jdbcType="VARCHAR"/>
         <result column="user_phone" property="userPhone" jdbcType="VARCHAR"/>
         <result column="user_email" property="userEmail" jdbcType="VARCHAR"/>
@@ -11,12 +11,49 @@
         <result column="pwd_salt" property="pwdSalt" jdbcType="VARCHAR"/>
         <result column="create_time" property="createTime" jdbcType="DATE"/>
         <result column="modify_time" property="modifyTime" jdbcType="DATE"/>
-        <result column="is_delete" property="isDelete" jdbcType="SMALLINT"></result>
+        <result column="is_delete" property="isDelete" jdbcType="SMALLINT"/>
+        <result column="nick_name" property="nick" jdbcType="VARCHAR"/>
+        <result column="user_address" property="address" jdbcType="VARCHAR"/>
+        <result column="user_introduce" property="introduceSelf" jdbcType="VARCHAR"/>
+        <result column="user_age" property="age" jdbcType="VARCHAR"/>
     </resultMap>
+
+
+    <insert id="registerUser" parameterType="chris.ssm.model.User" >
+        insert into t_user (user_name,user_phone,user_email,user_pwd,create_time,modify_time,nick_name  ) values(#{userName},#{userPhone},#{userEmail},#{userPwd},#{createTime},#{modifyTime} , #{nick})
+    </insert>
+
+    <insert id="registerUser2" parameterType="java.lang.String">
+        insert into t_user (user_name) values(#{user})
+    </insert>
+
+    <update id="updateUser" parameterType="chris.ssm.model.User" >
+        update t_user set  user_phone=#{userPhone} ,user_pwd =#{userPwd} ,modify_time = #{modifyTime},user_address=#{address},user_introduce=#{introduceSelf},user_age=#{age} WHERE user_id =#{id}
+     </update>
 
     <select id="selectUserById" parameterType="java.lang.Long" resultMap="UserBaseMap">
         SELECT * FROM t_user
         WHERE id = #{userId}
+    </select>
+
+    <select id="selectUserByUserName" parameterType="java.lang.String" resultMap="UserBaseMap">
+        SELECT * FROM t_user
+        WHERE user_name = #{userName}
+    </select>
+
+    <select id="selectUserByEmail" parameterType="java.lang.String" resultMap="UserBaseMap">
+        SELECT * FROM t_user
+        WHERE user_email = #{userEmail}
+    </select>
+
+    <select id="selectUserByNick" parameterType="java.lang.String" resultMap="UserBaseMap">
+        SELECT * FROM t_user
+        WHERE nick_name = #{userNick}
+    </select>
+
+    <select id="selectUserByPhone" parameterType="java.lang.String" resultMap="UserBaseMap">
+        SELECT * FROM t_user
+        WHERE user_phone = #{userPhone}
     </select>
 
     <select id="selectUserByPhoneOrEmail" resultMap="UserBaseMap">
@@ -29,8 +66,8 @@
         SELECT * FROM t_user
     </select>
 
-    <select id="getUserByUP" resultMap="UserBaseMap">
-        SELECT * FROM t_user where user_name = #{username} and userPwd = #{password}
+    <select id="getUserByUP" parameterType="java.lang.String" resultMap="UserBaseMap">
+        SELECT * FROM t_user where user_name = #{username} and user_pwd = #{password}
     </select>
 
 </mapper>

@@ -19,4 +19,15 @@ public interface UserDao {
 
     User getUserByUP(@Param("username") String username,@Param("password") String password);
 
+    void registerUser(User user);
+
+    User selectUserByUserName(@Param("userName") String userName);
+
+    User selectUserByEmail(@Param("userEmail") String userEmail);
+
+    User selectUserByNick(@Param("userNick") String userNick);
+
+    User selectUserByPhone(@Param("userPhone") String userPhone);
+
+    void updateUser(User user);
 }

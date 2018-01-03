@@ -5,28 +5,37 @@ import java.util.Date;
 /**
  * Created by Chris on 2016/7/15.
  */
+
 public class User {
 
-    private Long id;
-    private String userName;
-    private String userPhone;
-    private String userEmail;
-    private String userPwd;
-    private String pwdSalt;
-    private Date createTime;
-    private Date modifyTime;
-    private Short isDelete;
-    private String address;
-    private String nick;
-    private String sex;
-    private String intoduceSelf;
+    private Long id;    //存储id
+    private String userName;    //用户名
+    private String userPhone;   //用户手机
+    private String userEmail;   //用户邮箱
+    private String userPwd;     //用户密码
+    private String pwdSalt;     //验证码?
+    private Date createTime;    //创建时间
+    private Date modifyTime;    //修改时间--最近登录时间
+    private Short isDelete;     //?
+    private String nick;        //昵称
 
-    public String getIntoduceSelf() {
-        return intoduceSelf;
+
+    private String address;     //家庭住址
+
+    private String sex;         //性别
+    private String introduceSelf;    //个人介绍
+    private String age ;    //年龄
+
+    public void setAge(String age) { this.age = age; }
+
+    public String getAge() {  return age;  }
+
+    public String getIntroduceSelf() {
+        return introduceSelf;
     }
 
-    public void setIntoduceSelf(String intoduceSelf) {
-        this.intoduceSelf = intoduceSelf;
+    public void setIntroduceSelf(String intoduceSelf) {
+        this.introduceSelf = intoduceSelf;
     }
 
     public String getSex() {

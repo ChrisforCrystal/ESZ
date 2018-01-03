@@ -3,11 +3,13 @@ package chris.ssm.service.impl;
 import chris.ssm.dao.GoodsListDao;
 import chris.ssm.model.Orderlist;
 import chris.ssm.model.Goods;
-import chris.ssm.service.goodsListService;
+import chris.ssm.model.QueryInfo;
+import chris.ssm.service.GoodsListService;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import javax.annotation.Resource;
+import java.sql.ResultSet;
 import java.util.List;
 
 /**
@@ -16,7 +18,7 @@ import java.util.List;
 
 @Service
 @Transactional(rollbackFor = Exception.class)
-public class GoodsListServiceImpl implements goodsListService {
+public class GoodsListServiceImpl implements GoodsListService {
     
     @Resource
     private GoodsListDao goodsListDao;
@@ -30,4 +32,7 @@ public class GoodsListServiceImpl implements goodsListService {
     public List<Orderlist> findbyOrderName(int page, String orderName) {
         return null;
     }
+
+    //
+    public List findListByQR(QueryInfo queryInfo){return goodsListDao.findListByQR(queryInfo);}
 }

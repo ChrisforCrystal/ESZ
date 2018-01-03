@@ -5,6 +5,7 @@
   Time: 下午12:07
   To change this template use File | Settings | File Templates.
 --%>
+<%@ page isELIgnored="false"%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <div id="navbar" class="navbar navbar-default">
     <div class="navbar-container" id="navbar-container">
@@ -100,7 +101,8 @@
                         <img class="nav-user-photo" src="assets/avatars/profile-pic.jpg" alt="Jason's Photo"/>
                         <span class="user-info">
 									欢迎您<br/>
-									洺皓
+									 ${sessionScope.user.nick}
+
 								</span>
 
                         <i class="ace-icon fa fa-caret-down"></i>

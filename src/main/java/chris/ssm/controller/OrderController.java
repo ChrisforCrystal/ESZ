@@ -6,7 +6,7 @@ import chris.ssm.model.Result;
 import chris.ssm.model.User;
 import chris.ssm.service.OrderHelperService;
 import chris.ssm.service.OrderService;
-import chris.ssm.service.goodsListService;
+import chris.ssm.service.GoodsListService;
 import org.apache.log4j.Logger;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -26,7 +26,7 @@ import java.util.List;
 @Controller
 public class OrderController {
     @Resource
-    private goodsListService shopService ;
+    private GoodsListService shopService ;
     @Resource
     private OrderService orderService;
     @Resource

@@ -1,4 +1,5 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ page isELIgnored="false" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
         <!DOCTYPE html>
 <html lang="en">
@@ -93,6 +94,7 @@
                                         <div class="step-pane active" id="step1">
                                             <h3 class="lighter block blue">请修改以下信息</h3>
 
+
                                             <form class="form-horizontal " id="validation-form" method="get">
                                                 <div class="form-group">
                                                     <label class="control-label col-xs-12 col-sm-3 no-padding-right"
@@ -100,8 +102,10 @@
 
                                                     <div class="col-xs-12 col-sm-9">
                                                         <div class="clearfix">
-                                                            <input type="email" name="email" id="email" value="329430003@qq.com"
-                                                                   class="col-xs-12 col-sm-6"/>
+                                                            <input type="email" name="email" id="email" value="${sessionScope.user.userEmail}"
+                                                                   readonly="readonly"
+                                                                   class="col-xs-12 col-sm-6"
+                                                            />
                                                         </div>
                                                     </div>
                                                 </div>
@@ -112,8 +116,11 @@
 
                                                     <div class="col-xs-12 col-sm-9">
                                                         <div class="clearfix">
-                                                            <input type="text" value="陕西省西安市, 西安邮电大学"
+                                                            <input type="text" value="${sessionScope.user.address}"
+                                                                   name="update_address"
                                                                    class="col-xs-12 col-sm-4"/>
+
+
                                                         </div>
                                                     </div>
                                                 </div>
@@ -123,8 +130,8 @@
 
                                                     <div class="col-xs-12 col-sm-9">
                                                         <div class="clearfix">
-                                                            <input type="text" name="age" id="age"
-                                                                   class="col-xs-12 col-sm-4" value="18"/>
+                                                            <input type="text" name="updata_age" id="age"
+                                                                   class="col-xs-12 col-sm-4" value="${sessionScope.user.age}"/>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -137,11 +144,14 @@
 
                                                     <div class="col-xs-12 col-sm-9">
                                                         <div class="clearfix">
-                                                            <input type="text" id="name" name="name" value="洺皓"
+                                                            <input type="text" id="name" name="name" value="${sessionScope.user.nick}"
+                                                                   disabled="disabled"
                                                                    class="col-xs-12 col-sm-5"/>
                                                         </div>
                                                     </div>
                                                 </div>
+
+
 
                                                 <div class="space-2"></div>
 
@@ -155,7 +165,8 @@
 																		<i class="ace-icon fa fa-phone"></i>
 																	</span>
 
-                                                            <input type="tel" id="phone" name="phone" value="15309282654"/>
+                                                            <input type="tel" id="phone" name="phone" value="${sessionScope.user.userPhone}"
+                                                                   disabled="disabled" />
                                                         </div>
                                                     </div>
                                                 </div>
@@ -174,7 +185,7 @@
                                                     <div class="col-xs-12 col-sm-9">
                                                         <div>
                                                             <label class="line-height-1 blue">
-                                                                <input name="gender" value="1" type="radio" checked
+                                                                <input name="gender" value="1" type="radio"
                                                                        class="ace"/>
                                                                 <span class="lbl"> 男</span>
                                                             </label>
@@ -198,7 +209,7 @@
                                                     <div class="col-xs-12 col-sm-9">
                                                         <div class="clearfix">
                                                             <textarea class="input-xlarge" name="comment"
-                                                                      id="comment" >15309282654</textarea>
+                                                                      id="comment" >${sessionScope.user.introduceSelf}</textarea>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -363,6 +374,10 @@
                     required: true,
                     minlength: 5
                 },
+                name:{
+                  required :true,
+                  minlength:3
+                },
 //                password2: {
 //                    required: true,
 //                    minlength: 5,
@@ -408,6 +423,10 @@
                     required: "请输入有效的密码.",
                     minlength: "请输入有效的密码."
                 },
+                name:{
+                    required:"请输入姓名",
+                    minlength:"名字太短了"
+                },
                 subscription: "请至少选择一项",
                 gender: "请选择性别",
                 agree: "请勾选同意协议"
@@ -447,20 +466,43 @@
 
     });
     function finishModify(){
-        bootbox.dialog({
+
+       if (confirm("确定提交信息吗?")){
+
+
+
+
+               $.ajax({
+
+                   type: "POST",
+                   url: "./updateUser",
+                   data: $('#validation-form').serialize(),
+                   dataType: "html",
+
+
+                       error: function(){alert('Error');},
+                   success: function(result){alert(result);}
+               });
+       }else{
+           alert("0");
+       }
+       /* bootbox.dialog({
             message: "确认要提交修改吗",
             buttons: {
                 "success": {
                     "label": "确定并关闭",
-                    "className": "btn-sm btn-danger"
+                    "className": "btn-sm btn-danger",
+
                 },
                 "danger": {
                     "label": "取消提交",
                     "className": "btn-sm btn-primary",
                 },
             }
-        });
+        });*/
     }
+
+
 </script>
 </body>
 </html>

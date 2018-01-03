@@ -28,7 +28,7 @@
 
         <ul class="submenu">
             <li class="" id="chooseGoodsActive">
-                <a href="chooseGoods.jsp">
+                <a href="listgoods">
                     <i class="menu-icon fa fa-caret-right"></i>
                     购物
                 </a>

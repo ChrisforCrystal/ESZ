@@ -1,10 +1,12 @@
 package chris.ssm.controller;
 
 import chris.ssm.model.Orderlist;
+import chris.ssm.model.QueryInfo;
 import chris.ssm.model.Result;
 import chris.ssm.model.Goods;
-import chris.ssm.service.goodsListService;
+import chris.ssm.service.GoodsListService;
 import org.apache.log4j.Logger;
+import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -12,14 +14,17 @@ import org.springframework.web.bind.annotation.ResponseBody;
 
 import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
+import java.sql.ResultSet;
+import java.util.ArrayList;
 import java.util.List;
 
 /**
  * Created by Chris on 2017/11/21
  */
+@Controller
 public class goodsListController {
     @Resource
-    private goodsListService goodsListService ;
+    private GoodsListService goodsListService ;
     private Logger log = Logger.getLogger(goodsListController.class);
 
     @RequestMapping("/goodslist")
@@ -46,6 +51,20 @@ public class goodsListController {
         model.addAttribute("orderlist",orderlist);
         model.addAttribute("page",page);
         log.info(orderlist);
+        return "chooseGoods";
+    }
+
+
+    //bo
+    @RequestMapping("/listgoods")
+    public String listGoods(HttpServletRequest request, Model model){
+
+
+        QueryInfo qr = new QueryInfo();
+       List rs= goodsListService.findListByQR(qr);
+        List list = new ArrayList();
+
+        System.out.println("123123123");
         return "chooseGoods";
     }
 
