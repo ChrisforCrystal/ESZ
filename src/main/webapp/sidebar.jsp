@@ -156,7 +156,7 @@
 
         <ul class="submenu">
             <li class="" id="shopChar">
-                <a href="shopCar.jsp">
+                <a href="./shopCar">
                     <i class="menu-icon fa fa-caret-right"></i>
                     购物车
                 </a>

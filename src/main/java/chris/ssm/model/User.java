@@ -20,6 +20,10 @@ public class User {
     private String nick;        //昵称
 
 
+
+    private double userPrice;     //用户余额
+
+
     private String address;     //家庭住址
 
     private String sex;         //性别
@@ -132,5 +136,12 @@ public class User {
 
     public void setIsDelete(Short isDelete) {
         this.isDelete = isDelete;
+    }
+    public double getUserPrice() {
+        return userPrice;
+    }
+
+    public void setUserPrice(double userPrice) {
+        this.userPrice = userPrice;
     }
 }

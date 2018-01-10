@@ -17,7 +17,7 @@ public class Basepo {
         this.createTime = createTime;
     }
 
-    public Date getModifyTime() {
+    public Date getModifyTime(Date date) {
         return modifyTime;
     }
 

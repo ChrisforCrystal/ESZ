@@ -11,9 +11,13 @@ import java.util.List;
  * Created by Chris on 2017/8/21
  */
 public interface GoodsListService {
-    public List<Goods> findByPage(Integer page);
-    public List<Orderlist> findbyOrderName(int page, String orderName);
+     List<Goods> findByPage(Integer page);
+     List<Orderlist> findbyOrderName(int page, String orderName);
 
     //
-    public List findListByQR(QueryInfo queryInfo);
+     List findListByQR(QueryInfo queryInfo);
+
+     int countSumGoodsNum();
+
+     Goods selectGoodsById(Long goodsId);
 }

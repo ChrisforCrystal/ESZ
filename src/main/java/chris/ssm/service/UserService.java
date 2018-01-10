@@ -14,7 +14,7 @@ public interface UserService {
 
     public User getUserByPhoneOrEmail(String emailOrPhone, Short state);
 
-    public User getUserById(Long userId);
+    public User selectUserById(Long userId);
 
     User getUserByUP(String username, String password);
 

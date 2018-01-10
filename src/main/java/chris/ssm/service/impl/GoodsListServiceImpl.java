@@ -35,4 +35,10 @@ public class GoodsListServiceImpl implements GoodsListService {
 
     //
     public List findListByQR(QueryInfo queryInfo){return goodsListDao.findListByQR(queryInfo);}
+
+    public int countSumGoodsNum() {        return goodsListDao.countSumGoodsNum();    }
+
+    public Goods selectGoodsById(Long goodsId) {
+        return goodsListDao.selectGoodsById(goodsId);
+    }
 }

@@ -16,6 +16,7 @@
         <result column="user_address" property="address" jdbcType="VARCHAR"/>
         <result column="user_introduce" property="introduceSelf" jdbcType="VARCHAR"/>
         <result column="user_age" property="age" jdbcType="VARCHAR"/>
+        <result column="user_price" property="userPrice" jdbcType="BIGINT"/>
     </resultMap>
 
 
@@ -28,12 +29,12 @@
     </insert>
 
     <update id="updateUser" parameterType="chris.ssm.model.User" >
-        update t_user set  user_phone=#{userPhone} ,user_pwd =#{userPwd} ,modify_time = #{modifyTime},user_address=#{address},user_introduce=#{introduceSelf},user_age=#{age} WHERE user_id =#{id}
+        update t_user set  user_phone=#{userPhone} ,user_pwd =#{userPwd} ,modify_time = #{modifyTime},user_address=#{address},user_introduce=#{introduceSelf},user_age=#{age},user_price=#{userPrice} WHERE user_id =#{id}
      </update>
 
     <select id="selectUserById" parameterType="java.lang.Long" resultMap="UserBaseMap">
         SELECT * FROM t_user
-        WHERE id = #{userId}
+        WHERE user_id = #{userId}
     </select>
 
     <select id="selectUserByUserName" parameterType="java.lang.String" resultMap="UserBaseMap">

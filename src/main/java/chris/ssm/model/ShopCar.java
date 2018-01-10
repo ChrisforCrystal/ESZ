@@ -4,31 +4,38 @@ package chris.ssm.model;
  * Created by Chris on 2017/11/21
  */
 public class ShopCar extends Basepo{
-    private int shopcarid;
-    private double money;
-    private int userid;
+    private Long shopcarId;
+    private double totalprice;
+    private Long userId;
+    private String userNick;
 
-    public int getShopcarid() {
-        return shopcarid;
+    public Long getShopcarId() {
+        return shopcarId;
     }
 
-    public void setShopcarid(int shopcarid) {
-        this.shopcarid = shopcarid;
+
+
+    public double getTotalprice() {
+        return totalprice;
     }
 
-    public double getMoney() {
-        return money;
+    public void setTotalprice(double totalprice) {
+        this.totalprice = totalprice;
     }
 
-    public void setMoney(double money) {
-        this.money = money;
+    public Long getUserId() {
+        return userId;
     }
 
-    public int getUserid() {
-        return userid;
+    public void setUserId(Long userId) {
+        this.userId = userId;
     }
 
-    public void setUserid(int userid) {
-        this.userid = userid;
+    public String getUserNick() {
+        return userNick;
+    }
+
+    public void setUserNick(String userNick) {
+        this.userNick = userNick;
     }
 }

@@ -1,4 +1,7 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ page isELIgnored="false" %>
+
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -26,7 +29,7 @@
     <![endif]-->
 </head>
 <script type="text/javascript">
-    $(function() {
+    $(function () {
         $("#chooseGoodsActive").addClass("active");
         $("#buyPart").addClass("active open");
     })
@@ -80,393 +83,179 @@
             <!-- /section:settings.box -->
             <div class="page-content-area">
                 <div class="row">
-                    <div class="col-xs-6 col-sm-3 pricing-box">
-                        <div class="widget-box">
-                            <div class="widget-header header-color-orange"
-                                 style="background: #ffc657;border-color: #fff;">
-                                <h5 class="bigger lighter" style="color:#333">文具</h5>
-                            </div>
-
-                            <div class="widget-body">
-                                <div class="widget-main">
-                                    <ul class="list-unstyled spaced2">
-                                        <li style="text-align: center">
-                                            <a href="assets/images/carsShow/shuqian.png" data-rel="colorbox">
-                                                <img alt="150x150" height="150" width="150" src="assets/images/carsShow/shuqian.png"/>
-
-                                            </a>
 
 
-                                        </li>
+                    <c:forEach var="goods" items="${requestScope.pagebean.list }"
+                               varStatus="status">
 
 
-                                    </ul>
-
-
-                                    <hr/>
-                                    <div class="price">
-                                        ￥3
-                                        <small>/书签</small>
-                                    </div>
+                        <div class="col-xs-6 col-sm-3 pricing-box">
+                            <div class="widget-box">
+                                <div class="widget-header header-color-orange"
+                                     style="background: #ffc657;border-color: #fff;">
+                                    <h5 class="bigger lighter" style="color:#333">所属类型编号:${goods.typeNum }</h5>
                                 </div>
 
-                                <div>
-                                    <a href="#" class="btn btn-block btn-warning" id="bootbox-options">
-                                        <i class="icon-shopping-cart bigger-110"></i>
-                                        <span>马上预定</span>
-                                    </a>
+                                <div class="widget-body">
+                                    <div class="widget-main">
+                                        <ul class="list-unstyled spaced2">
+                                            <li style="text-align: center">
+                                                <a href="assets/images/carsShow/shoutao.png" data-rel="colorbox">
+                                                    <img alt="150x150" width="150" height="150"
+                                                         src="assets/images/carsShow/${goods.picUrl}"/>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                        <hr/>
+                                        <div class="price">
+                                            ￥${goods.price }
+                                            <small>/${goods.goodsName }/库存:${goods.goodsNum}</small>
+
+                                        </div>
+                                    </div>
+                                    <div onclick="putInToOrder(${goods.goodsId})" id = "${goods.goodsId}">
+                                        <a href="#" class="btn btn-block btn-warning">
+                                            <i class="icon-shopping-cart bigger-110"></i>
+                                            <span   >马上预定</span>
+                                        </a>
+                                    </div>
                                 </div>
                             </div>
                         </div>
+
+                    </c:forEach>
+
+                    <br><br>
+                    <div class="modal-footer no-margin-top">
+                        <ul class="pagination pull-right no-margin">
+                            共有[${requestScope.pagebean.totalrecord}]条记录
+                            <input type="text" id="pagesize" value="${requestScope.pagebean.pagesize}"
+                                   style="width: 30px" maxlength="2"
+                                   onchange="changesize(this.value,${requestScope.pagebean.pagesize})">
+                            每页[${requestScope.pagebean.pagesize}]条,共有[${requestScope.pagebean.totalpage}]页,当前为第[${requestScope.pagebean.currentpage}]页
+
+                            <c:if test="${requestScope.pagebean.currentpage > 1}">
+
+
+                                <li><a href="javascript:void(0)"
+                                       onclick="gotopage(${requestScope.pagebean.previouspage})">上一页</a></li>
+                            </c:if>
+
+                            <c:forEach var="pagenum" items="${requestScope.pagebean.pagebar}" varStatus="status">
+                                <li><a href="javascript:void(0)" onclick="gotopage(${pagenum})">${pagenum}</a></li>
+                            </c:forEach>
+
+                            <c:if test="${requestScope.pagebean.currentpage < requestScope.pagebean.totalpage}">
+                                <li><a href="javascript:void(0)"
+                                       onclick="gotopage (  ${requestScope.pagebean.nextpage} )">下一页</a></li>
+                            </c:if>
+
+
+                        </ul>
                     </div>
+                </div><!-- /.page-content-area -->
+            </div><!-- /.page-content -->
+        </div><!-- /.main-content -->
 
-                    <div class="col-xs-6 col-sm-3 pricing-box">
-                        <div class="widget-box">
-                            <div class="widget-header header-color-orange"
-                                 style="background: #ffc657;border-color: #fff;">
-                                <h5 class="bigger lighter" style="color:#333">文具</h5>
-                            </div>
-
-                            <div class="widget-body">
-                                <div class="widget-main">
-                                    <ul class="list-unstyled spaced2">
-                                        <li style="text-align: center">
-                                            <a href="assets/images/carsShow/gangbi.png" data-rel="colorbox">
-                                                <img alt="150x150" width="150" height="150" src="assets/images/carsShow/gangbi.png"/>
-                                            </a>
-                                        </li>
-                                    </ul>
-                                    <hr/>
-                                    <div class="price">
-                                        ￥20
-                                        <small>/钢笔</small>
-                                    </div>
-                                </div>
-
-                                <div>
-                                    <a href="#" class="btn btn-block btn-warning">
-                                        <i class="icon-shopping-cart bigger-110"></i>
-                                        <span>马上预定</span>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-xs-6 col-sm-3 pricing-box">
-                        <div class="widget-box">
-                            <div class="widget-header header-color-orange"
-                                 style="background: #ffc657;border-color: #fff;">
-                                <h5 class="bigger lighter" style="color:#333">文具</h5>
-                            </div>
-
-                            <div class="widget-body">
-                                <div class="widget-main">
-                                    <ul class="list-unstyled spaced2">
-                                        <li style="text-align: center">
-                                            <a href="assets/images/carsShow/zhongxing.png" data-rel="colorbox">
-                                                <img alt="150x150" width="150" height="150" src="assets/images/carsShow/zhongxing.png"/>
-                                            </a>
-                                        </li>
-                                    </ul>
-                                    <hr/>
-                                    <div class="price">
-                                        ￥3
-                                        <small>/黑色中性笔</small>
-                                    </div>
-                                </div>
-                                <div>
-                                    <a href="#" class="btn btn-block btn-warning">
-                                        <i class="icon-shopping-cart bigger-110"></i>
-                                        <span>马上预定</span>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xs-6 col-sm-3 pricing-box">
-                        <div class="widget-box">
-                            <div class="widget-header header-color-orange"
-                                 style="background: #ffc657;border-color: #fff;">
-                                <h5 class="bigger lighter" style="color:#333">文具</h5>
-                            </div>
-
-                            <div class="widget-body">
-                                <div class="widget-main">
-                                    <ul class="list-unstyled spaced2">
-                                        <li style="text-align: center">
-                                            <a href="assets/images/carsShow/bidai.png" data-rel="colorbox">
-                                                <img alt="150x150" width=" 150" height="150" src="assets/images/carsShow/bidai.png"/>
-                                            </a>
-                                        </li>
-                                    </ul>
-                                    <hr/>
-                                    <div class="price">
-                                        ￥10
-                                        <small>/文具盒</small>
-                                    </div>
-                                </div>
-                                <div>
-                                    <a href="#" class="btn btn-block btn-warning">
-                                        <i class="icon-shopping-cart bigger-110"></i>
-                                        <span>马上预定</span>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xs-6 col-sm-3 pricing-box">
-                        <div class="widget-box">
-                            <div class="widget-header header-color-orange"
-                                 style="background: #ffc657;border-color: #fff;">
-                                <h5 class="bigger lighter" style="color:#333">文具</h5>
-                            </div>
-                            <div class="widget-body">
-                                <div class="widget-main">
-                                    <ul class="list-unstyled spaced2">
-                                        <li style="text-align: center">
-                                            <a href="assets/images/carsShow/jiaodai.png" data-rel="colorbox">
-                                                <img alt="150x150" width="150" height="150" src="assets/images/carsShow/jiaodai.png"/>
-
-                                            </a>
+        <div class="footer">
+            <jsp:include page="footer.jsp"></jsp:include>
+        </div>
 
 
-                                        </li>
+        <a href="#" id="btn-scroll-up" class="btn-scroll-up btn btn-sm btn-inverse">
+            <i class="ace-icon fa fa-angle-double-up icon-only bigger-110"></i>
+        </a>
+    </div><!-- /.main-container -->
+</div>
+    <!-- basic scripts -->
 
 
-                                    </ul>
+    <!--[if !IE]> -->
+    <script type="text/javascript">
+        window.jQuery || document.write("<script src='assets/js/jquery.min.js'>" + "<" + "/script>");
+
+        function changesize(pagesize, oldvalue) {
+            if (pagesize / 1 != pagesize || pagesize < 1) {
+                alert("请输入正确的数字");
+                document.getElementById("pagesize").value = oldvalue;
+            } else {
+                window.location.href = './listgoods2PageSize?pagesize=' + pagesize;
+            }
+        }
+
+        function gotopage(pagenum) {
+            var pagesize = $('#pagesize').val();
+            window.location.href = './listgoods2gotopage?pagenum=' + pagenum + '&pagesize=' + pagesize;
+        }
+
+        function putInToOrder(goodsid){
+
+           var goodsId = goodsid;
+           var userId = ${sessionScope.user.id};
+
+            $.ajax({
+                type: "POST",
+                url: "./putInTheOrder",
+                data:{userid:userId,goodsid:goodsid},
+
+                dataType: "json",
+                error: function (result) {
+                    alert("错了");
+                },
+                success: function (result) {
+                    alert(result.msg);
+                }
+            });
+            return false;
+        }
+
+    </script>
 
 
-                                    <hr/>
-                                    <div class="price">
-                                        ￥3
-                                        <small>/胶带</small>
-                                    </div>
-                                </div>
+    <!-- <![endif]-->
 
-                                <div>
-                                    <a href="#" class="btn btn-block btn-warning">
-                                        <i class="icon-shopping-cart bigger-110"></i>
-                                        <span>马上预定</span>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xs-6 col-sm-3 pricing-box">
-                        <div class="widget-box">
-                            <div class="widget-header header-color-orange"
-                                 style="background: #ffc657;border-color: #fff;">
-                                <h5 class="bigger lighter" style="color:#333">文具</h5>
-                            </div>
+    <!--[if IE]>
+    <script type="text/javascript">
+        window.jQuery || document.write("<script src='assets/js/jquery1x.min.js'>" + "<" + "/script>");
+    </script>
+    <![endif]-->
+    <script type="text/javascript">
+        if ('ontouchstart' in document.documentElement) document.write("<script src='assets/js/jquery.mobile.custom.min.js'>" + "<" + "/script>");
+    </script>
+    <script src="assets/js/bootstrap.min.js"></script>
 
-                            <div class="widget-body">
-                                <div class="widget-main">
-                                    <ul class="list-unstyled spaced2">
-                                        <li style="text-align: center">
-                                            <a href="assets/images/carsShow/jiaoshui.png" data-rel="colorbox">
-                                                <img alt="150x150" width="150" height="150" src="assets/images/carsShow/jiaoshui.png"/>
+    <!-- page specific plugin scripts -->
 
-                                            </a>
+    <!-- ace scripts -->
+    <script src="assets/js/ace-elements.min.js"></script>
+    <script src="assets/js/ace.min.js"></script>
+    <script src="assets/js/bootbox.min.js"></script>
+
+    <script type="text/javascript">
+        jQuery(function ($) {
 
 
-                                        </li>
-
-
-                                    </ul>
-
-
-                                    <hr/>
-                                    <div class="price">
-                                        ￥3
-                                        <small>/胶水</small>
-                                    </div>
-                                </div>
-
-                                <div>
-                                    <a href="#" class="btn btn-block btn-warning">
-                                        <i class="icon-shopping-cart bigger-110"></i>
-                                        <span>马上预定</span>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xs-6 col-sm-3 pricing-box">
-                        <div class="widget-box">
-                            <div class="widget-header header-color-orange"
-                                 style="background: #ffc657;border-color: #fff;">
-                                <h5 class="bigger lighter" style="color:#333">电子</h5>
-                            </div>
-
-                            <div class="widget-body">
-                                <div class="widget-main">
-                                    <ul class="list-unstyled spaced2">
-                                        <li style="text-align: center">
-                                            <a href="assets/images/carsShow/shujuxian.png" data-rel="colorbox">
-                                                <img alt="150x150" width="150" height="150" src="assets/images/carsShow/shujuxian.png"/>
-
-                                            </a>
-
-
-                                        </li>
-
-
-                                    </ul>
-
-
-                                    <hr/>
-                                    <div class="price">
-                                        ￥15
-                                        <small>/数据线</small>
-                                    </div>
-                                </div>
-
-                                <div>
-                                    <a href="#" class="btn btn-block btn-warning">
-                                        <i class="icon-shopping-cart bigger-110"></i>
-                                        <span>马上预定</span>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xs-6 col-sm-3 pricing-box">
-                        <div class="widget-box">
-                            <div class="widget-header header-color-orange"
-                                 style="background: #ffc657;border-color: #fff;">
-                                <h5 class="bigger lighter" style="color:#333">医护</h5>
-                            </div>
-
-                            <div class="widget-body">
-                                <div class="widget-main">
-                                    <ul class="list-unstyled spaced2">
-                                        <li style="text-align: center">
-                                            <a href="assets/images/carsShow/shoutao.png" data-rel="colorbox">
-                                                <img alt="150x150" width="150" height="150" src="assets/images/carsShow/shoutao.png"/>
-
-                                            </a>
-
-
-                                        </li>
-
-
-                                    </ul>
-
-
-                                    <hr/>
-                                    <div class="price">
-                                        ￥10
-                                        <small>/手套</small>
-                                    </div>
-                                </div>
-
-                                <div>
-                                    <a href="#" class="btn btn-block btn-warning">
-                                        <i class="icon-shopping-cart bigger-110"></i>
-                                        <span>马上预定</span>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="modal-footer no-margin-top">
-
-                    <ul class="pagination pull-right no-margin">
-                        <li class="prev disabled">
-                            <a href="#">
-                                <i class="ace-icon fa fa-angle-double-left"></i>
-                            </a>
-                        </li>
-
-                        <li class="active">
-                            <a href="#">1</a>
-                        </li>
-
-                        <li>
-                            <a href="#">2</a>
-                        </li>
-
-                        <li>
-                            <a href="#">3</a>
-                        </li>
-
-                        <li class="next">
-                            <a href="#">
-                                <i class="ace-icon fa fa-angle-double-right"></i>
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-            </div><!-- /.page-content-area -->
-        </div><!-- /.page-content -->
-    </div><!-- /.main-content -->
-
-    <div class="footer">
-        <jsp:include page="footer.jsp"></jsp:include>
-    </div>
-
-    <a href="#" id="btn-scroll-up" class="btn-scroll-up btn btn-sm btn-inverse">
-        <i class="ace-icon fa fa-angle-double-up icon-only bigger-110"></i>
-    </a>
-</div><!-- /.main-container -->
-
-<!-- basic scripts -->
-
-<!--[if !IE]> -->
-<script type="text/javascript">
-    window.jQuery || document.write("<script src='assets/js/jquery.min.js'>" + "<" + "/script>");
-</script>
-
-
-
-
-
-<!-- <![endif]-->
-
-<!--[if IE]>
-<script type="text/javascript">
-    window.jQuery || document.write("<script src='assets/js/jquery1x.min.js'>" + "<" + "/script>");
-</script>
-<![endif]-->
-<script type="text/javascript">
-    if ('ontouchstart' in document.documentElement) document.write("<script src='assets/js/jquery.mobile.custom.min.js'>" + "<" + "/script>");
-</script>
-<script src="assets/js/bootstrap.min.js"></script>
-
-<!-- page specific plugin scripts -->
-
-<!-- ace scripts -->
-<script src="assets/js/ace-elements.min.js"></script>
-<script src="assets/js/ace.min.js"></script>
-<script src="assets/js/bootbox.min.js"></script>
-
-<script type="text/javascript">
-    jQuery(function($) {
-
-
-        $("#bootbox-options").on(ace.click_event, function() {
-            bootbox.dialog({
-                message: "<div class='row'><div class='col-sm-12'><span class='bigger-110'>请填写购买个数：</span><input id='heihei' type='text' placeholder='只能填写数字' /></div></div><hr />",
-                buttons:
-                    {
-                        "success" :
-                            {
-                                "label" : "<i class='ace-icon fa fa-check'></i> 确定",
-                                "className" : "btn-sm btn-success",
-                                "callback": function() {
-                                    bootbox.dialog({
-                                        message: "加入购物车成功，请及时到购物车完成结算",
-                                        buttons: {
-                                            "success" : {
-                                                "label" : "确定并关闭",
-                                                "className" : "btn-sm btn-primary"
+            $("#bootbox-options").on(ace.click_event, function () {
+                bootbox.dialog({
+                    message: "<div class='row'><div class='col-sm-12'><span class='bigger-110'>请填写购买个数：</span><input id='heihei' type='text' placeholder='只能填写数字' /></div></div><hr />",
+                    buttons:
+                        {
+                            "success":
+                                {
+                                    "label": "<i class='ace-icon fa fa-check'></i> 确定",
+                                    "className": "btn-sm btn-success",
+                                    "callback": function () {
+                                        bootbox.dialog({
+                                            message: "加入购物车成功，请及时到购物车完成结算",
+                                            buttons: {
+                                                "success": {
+                                                    "label": "确定并关闭",
+                                                    "className": "btn-sm btn-primary"
+                                                }
                                             }
-                                        }
-                                    });
+                                        });
+                                    }
                                 }
-                            }
 //                        "danger" :
 //                            {
 //                                "label" : "确定删除",
@@ -489,11 +278,11 @@
 //                                "className" : "btn-sm"
 //                            }
                     }
+                });
             });
-        });
 
-    });
-</script>
+        });
+    </script>
 
 </body>
 </html>

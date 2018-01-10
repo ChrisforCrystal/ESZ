@@ -1,11 +1,8 @@
 package chris.ssm.controller;
 
-import chris.ssm.model.Picture;
-import chris.ssm.model.Result;
-import chris.ssm.model.ShopCar;
-import chris.ssm.model.User;
+import chris.ssm.model.*;
 import chris.ssm.service.GalleryService;
-import chris.ssm.service.ShopCarService;
+import chris.ssm.service.ShopOder_CarService;
 import chris.ssm.service.UserService;
 import org.apache.log4j.Logger;
 import org.springframework.stereotype.Controller;
@@ -31,7 +28,7 @@ public class UserController {
     @Resource
     private UserService userService;
     @Resource
-    private ShopCarService shopCarService;
+    private ShopOder_CarService orderCarService;
     @Resource
     private GalleryService galleryService;
 
@@ -73,7 +70,17 @@ public class UserController {
             result.setCode(1000);
             result.setMsg("登录成功");
 
+            ShopCar car = orderCarService.selectCarByUserId(user.getId());
+            if (car == null){
+                ShopCar sc = new ShopCar();
+                sc.setUserId(user.getId());
+                sc.setUserNick(user.getNick());
+                sc.setCreateTime(new Date());
+                sc.setModifyTime(new Date());
+                orderCarService.registerShopCar(sc);
+            }
             request.getSession().setAttribute("user",user);
+
             //匹配购物车
            // fetchShopCar(user.getId());
         }else{
@@ -231,15 +238,7 @@ public class UserController {
         return result;
     }
 
-    private void fetchShopCar(Long id) {
-//        User user=userService.getUserById(id);
-        ShopCar shopCar = shopCarService.findByUserId(id);
-        boolean istrue=false;
-        if(shopCar==null && shopCar.getShopcarid()==0){
-            //创建购物车
-            istrue=shopCarService.insert(id);
-        }
-    }
+
 
 
     @RequestMapping("/indexIn")
@@ -310,6 +309,13 @@ public class UserController {
         }
 
         model.addAttribute("user",user);
+
+
         return result;
+
+
     }
+
+
+
 }

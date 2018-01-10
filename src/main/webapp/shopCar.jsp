@@ -1,5 +1,6 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ page isELIgnored="false" %>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -156,9 +157,13 @@
                                         <th>物品名称</th>
                                         <th class="hidden-480">单个金额</th>
                                         <th class="hidden-480">物品数量</th>
+                                        <th class="hidden-480">物品总价</th>
                                         <th class="hidden-480">操作</th>
                                     </tr>
                                     </thead>
+
+                                    <c:forEach var="order" items="${requestScope.orderList}" varStatus="status">
+
                                     <tbody>
                                     <tr>
                                         <td class="center">
@@ -171,128 +176,44 @@
                                         <td>
                                             <a href="#">文具</a>
                                         </td>
-                                        <td>中性笔</td>
-                                        <td>￥2</td>
+                                        <td>${order.goodsName}</td>
+                                        <td>￥${order.goodsPrice}</td>
 
                                         <td class="hidden-480">
-                                            <button onclick="minus()"><i class="fa fa-minus" aria-hidden="true"></i>
+                                            <button onclick="minus('${order.goodsId}',${order.goodsPrice})"><i
+                                                    class="fa fa-minus" aria-hidden="true"></i>
                                             </button>
-                                            <span class="label label-sm label-warning">4</span>
-                                            <button onclick="plus()"><i class="fa fa-plus" aria-hidden="true"></i>
+                                            <span class="label label-sm label-warning"
+                                                  id="${order.goodsId}">${order.goodsNum}</span>
+                                            <button onclick="plus(${order.goodsId},${order.goodsPrice})"><i
+                                                    class="fa fa-plus" aria-hidden="true"></i>
                                             </button>
                                         </td>
+                                        <td id="${-order.goodsId}">${order.totalPrice}</td>
                                         <td>
                                             <div class="hidden-sm hidden-xs btn-group">
 
-                                                <button class="btn btn-xs btn-danger">
+                                                <button class="btn btn-xs btn-danger"
+                                                        onclick="deleteOrder(${order.orderId})">
+                                                    删除订单
                                                     <i class="ace-icon fa fa-trash-o bigger-120"></i>
                                                 </button>
                                             </div>
                                         </td>
                                     </tr>
 
-                                    <%--<tr>--%>
-                                        <%--<td class="center">--%>
-                                            <%--<label class="position-relative">--%>
-                                                <%--<input type="checkbox" class="ace"/>--%>
-                                                <%--<span class="lbl"></span>--%>
-                                            <%--</label>--%>
-                                        <%--</td>--%>
-
-                                        <%--<td>--%>
-                                            <%--<a href="#">文具</a>--%>
-                                        <%--</td>--%>
-                                        <%--<td>钢笔</td>--%>
-                                        <%--<td>￥20</td>--%>
-
-                                        <%--<td class="hidden-480">--%>
-                                            <%--<button onclick="minus()"><i class="fa fa-minus" aria-hidden="true"></i>--%>
-                                            <%--</button>--%>
-                                            <%--<span class="label label-sm label-warning">5</span>--%>
-                                            <%--<button onclick="plus()"><i class="fa fa-plus" aria-hidden="true"></i>--%>
-                                            <%--</button>--%>
-                                        <%--</td>--%>
-                                        <%--<td>--%>
-                                            <%--<div class="hidden-sm hidden-xs btn-group">--%>
-
-                                                <%--<button class="btn btn-xs btn-danger">--%>
-                                                    <%--<i class="ace-icon fa fa-trash-o bigger-120"></i>--%>
-                                                <%--</button>--%>
-                                            <%--</div>--%>
-                                        <%--</td>--%>
-                                    <%--</tr>--%>
-
-                                    <%--<tr>--%>
-                                        <%--<td class="center">--%>
-                                            <%--<label class="position-relative">--%>
-                                                <%--<input type="checkbox" class="ace"/>--%>
-                                                <%--<span class="lbl"></span>--%>
-                                            <%--</label>--%>
-                                        <%--</td>--%>
-
-                                        <%--<td>--%>
-                                            <%--<a href="#">文具</a>--%>
-                                        <%--</td>--%>
-                                        <%--<td>圆珠笔</td>--%>
-                                        <%--<td>￥3</td>--%>
-
-                                        <%--<td class="hidden-480">--%>
-                                            <%--<button onclick="minus()"><i class="fa fa-minus" aria-hidden="true"></i>--%>
-                                            <%--</button>--%>
-                                            <%--<span class="label label-sm label-warning">5</span>--%>
-                                            <%--<button onclick="plus()"><i class="fa fa-plus" aria-hidden="true"></i>--%>
-                                            <%--</button>--%>
-                                        <%--</td>--%>
-                                        <%--<td>--%>
-                                            <%--<div class="hidden-sm hidden-xs btn-group">--%>
-
-                                                <%--<button class="btn btn-xs btn-danger">--%>
-                                                    <%--<i class="ace-icon fa fa-trash-o bigger-120"></i>--%>
-                                                <%--</button>--%>
-                                            <%--</div>--%>
-                                        <%--</td>--%>
-                                    <%--</tr>--%>
-
-                                    <%--<tr>--%>
-                                        <%--<td class="center">--%>
-                                            <%--<label class="position-relative">--%>
-                                                <%--<input type="checkbox" class="ace"/>--%>
-                                                <%--<span class="lbl"></span>--%>
-                                            <%--</label>--%>
-                                        <%--</td>--%>
-
-                                        <%--<td>--%>
-                                            <%--<a href="#">电子</a>--%>
-                                        <%--</td>--%>
-                                        <%--<td>USB3.0数据线</td>--%>
-                                        <%--<td>￥15</td>--%>
-
-                                        <%--<td class="hidden-480">--%>
-                                            <%--<button onclick="minus()"><i class="fa fa-minus" aria-hidden="true"></i>--%>
-                                            <%--</button>--%>
-                                            <%--<span class="label label-sm label-warning">1</span>--%>
-                                            <%--<button onclick="plus()"><i class="fa fa-plus" aria-hidden="true"></i>--%>
-                                            <%--</button>--%>
-                                        <%--</td>--%>
-                                        <%--<td>--%>
-                                            <%--<div class="hidden-sm hidden-xs btn-group">--%>
-
-                                                <%--<button class="btn btn-xs btn-danger">--%>
-                                                    <%--<i class="ace-icon fa fa-trash-o bigger-120"></i>--%>
-                                                <%--</button>--%>
-                                            <%--</div>--%>
-                                        <%--</td>--%>
-                                    <%--</tr>--%>
-
-
+                                    </c:forEach>
                                     </tbody>
                                 </table>
                             </div><!-- /.span -->
                         </div><!-- /.row -->
                         <div style="text-align: right">
-                            <h4><strong>总价 : 8 元</strong></h4>
+                            <h4><strong>总价:</strong></h4>
+                            <h4><strong id="totalprice">${requestScope.shopCar.totalprice}</strong></h4>
+                            <h4><strong>元</strong></h4>
                             <button class="btn btn-danger " onclick="generateOrderList()">提交订单</button>
                         </div>
+
                     </div><!-- /.col -->
                 </div><!-- /.row -->
             </div><!-- /.page-content-area -->
@@ -338,12 +259,65 @@
 
 
 <script type="text/javascript">
-    function plus() {
-        $("#orderNum").val($("#orderNum").val + 1);
+    function plus(id, price) {
+
+        $.ajax({
+            type: "POST",
+            url: "./addGoodsInOrder",
+            data: {goodsid: id},
+            dataType: "json",
+            error: function (result) {
+                alert("错了");
+            },
+            success: function (result) {
+                if (result.code == 1000) {
+                    document.getElementById(id).innerText = parseInt(document.getElementById(id).innerText) + 1;
+                    document.getElementById(-id).innerText = parseFloat(document.getElementById(-id).innerText) + price;
+                    document.getElementById("totalprice").innerText = parseFloat(document.getElementById("totalprice").innerText) + price;
+                } else {
+                    alert("抱歉,该货物可购买数量已到达上限.")
+                }
+            }
+        });
+
+        //   document.getElementById(id).innerText = parseInt(document.getElementById(id).innerText)+1;
+
+
+//        var num = document.getElementById(id).innerHTML;
+//        document.getElementById(id).innerText= (document.getElementById(id).innerText)+1 ;
+//        alert( document.getElementById(id).innerHTML);
+//        $("#id").val($("#id").val + 1);
     }
 
-    function minus() {
-        $("#orderNum").val($("#orderNum").val - 1);
+    function minus(id, price) {
+
+        $.ajax({
+            type: "POST",
+            url: "./cutGoodsInOrder",
+            data: {goodsid: id},
+            dataType: "json",
+            error: function (result) {
+                alert("错了");
+            },
+            success: function (result) {
+                if (result.code == 1000) {
+                    document.getElementById(id).innerText = parseInt(document.getElementById(id).innerText) - 1;
+                    document.getElementById(-id).innerText = parseFloat(document.getElementById(-id).innerText) - price;
+                    document.getElementById("totalprice").innerText = parseFloat(document.getElementById("totalprice").innerText) - price;
+
+                } else {
+                    alert("已经到达最小值,如果不需要该物品请直接删除订单");
+                }
+            }
+        });
+    }
+
+    function deleteOrder(orderid) {
+
+        if (window.confirm("确定要删除吗?")) {
+            window.location.href = "deleteOrder?orderid=" + orderid;
+        }
+
     }
 
     function generateOrderList() {

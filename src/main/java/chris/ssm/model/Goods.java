@@ -5,18 +5,13 @@ package chris.ssm.model;
  */
 public class Goods extends Basepo {
     private Long goodsId;   //商品id
-    private double money;   //商品价格
+    private double price;   //商品价格
     private String goodsName;   //商品名称
-    private int spid;   //
+    private int spid;   //图片id?
     private String picUrl;  //图片地址
-
-    public String getPicUrl() {
-        return picUrl;
-    }
-
-    public void setPicUrl(String picUrl) {
-        this.picUrl = picUrl;
-    }
+    private String description;
+    private int goodsNum;
+    private int typeNum;
 
     public Long getGoodsId() {
         return goodsId;
@@ -26,20 +21,20 @@ public class Goods extends Basepo {
         this.goodsId = goodsId;
     }
 
-    public double getMoney() {
-        return money;
+    public double getPrice() {
+        return price;
     }
 
-    public void setMoney(double money) {
-        this.money = money;
+    public void setPrice(double price) {
+        this.price = price;
     }
 
-    public String getShopName() {
+    public String getGoodsName() {
         return goodsName;
     }
 
-    public void setShopName(String shopName) {
-        this.goodsName = shopName;
+    public void setGoodsName(String goodsName) {
+        this.goodsName = goodsName;
     }
 
     public int getSpid() {
@@ -48,5 +43,37 @@ public class Goods extends Basepo {
 
     public void setSpid(int spid) {
         this.spid = spid;
+    }
+
+    public String getPicUrl() {
+        return picUrl;
+    }
+
+    public void setPicUrl(String picUrl) {
+        this.picUrl = picUrl;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
+    public int getGoodsNum() {
+        return goodsNum;
+    }
+
+    public void setGoodsNum(int goodsNum) {
+        this.goodsNum = goodsNum;
+    }
+
+    public int getTypeNum() {
+        return typeNum;
+    }
+
+    public void setTypeNum(int typeNum) {
+        this.typeNum = typeNum;
     }
 }
