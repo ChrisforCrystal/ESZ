@@ -110,8 +110,8 @@
       <file leaf-file-name="shopCar.jsp" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/shopCar.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="547">
-              <caret line="311" column="11" lean-forward="true" selection-start-line="311" selection-start-column="11" selection-end-line="311" selection-end-column="11" />
+            <state relative-caret-position="456">
+              <caret line="24" column="28" lean-forward="true" selection-start-line="24" selection-start-column="28" selection-end-line="24" selection-end-column="28" />
               <folding>
                 <marker date="1515549938493" expanded="true" signature="9560:9670" ph="..." />
               </folding>
@@ -796,7 +796,7 @@
       <workItem from="1515465843877" duration="17982000" />
       <workItem from="1515505081667" duration="1478000" />
       <workItem from="1515548704238" duration="2566000" />
-      <workItem from="1515769965830" duration="317000" />
+      <workItem from="1515769965830" duration="673000" />
     </task>
     <task id="LOCAL-00001" summary="上传代码">
       <created>1510204240319</created>
@@ -833,11 +833,18 @@
       <option name="project" value="LOCAL" />
       <updated>1515770097205</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="2018-1-12">
+      <created>1515770365487</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1515770365487</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="248598000" />
+    <option name="totallyTimeSpent" value="248954000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1317,8 +1324,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/shopCar.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="547">
-          <caret line="311" column="11" lean-forward="true" selection-start-line="311" selection-start-column="11" selection-end-line="311" selection-end-column="11" />
+        <state relative-caret-position="456">
+          <caret line="24" column="28" lean-forward="true" selection-start-line="24" selection-start-column="28" selection-end-line="24" selection-end-column="28" />
           <folding>
             <marker date="1515549938493" expanded="true" signature="9560:9670" ph="..." />
           </folding>
