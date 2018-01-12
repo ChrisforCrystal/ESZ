@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="chris.ssm.dao.GoodsListDao">
+
+
+
+
+    <resultMap id="GoodsBaseMap" type="chris.ssm.model.Goods">
+        <id column="goods_id" property="goodsId" jdbcType="BIGINT"/>
+        <result column="goods_type" property="typeNum" jdbcType="BIGINT"/>
+        <result column="goods_num" property="goodsNum" jdbcType="BIGINT"/>
+        <result column="goods_name" property="goodsName" jdbcType="VARCHAR"/>
+        <result column="goods_description" property="description" jdbcType="VARCHAR"/>
+        <result column="goods_price" property="price" jdbcType="BIGINT"/>
+        <result column="goods_pic_url" property="picUrl" jdbcType="VARCHAR"/>
+
+    </resultMap>
+
+    <select id="findListByQR" parameterType="chris.ssm.model.QueryInfo" resultMap="GoodsBaseMap">
+       SELECT * FROM goods limit #{startindex},#{pagesize}
+    </select>
+
+    <select id="countSumGoodsNum" resultType="java.lang.Integer">
+        select count(*) from goods
+     </select>
+
+    <select id="selectGoodsById" parameterType="java.lang.Long" resultMap="GoodsBaseMap">
+        SELECT * FROM goods
+        WHERE goods_id = #{goodsId}
+    </select>
+
+
+
+
+</mapper>
