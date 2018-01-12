@@ -7,39 +7,8 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1907af34-dbfd-49a3-9d56-ef3287688c92" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/chris/ssm/service/impl/ShopOder_CarServiceImp.java" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/chris/ssm/service/impl/ShopCarServiceImp.java" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/ESZ/WEB-INF/classes/chris/ssm/controller/UserController.class" afterPath="$PROJECT_DIR$/target/ESZ/WEB-INF/classes/chris/ssm/controller/UserController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/ESZ/WEB-INF/classes/chris/ssm/model/User.class" afterPath="$PROJECT_DIR$/target/ESZ/WEB-INF/classes/chris/ssm/model/User.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/ESZ/WEB-INF/classes/chris/ssm/service/UserService.class" afterPath="$PROJECT_DIR$/target/ESZ/WEB-INF/classes/chris/ssm/service/UserService.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/ESZ/WEB-INF/classes/chris/ssm/service/impl/UserServiceImpl.class" afterPath="$PROJECT_DIR$/target/ESZ/WEB-INF/classes/chris/ssm/service/impl/UserServiceImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/chris/ssm/controller/UserController.class" afterPath="$PROJECT_DIR$/target/classes/chris/ssm/controller/UserController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/chris/ssm/model/User.class" afterPath="$PROJECT_DIR$/target/classes/chris/ssm/model/User.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/chris/ssm/service/UserService.class" afterPath="$PROJECT_DIR$/target/classes/chris/ssm/service/UserService.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/chris/ssm/service/impl/UserServiceImpl.class" afterPath="$PROJECT_DIR$/target/classes/chris/ssm/service/impl/UserServiceImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/encodings.xml" afterPath="$PROJECT_DIR$/.idea/encodings.xml" />
+    <list default="true" id="1907af34-dbfd-49a3-9d56-ef3287688c92" name="Default" comment="上传代码">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/chris/ssm/controller/UserController.java" afterPath="$PROJECT_DIR$/src/main/java/chris/ssm/controller/UserController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/chris/ssm/dao/GoodsListDao.java" afterPath="$PROJECT_DIR$/src/main/java/chris/ssm/dao/GoodsListDao.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/chris/ssm/model/Basepo.java" afterPath="$PROJECT_DIR$/src/main/java/chris/ssm/model/Basepo.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/chris/ssm/model/Goods.java" afterPath="$PROJECT_DIR$/src/main/java/chris/ssm/model/Goods.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/chris/ssm/model/ShopCar.java" afterPath="$PROJECT_DIR$/src/main/java/chris/ssm/model/ShopCar.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/chris/ssm/model/User.java" afterPath="$PROJECT_DIR$/src/main/java/chris/ssm/model/User.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/chris/ssm/service/GoodsListService.java" afterPath="$PROJECT_DIR$/src/main/java/chris/ssm/service/GoodsListService.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/chris/ssm/service/UserService.java" afterPath="$PROJECT_DIR$/src/main/java/chris/ssm/service/UserService.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/chris/ssm/service/impl/GoodsListServiceImpl.java" afterPath="$PROJECT_DIR$/src/main/java/chris/ssm/service/impl/GoodsListServiceImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/chris/ssm/service/impl/UserServiceImpl.java" afterPath="$PROJECT_DIR$/src/main/java/chris/ssm/service/impl/UserServiceImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/mapping/UserMapper.xml" afterPath="$PROJECT_DIR$/src/main/resources/mapping/UserMapper.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/mapping/shopMapper.xml" afterPath="$PROJECT_DIR$/src/main/resources/mapping/shopMapper.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/chooseGoods.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/chooseGoods.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/shopCar.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/shopCar.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/sidebar.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/sidebar.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/ESZ/WEB-INF/classes/mapping/UserMapper.xml" afterPath="$PROJECT_DIR$/target/ESZ/WEB-INF/classes/mapping/UserMapper.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/mapping/UserMapper.xml" afterPath="$PROJECT_DIR$/target/classes/mapping/UserMapper.xml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/chris/ssm/controller/goodsListController.java" afterPath="$PROJECT_DIR$/src/main/java/chris/ssm/controller/GoodsListController.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/chris/ssm/model/Shoptype.java" afterPath="$PROJECT_DIR$/src/main/java/chris/ssm/model/ShopOrder.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/chris/ssm/service/ShopCarService.java" afterPath="$PROJECT_DIR$/src/main/java/chris/ssm/service/ShopOder_CarService.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -55,7 +24,7 @@
       <file leaf-file-name="ShopOder_CarController.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/chris/ssm/controller/ShopOder_CarController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="357">
+            <state relative-caret-position="1444">
               <caret line="90" column="21" lean-forward="false" selection-start-line="90" selection-start-column="21" selection-end-line="90" selection-end-column="21" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -87,8 +56,8 @@
       <file leaf-file-name="shopMapper.xml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/resources/mapping/shopMapper.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="509">
-              <caret line="75" column="0" lean-forward="true" selection-start-line="75" selection-start-column="0" selection-end-line="75" selection-end-column="0" />
+            <state relative-caret-position="1425">
+              <caret line="75" column="0" lean-forward="false" selection-start-line="75" selection-start-column="0" selection-end-line="75" selection-end-column="0" />
               <folding>
                 <marker date="1515549513629" expanded="true" signature="872:1021" ph="insert into shopcar... " />
                 <marker date="1515549513629" expanded="true" signature="1135:1191" ph="SELECT * FRO... shopcar" />
@@ -116,7 +85,7 @@
       <file leaf-file-name="ShopOder_CarServiceImp.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/chris/ssm/service/impl/ShopOder_CarServiceImp.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="528">
+            <state relative-caret-position="722">
               <caret line="58" column="0" lean-forward="false" selection-start-line="58" selection-start-column="0" selection-end-line="58" selection-end-column="0" />
               <folding>
                 <element signature="e#851#852#0" expanded="true" />
@@ -141,8 +110,8 @@
       <file leaf-file-name="shopCar.jsp" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/shopCar.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="300">
-              <caret line="298" column="38" lean-forward="true" selection-start-line="298" selection-start-column="38" selection-end-line="298" selection-end-column="38" />
+            <state relative-caret-position="566">
+              <caret line="312" column="5" lean-forward="false" selection-start-line="312" selection-start-column="5" selection-end-line="312" selection-end-column="5" />
               <folding>
                 <marker date="1515549938493" expanded="true" signature="9560:9670" ph="..." />
               </folding>
@@ -447,10 +416,10 @@
           <select />
         </subPane>
       </pane>
-      <pane id="AndroidView" />
       <pane id="Scope" />
-      <pane id="Scratches" />
       <pane id="PackagesPane" />
+      <pane id="AndroidView" />
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -826,7 +795,8 @@
       <workItem from="1515418579726" duration="1801000" />
       <workItem from="1515465843877" duration="17982000" />
       <workItem from="1515505081667" duration="1478000" />
-      <workItem from="1515548704238" duration="2090000" />
+      <workItem from="1515548704238" duration="2566000" />
+      <workItem from="1515769965830" duration="116000" />
     </task>
     <task id="LOCAL-00001" summary="上传代码">
       <created>1510204240319</created>
@@ -849,11 +819,18 @@
       <option name="project" value="LOCAL" />
       <updated>1514978105957</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="上传代码">
+      <created>1515551207342</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1515551207342</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="247805000" />
+    <option name="totallyTimeSpent" value="248397000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -882,13 +859,12 @@
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2524377" sideWeight="0.9211087" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32936078" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3206934" sideWeight="0.38432837" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32936078" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32936078" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.26760563" sideWeight="0.39925373" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.26760563" sideWeight="0.39925373" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32936078" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32936078" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18070363" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -900,6 +876,7 @@
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3206934" sideWeight="0.38432837" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Mybatis datasource" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="true" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.18634886" sideWeight="0.4978678" order="1" side_tool="false" content_ui="tabs" />
@@ -1276,7 +1253,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/chris/ssm/service/impl/ShopOder_CarServiceImp.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="528">
+        <state relative-caret-position="722">
           <caret line="58" column="0" lean-forward="false" selection-start-line="58" selection-start-column="0" selection-end-line="58" selection-end-column="0" />
           <folding>
             <element signature="e#851#852#0" expanded="true" />
@@ -1289,8 +1266,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/mapping/shopMapper.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="509">
-          <caret line="75" column="0" lean-forward="true" selection-start-line="75" selection-start-column="0" selection-end-line="75" selection-end-column="0" />
+        <state relative-caret-position="1425">
+          <caret line="75" column="0" lean-forward="false" selection-start-line="75" selection-start-column="0" selection-end-line="75" selection-end-column="0" />
           <folding>
             <marker date="1515549513629" expanded="true" signature="872:1021" ph="insert into shopcar... " />
             <marker date="1515549513629" expanded="true" signature="1135:1191" ph="SELECT * FRO... shopcar" />
@@ -1322,7 +1299,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/chris/ssm/controller/ShopOder_CarController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
+        <state relative-caret-position="1444">
           <caret line="90" column="21" lean-forward="false" selection-start-line="90" selection-start-column="21" selection-end-line="90" selection-end-column="21" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -1332,8 +1309,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/shopCar.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="298" column="38" lean-forward="true" selection-start-line="298" selection-start-column="38" selection-end-line="298" selection-end-column="38" />
+        <state relative-caret-position="566">
+          <caret line="312" column="5" lean-forward="false" selection-start-line="312" selection-start-column="5" selection-end-line="312" selection-end-column="5" />
           <folding>
             <marker date="1515549938493" expanded="true" signature="9560:9670" ph="..." />
           </folding>
