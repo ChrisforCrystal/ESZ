@@ -7,34 +7,8 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1907af34-dbfd-49a3-9d56-ef3287688c92" name="Default" comment="2018-1-12">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/ESZ/WEB-INF/classes/chris/ssm/controller/UserController.class" afterPath="$PROJECT_DIR$/target/ESZ/WEB-INF/classes/chris/ssm/controller/UserController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/chris/ssm/controller/UserController.class" afterPath="$PROJECT_DIR$/target/classes/chris/ssm/controller/UserController.class" />
+    <list default="true" id="1907af34-dbfd-49a3-9d56-ef3287688c92" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/chris/ssm/controller/GoodsListController.java" afterPath="$PROJECT_DIR$/src/main/java/chris/ssm/controller/GoodsListController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/chris/ssm/controller/ShopOder_CarController.java" afterPath="$PROJECT_DIR$/src/main/java/chris/ssm/controller/ShopOder_CarController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/chris/ssm/controller/UserController.java" afterPath="$PROJECT_DIR$/src/main/java/chris/ssm/controller/UserController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/chris/ssm/dao/GoodsListDao.java" afterPath="$PROJECT_DIR$/src/main/java/chris/ssm/dao/GoodsListDao.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/chris/ssm/dao/ShopOder_CarDao.java" afterPath="$PROJECT_DIR$/src/main/java/chris/ssm/dao/ShopOder_CarDao.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/chris/ssm/model/Basepo.java" afterPath="$PROJECT_DIR$/src/main/java/chris/ssm/model/Basepo.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/chris/ssm/model/Goods.java" afterPath="$PROJECT_DIR$/src/main/java/chris/ssm/model/Goods.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/chris/ssm/model/Orderlist.java" afterPath="$PROJECT_DIR$/src/main/java/chris/ssm/model/Orderlist.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/chris/ssm/model/ShopOrder.java" afterPath="$PROJECT_DIR$/src/main/java/chris/ssm/model/ShopOrder.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/chris/ssm/service/GoodsListService.java" afterPath="$PROJECT_DIR$/src/main/java/chris/ssm/service/GoodsListService.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/chris/ssm/service/ShopOder_CarService.java" afterPath="$PROJECT_DIR$/src/main/java/chris/ssm/service/ShopOder_CarService.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/chris/ssm/service/impl/GoodsListServiceImpl.java" afterPath="$PROJECT_DIR$/src/main/java/chris/ssm/service/impl/GoodsListServiceImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/chris/ssm/service/impl/ShopOder_CarServiceImp.java" afterPath="$PROJECT_DIR$/src/main/java/chris/ssm/service/impl/ShopOder_CarServiceImp.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/mapping/GoodsMapper.xml" afterPath="$PROJECT_DIR$/src/main/resources/mapping/GoodsMapper.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/mapping/shopMapper.xml" afterPath="$PROJECT_DIR$/src/main/resources/mapping/shopMapper.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/assets/css/less/bootstrap/variables.less" afterPath="$PROJECT_DIR$/src/main/webapp/assets/css/less/bootstrap/variables.less" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/chooseGoods.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/chooseGoods.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/login.html" afterPath="$PROJECT_DIR$/src/main/webapp/login.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/orderList.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/orderList.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/shopCar.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/shopCar.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/sidebar.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/sidebar.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/ESZ/assets/css/less/bootstrap/variables.less" afterPath="$PROJECT_DIR$/target/ESZ/assets/css/less/bootstrap/variables.less" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/ESZ/login.html" afterPath="$PROJECT_DIR$/target/ESZ/login.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/chris/ssm/controller/OrderController.java" afterPath="$PROJECT_DIR$/src/main/java/chris/ssm/controller/IndentController.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -74,8 +48,8 @@
       <file leaf-file-name="IndentController.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/chris/ssm/controller/IndentController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="528">
-              <caret line="176" column="30" lean-forward="true" selection-start-line="176" selection-start-column="30" selection-end-line="176" selection-end-column="30" />
+            <state relative-caret-position="243">
+              <caret line="125" column="39" lean-forward="true" selection-start-line="125" selection-start-column="39" selection-end-line="125" selection-end-column="39" />
               <folding />
             </state>
           </provider>
@@ -782,7 +756,7 @@
       <workItem from="1516550745243" duration="2305000" />
       <workItem from="1516599066340" duration="13997000" />
       <workItem from="1516679201657" duration="16990000" />
-      <workItem from="1516765802431" duration="1040000" />
+      <workItem from="1516765802431" duration="1327000" />
     </task>
     <task id="LOCAL-00001" summary="上传代码">
       <created>1510204240319</created>
@@ -833,11 +807,18 @@
       <option name="project" value="LOCAL" />
       <updated>1515770644901</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="2018-1-24&#10;更改了数据库.&#10;新增加了ident(订单)相关的属性(order为订单项,即购物车中的小条条)&#10;&#10;还需要做的:&#10;1.订单详情没有制作.&#10;2.搜索中sql使用的like.可能导致搜索1月份的时候10,11,12月份也会出现的问题&#10;3.性别等方面没有具体制作.&#10;4.判定登录条件&#10;5.订单和购物车的分页没有制作.&#10;6.购物车目前暂时无用">
+      <created>1516767064406</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1516767064407</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="341476000" />
+    <option name="totallyTimeSpent" value="341763000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -898,7 +879,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="上传代码" />
     <MESSAGE value="2018-1-12" />
-    <option name="LAST_COMMIT_MESSAGE" value="2018-1-12" />
+    <MESSAGE value="2018-1-24&#10;更改了数据库.&#10;新增加了ident(订单)相关的属性(order为订单项,即购物车中的小条条)&#10;&#10;还需要做的:&#10;1.订单详情没有制作.&#10;2.搜索中sql使用的like.可能导致搜索1月份的时候10,11,12月份也会出现的问题&#10;3.性别等方面没有具体制作.&#10;4.判定登录条件&#10;5.订单和购物车的分页没有制作.&#10;6.购物车目前暂时无用" />
+    <option name="LAST_COMMIT_MESSAGE" value="2018-1-24&#10;更改了数据库.&#10;新增加了ident(订单)相关的属性(order为订单项,即购物车中的小条条)&#10;&#10;还需要做的:&#10;1.订单详情没有制作.&#10;2.搜索中sql使用的like.可能导致搜索1月份的时候10,11,12月份也会出现的问题&#10;3.性别等方面没有具体制作.&#10;4.判定登录条件&#10;5.订单和购物车的分页没有制作.&#10;6.购物车目前暂时无用" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1133,6 +1115,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="594">
           <caret line="368" column="50" lean-forward="false" selection-start-line="368" selection-start-column="41" selection-end-line="368" selection-end-column="50" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1383,8 +1366,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/chris/ssm/controller/IndentController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="528">
-          <caret line="176" column="30" lean-forward="true" selection-start-line="176" selection-start-column="30" selection-end-line="176" selection-end-column="30" />
+        <state relative-caret-position="243">
+          <caret line="125" column="39" lean-forward="true" selection-start-line="125" selection-start-column="39" selection-end-line="125" selection-end-column="39" />
           <folding />
         </state>
       </provider>
