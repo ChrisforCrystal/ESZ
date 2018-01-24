@@ -12,6 +12,7 @@ public class Orderlist extends Basepo {
     private String orderName;
     private String ordernum;
     private Long typeid;
+    private String typeName;
     //单价
     private double money;
     private double sumMoney;
@@ -104,5 +105,13 @@ public class Orderlist extends Basepo {
 
     public void setOrdernum(String ordernum) {
         this.ordernum = ordernum;
+    }
+
+    public String getTypeName() {
+        return typeName;
+    }
+
+    public void setTypeName(String typeName) {
+        this.typeName = typeName;
     }
 }

@@ -7,7 +7,8 @@
 
     <resultMap id="GoodsBaseMap" type="chris.ssm.model.Goods">
         <id column="goods_id" property="goodsId" jdbcType="BIGINT"/>
-        <result column="goods_type" property="typeNum" jdbcType="BIGINT"/>
+        <result column="goods_type_id" property="typeId" jdbcType="BIGINT"/>
+        <result column="goods_type_name" property="typeName" jdbcType="VARCHAR"/>
         <result column="goods_num" property="goodsNum" jdbcType="BIGINT"/>
         <result column="goods_name" property="goodsName" jdbcType="VARCHAR"/>
         <result column="goods_description" property="description" jdbcType="VARCHAR"/>
@@ -29,6 +30,19 @@
         WHERE goods_id = #{goodsId}
     </select>
 
+    <resultMap id="GoodsType" type="chris.ssm.model.GoodsType">
+        <id column="type_id" property="typeId" jdbcType="BIGINT"/>
+        <result column="type_name" property="typeName" jdbcType="VARCHAR"/>
+    </resultMap>
+
+    <select id="listType" resultMap="GoodsType">
+        SELECT * FROM type
+    </select>
+
+    <select id="selectTypeById" parameterType="java.lang.Long" resultMap="GoodsType">
+        SELECT * FROM type
+        WHERE id=#{typeId}
+    </select>
 
 
 

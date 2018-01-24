@@ -195,7 +195,7 @@
 
         <ul class="submenu">
             <li class="" id="searchOrder">
-                <a href="orderList.jsp">
+                <a href="./orderList">
                     <i class="menu-icon fa fa-caret-right"></i>
                     订单列表
                 </a>

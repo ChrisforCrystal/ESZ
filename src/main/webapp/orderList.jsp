@@ -1,4 +1,6 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ page isELIgnored="false" %>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -104,16 +106,16 @@
                         <div class="table-header">
                             购物车管理
                         </div>
-
+                       <form action="./orderList" method="post">
                         <table width="100%" class="CSSearchTbl" cellpadding="0" cellspacing="0">
                             <tr>
                                 <td class="left">订单编号：</td>
-                                <td class="right"><input type="text" size="16"/></td>
+                                <td class="right"><input type="text" size="16" name="indennum"/></td>
 
                                 <td class="left">按月查询</td>
                                 <td class="right">
-                                    <select>
-                                        <option>全部</option>
+                                    <select name="month">
+                                        <option value="0">全部</option>
                                         <option>1</option>
                                         <option>2</option>
                                         <option>3</option>
@@ -130,16 +132,16 @@
                                 </td>
                                 <div class="col-xs-12 col-sm-3 left"></div>
                                 <td class="right" colspan="2">
-                                    <button class="btn btn-primary pull-left col-sm-12 tbl-search"
+                                    <input type="submit" class="btn btn-primary pull-left col-sm-12 tbl-search"
                                             data-dismiss="modal">
                                         开始搜索
                                         <i class="ace-icon fa fa-search"></i>
-                                    </button>
+                                    </input>
                                 </td>
                             </tr>
 
                         </table>
-
+                       </form>
 
                     </div>
                 </div>
@@ -158,34 +160,43 @@
                                         <th>订单编号</th>
                                         <th>下单人</th>
                                         <th class="hidden-480">订单时间</th>
+                                        <th class="hidden-480">订单内容</th>
                                         <th class="hidden-480">用户金额</th>
-                                        <th class="hidden-480">操作</th>
+                                        <th class="hidden-480">订单状态</th>
                                     </tr>
                                     </thead>
                                     <tbody>
+                                    <c:forEach var ="indent"  items="${requestScope.indent}" varStatus="status">
                                     <tr>
 
 
                                         <td>
-                                            <a href="#">201709091</a>
+                                            <a href="#">${indent.indentNum}</a>
                                         </td>
-                                        <td>季伟男</td>
-                                        <td>2017-10-10 11：22：00</td>
+                                        <td>${indent.name}</td>
 
+                                        <td>${indent.modifyTime}</td>
+                                        <td>${indent.price}</td>
                                         <td class="hidden-480">
-                                            <span class="label label-sm label-warning">138元</span>
+                                            <span class="label label-sm label-warning">${indent.price}</span>
                                         </td>
                                         <td>
                                             <div class="hidden-sm hidden-xs btn-group">
 
+                                                <button class="btn btn-xs btn-danger">
+                                                    <i class="ace-icon  bigger-120">等待发货</i>
+                                                </button>
+
+
                                                 <button class="btn btn-xs btn-success">
                                                     <i class="ace-icon fa fa-check bigger-120"></i>
                                                 </button>
+
                                             </div>
                                         </td>
                                     </tr>
 
-                                    <tr>
+                                    <%--<tr>
 
 
                                         <td>
@@ -249,9 +260,9 @@
                                                 </button>
                                             </div>
                                         </td>
-                                    </tr>
+                                    </tr>--%>
 
-
+                                    </c:forEach>
                                     </tbody>
                                 </table>
                             </div><!-- /.span -->

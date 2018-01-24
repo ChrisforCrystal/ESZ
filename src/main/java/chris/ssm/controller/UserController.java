@@ -22,6 +22,7 @@ import java.util.List;
  */
 
 @Controller
+
 public class UserController {
 
     private Logger log = Logger.getLogger(UserController.class);

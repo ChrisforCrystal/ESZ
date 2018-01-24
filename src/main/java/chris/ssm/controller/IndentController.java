@@ -1,12 +1,7 @@
 package chris.ssm.controller;
 
-import chris.ssm.model.OrderHelper;
-import chris.ssm.model.Orderlist;
-import chris.ssm.model.Result;
-import chris.ssm.model.User;
-import chris.ssm.service.OrderHelperService;
-import chris.ssm.service.OrderService;
-import chris.ssm.service.GoodsListService;
+import chris.ssm.model.*;
+import chris.ssm.service.*;
 import org.apache.log4j.Logger;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -24,13 +19,23 @@ import java.util.List;
  * Created by Chris on 2017/11/21
  */
 @Controller
-public class OrderController {
+public class IndentController {
     @Resource
+    private UserService userService;
+    @Resource
+    private ShopOder_CarService orderCarService;
+    @Resource
+    private GoodsListService goodsService;
+    @Resource
+    private IndentService indentService;
+   /* @Resource
     private GoodsListService shopService ;
     @Resource
     private OrderService orderService;
     @Resource
     private OrderHelperService orderHelperService;
+
+
     private Logger log = Logger.getLogger(OrderController.class);
     //数据添加至购物车
     @RequestMapping("/insertOrder")
@@ -146,6 +151,39 @@ public class OrderController {
         model.addAttribute("goodsName",name);
         model.addAttribute("goodstype",type);
         return "redirect: shopCarShow";
+
+    }*/
+
+
+    @RequestMapping("/orderList")
+
+    public String listIndent(HttpServletRequest request, Model model) {
+
+
+        String indenNum = request.getParameter("indennum");
+        String month = request.getParameter("month");
+//        String state = request.getParameter("statenum");
+//
+//
+//        if (state == null) {
+//            state = "2";
+//        }
+        //Long stateNum = Long.parseLong(state);
+       // Long stateNum2 = stateNum+1;
+        if (month == null || month.equals("0")) {
+            month = "%";
+        }
+        if (indenNum == null) {
+            indenNum = "%%%%";
+        } else {
+            indenNum = "%%" + indenNum + "%%";
+        }
+        User user = (User) request.getSession().getAttribute("user");
+        List<Indent> indent = indentService.selectIndentByUserId_IndentNum_Month(user.getId(),indenNum,month);
+       // List<ShopOrder> orderList = orderCarService.selectOrderByUserId_OrderNum_Month_StateNum(user.getId(), indenNum, month, stateNum ,stateNum2);
+        //request.setAttribute("orderList", orderList);
+        request.setAttribute("indent",indent);
+        return "orderList";
 
     }
 

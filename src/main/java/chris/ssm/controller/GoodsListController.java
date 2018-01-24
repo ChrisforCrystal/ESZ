@@ -53,14 +53,15 @@ public class GoodsListController {
     }
 
 
-    //bo
+    //展示货物.可以选择当前页码显示多少
     @RequestMapping(value ="/listgoods" )
-    public String listGoods(HttpServletRequest request, Model model){
+    public String listGoods(HttpServletRequest request, Model model, @RequestParam(value="pagesize", defaultValue="5") int pagesize,@RequestParam(value ="pagenum" ,defaultValue = "1") int pagenum){
 
         PageBean pb = new PageBean();
 
         QueryInfo qi = new QueryInfo();
-
+        qi.setPagesize(pagesize);
+        qi.setCurrentpage(pagenum);
 
        List<Goods> rs= goodsListService.findListByQR(qi);
        pb.setTotalrecord(goodsListService.countSumGoodsNum());//总记录数目
@@ -73,42 +74,42 @@ public class GoodsListController {
     }
 
 
-    @RequestMapping(value ="/listgoods2PageSize" )
-    public String listGoods2PageSize(HttpServletRequest request, Model model,@RequestParam("pagesize") int pagesize){
-
-        PageBean pb = new PageBean();
-
-        QueryInfo qi = new QueryInfo();
-        qi.setPagesize(pagesize);
-
-        List<Goods> rs= goodsListService.findListByQR(qi);
-        pb.setTotalrecord(goodsListService.countSumGoodsNum());//总记录数目
-        pb.setList(rs);//符合规定的当前页的货物内容list集合
-        pb.setCurrentpage(qi.getCurrentpage());//设定当前页
-        pb.setPagesize(qi.getPagesize());
-
-        request.setAttribute("pagebean",pb);
-        return "chooseGoods";
-    }
-
-    @RequestMapping(value ="/listgoods2gotopage" )
-    public String listgoods2gotopage(HttpServletRequest request, Model model,@RequestParam("pagenum") int pagenum,@RequestParam("pagesize") int pagesize){
-
-        PageBean pb = new PageBean();
-
-        QueryInfo qi = new QueryInfo();
-        qi.setCurrentpage(pagenum);
-        qi.setPagesize(pagesize);
-
-        List<Goods> rs= goodsListService.findListByQR(qi);
-        pb.setTotalrecord(goodsListService.countSumGoodsNum());//总记录数目
-        pb.setList(rs);//符合规定的当前页的货物内容list集合
-        pb.setCurrentpage(qi.getCurrentpage());//设定当前页
-        pb.setPagesize(qi.getPagesize());
-
-        request.setAttribute("pagebean",pb);
-        return "chooseGoods";
-    }
+//    @RequestMapping(value ="/listgoods2PageSize" )
+//    public String listGoods2PageSize(HttpServletRequest request, Model model,@RequestParam("pagesize") int pagesize){
+//
+//        PageBean pb = new PageBean();
+//
+//        QueryInfo qi = new QueryInfo();
+//        qi.setPagesize(pagesize);
+//
+//        List<Goods> rs= goodsListService.findListByQR(qi);
+//        pb.setTotalrecord(goodsListService.countSumGoodsNum());//总记录数目
+//        pb.setList(rs);//符合规定的当前页的货物内容list集合
+//        pb.setCurrentpage(qi.getCurrentpage());//设定当前页
+//        pb.setPagesize(qi.getPagesize());
+//
+//        request.setAttribute("pagebean",pb);
+//        return "chooseGoods";
+//    }
+//
+//    @RequestMapping(value ="/listgoods2gotopage" )
+//    public String listgoods2gotopage(HttpServletRequest request, Model model,@RequestParam("pagenum") int pagenum,@RequestParam("pagesize") int pagesize){
+//
+//        PageBean pb = new PageBean();
+//
+//        QueryInfo qi = new QueryInfo();
+//        qi.setCurrentpage(pagenum);
+//        qi.setPagesize(pagesize);
+//
+//        List<Goods> rs= goodsListService.findListByQR(qi);
+//        pb.setTotalrecord(goodsListService.countSumGoodsNum());//总记录数目
+//        pb.setList(rs);//符合规定的当前页的货物内容list集合
+//        pb.setCurrentpage(qi.getCurrentpage());//设定当前页
+//        pb.setPagesize(qi.getPagesize());
+//
+//        request.setAttribute("pagebean",pb);
+//        return "chooseGoods";
+//    }
 
 
 

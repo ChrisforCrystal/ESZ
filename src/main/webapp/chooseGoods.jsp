@@ -93,7 +93,7 @@
                             <div class="widget-box">
                                 <div class="widget-header header-color-orange"
                                      style="background: #ffc657;border-color: #fff;">
-                                    <h5 class="bigger lighter" style="color:#333">所属类型编号:${goods.typeNum }</h5>
+                                    <h5 class="bigger lighter" style="color:#333">所属类型:${goods.typeName }</h5>
                                 </div>
 
                                 <div class="widget-body">
@@ -126,35 +126,36 @@
                     </c:forEach>
 
                     <br><br>
-                    <div class="modal-footer no-margin-top">
-                        <ul class="pagination pull-right no-margin">
-                            共有[${requestScope.pagebean.totalrecord}]条记录
-                            <input type="text" id="pagesize" value="${requestScope.pagebean.pagesize}"
-                                   style="width: 30px" maxlength="2"
-                                   onchange="changesize(this.value,${requestScope.pagebean.pagesize})">
-                            每页[${requestScope.pagebean.pagesize}]条,共有[${requestScope.pagebean.totalpage}]页,当前为第[${requestScope.pagebean.currentpage}]页
 
-                            <c:if test="${requestScope.pagebean.currentpage > 1}">
-
-
-                                <li><a href="javascript:void(0)"
-                                       onclick="gotopage(${requestScope.pagebean.previouspage})">上一页</a></li>
-                            </c:if>
-
-                            <c:forEach var="pagenum" items="${requestScope.pagebean.pagebar}" varStatus="status">
-                                <li><a href="javascript:void(0)" onclick="gotopage(${pagenum})">${pagenum}</a></li>
-                            </c:forEach>
-
-                            <c:if test="${requestScope.pagebean.currentpage < requestScope.pagebean.totalpage}">
-                                <li><a href="javascript:void(0)"
-                                       onclick="gotopage (  ${requestScope.pagebean.nextpage} )">下一页</a></li>
-                            </c:if>
-
-
-                        </ul>
-                    </div>
                 </div><!-- /.page-content-area -->
             </div><!-- /.page-content -->
+            <div class="modal-footer no-margin-top">
+                <ul class="pagination pull-right no-margin">
+                    共有[${requestScope.pagebean.totalrecord}]条记录,每页
+                    <input type="text" id="pagesize" value="${requestScope.pagebean.pagesize}"
+                           style="width: 30px" maxlength="2"
+                           onchange="changesize(this.value,${requestScope.pagebean.pagesize})">
+                    条记录,共有[${requestScope.pagebean.totalpage}]页,当前为第[${requestScope.pagebean.currentpage}]页
+
+                    <c:if test="${requestScope.pagebean.currentpage > 1}">
+
+
+                        <li><a href="javascript:void(0)"
+                               onclick="gotopage(${requestScope.pagebean.previouspage})">上一页</a></li>
+                    </c:if>
+
+                    <c:forEach var="pagenum" items="${requestScope.pagebean.pagebar}" varStatus="status">
+                        <li><a href="javascript:void(0)" onclick="gotopage(${pagenum})">${pagenum}</a></li>
+                    </c:forEach>
+
+                    <c:if test="${requestScope.pagebean.currentpage < requestScope.pagebean.totalpage}">
+                        <li><a href="javascript:void(0)"
+                               onclick="gotopage (  ${requestScope.pagebean.nextpage} )">下一页</a></li>
+                    </c:if>
+
+
+                </ul>
+            </div>
         </div><!-- /.main-content -->
 
         <div class="footer">
@@ -179,13 +180,13 @@
                 alert("请输入正确的数字");
                 document.getElementById("pagesize").value = oldvalue;
             } else {
-                window.location.href = './listgoods2PageSize?pagesize=' + pagesize;
+                window.location.href = './listgoods?pagesize=' + pagesize;
             }
         }
 
         function gotopage(pagenum) {
             var pagesize = $('#pagesize').val();
-            window.location.href = './listgoods2gotopage?pagenum=' + pagenum + '&pagesize=' + pagesize;
+            window.location.href = './listgoods?pagenum=' + pagenum + '&pagesize=' + pagesize;
         }
 
         function putInToOrder(goodsid){
@@ -196,7 +197,7 @@
             $.ajax({
                 type: "POST",
                 url: "./putInTheOrder",
-                data:{userid:userId,goodsid:goodsid},
+                data:{userid:userId,goodsid:goodsid,statenum:1},
 
                 dataType: "json",
                 error: function (result) {

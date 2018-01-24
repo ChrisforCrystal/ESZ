@@ -37,30 +37,43 @@
 
     <resultMap id="shopOrderMap" type="chris.ssm.model.ShopOrder">
         <id column="order_id" property="orderId" jdbcType="BIGINT" ></id>
+        <result column="order_num" property="orderNum" jdbcType="BIGINT" ></result>
         <result column="user_id" property="userId" jdbcType="BIGINT" ></result>
         <result column="shopcar_id" property="shopcarId" jdbcType="BIGINT" ></result>
         <result column="goods_id"  property="goodsId" jdbcType="BIGINT"></result>
         <result column="goods_name" property="goodsName" jdbcType="VARCHAR" ></result>
+        <result column="goods_type_id" property="typeid" jdbcType="BIGINT"/>
+        <result column="goods_type_name" property="typeName" jdbcType="VARCHAR"/>
         <result column="goods_num" property="goodsNum" jdbcType="BIGINT" ></result>
         <result column="goods_price" property="goodsPrice" jdbcType="BIGINT" ></result>
         <result column="total_price" property="totalPrice" jdbcType="BIGINT" ></result>
         <result column="modify_time" property="modifyTime" jdbcType="DATE" ></result>
         <result column="create_time" property="createTime" jdbcType="DATE" ></result>
+        <result column="state_num" property="stateNum" jdbcType="BIGINT" ></result>
+        <result column="indent_num" property="indentNum" jdbcType="VARCHAR"></result>
 
 
     </resultMap>
 
 
     <insert id="registerShopOrder" parameterType="chris.ssm.model.ShopOrder">
-        INSERT INTO shop_order (user_id,shopcar_id,goods_id,goods_name,goods_num,goods_price,total_price,modify_time,create_time) VALUES (#{userId},#{shopcarId},#{goodsId},#{goodsName},#{goodsNum},#{goodsPrice},#{totalPrice},#{modifyTime},#{createTime})
+        INSERT INTO shop_order (user_id,order_num,shopcar_id,goods_id,goods_name,goods_type_id,goods_type_name,goods_num,goods_price,total_price,modify_time,create_time,state_num) VALUES (#{userId},#{orderNum},#{shopcarId},#{goodsId},#{goodsName},#{typeid},#{typeName},#{goodsNum},#{goodsPrice},#{totalPrice},#{modifyTime},#{createTime},#{stateNum})
     </insert>
 
-    <select id="selectOrderByUserGoodsId" parameterType="java.lang.Long" resultMap="shopOrderMap" >
-        SELECT * FROM shop_order WHERE user_id=#{userId}  AND goods_id=#{goodsId}
+    <select id="selectOrderByUserGoodsId_GoodsName_TypeId_StateNum"  resultMap="shopOrderMap" >
+        SELECT * FROM shop_order WHERE user_id=#{userId}   AND goods_name LIKE #{goodsName} AND goods_type_id LIKE #{typeid} AND state_num=#{stateNum}
+    </select>
+
+    <select id="selectOrderByUserGoodsId_StateNum" parameterType="java.lang.Long" resultMap="shopOrderMap" >
+        SELECT * FROM shop_order WHERE user_id=#{userId}  AND goods_id=#{goodsId} AND state_num = #{stateNum}
+    </select>
+
+    <select id="selectOrderByOrderId" parameterType="java.lang.Long" resultMap="shopOrderMap">
+         SELECT * FROM shop_order WHERE order_id=#{orderId}
     </select>
 
     <update id="updateShopOrder"  parameterType="chris.ssm.model.ShopOrder">
-        UPDATE  shop_order set user_id=#{userId},shopcar_id=#{shopcarId},goods_id=#{goodsId},goods_name=#{goodsName},goods_num=#{goodsNum},goods_price=#{goodsPrice},total_price=#{totalPrice},modify_time=#{modifyTime} WHERE order_id=#{orderId}
+        UPDATE  shop_order set user_id=#{userId},shopcar_id=#{shopcarId},goods_id=#{goodsId},goods_type_id=#{typeid},goods_type_name=#{typeName},goods_name=#{goodsName},goods_num=#{goodsNum},goods_price=#{goodsPrice},total_price=#{totalPrice},modify_time=#{modifyTime},state_num=#{stateNum},indent_num=#{indentNum} WHERE order_id=#{orderId}
     </update>
 
     <select id="listOrderByUserId" parameterType="java.lang.Long" resultMap = "shopOrderMap">
@@ -70,6 +83,18 @@
     <delete id="deleteOrderById" parameterType="java.lang.Long">
         DELETE  FROM shop_order WHERE order_id =#{orderId}
     </delete>
+
+    <delete id="deleteOrderByIndentNum" >
+         DELETE  FROM shop_order WHERE indent_num =#{indentNum}
+    </delete>
+
+    <select id="selectOrderByUserId_OrderNum_Month_StateNum"  resultMap="shopOrderMap" >
+        SELECT * FROM shop_order WHERE user_id=#{userId}   AND order_num LIKE #{orderNum} AND month(modify_time) LIKE #{month} AND state_num>=#{stateNum} AND state_num &lt;= #{stateNum2} ORDER BY state_num
+    </select>
+
+    <select id="selectOrderByIndentNum" resultMap="shopOrderMap">
+        SELECT * FROM shop_order WHERE inden_num = #{indenNum}
+    </select>
 
 
 </mapper>

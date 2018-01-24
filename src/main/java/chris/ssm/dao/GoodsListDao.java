@@ -1,6 +1,7 @@
 package chris.ssm.dao;
 
 import chris.ssm.model.Goods;
+import chris.ssm.model.GoodsType;
 import chris.ssm.model.QueryInfo;
 import org.apache.ibatis.annotations.Param;
 import org.springframework.stereotype.Repository;
@@ -24,5 +25,8 @@ public interface GoodsListDao {
 
     Goods selectGoodsById(@Param("goodsId") Long goodsId);
 
+    List listType();
+
+   GoodsType selectTypeById(@Param("typeId") Long typeId);
 
 }

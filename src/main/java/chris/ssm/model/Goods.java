@@ -11,7 +11,16 @@ public class Goods extends Basepo {
     private String picUrl;  //图片地址
     private String description;
     private int goodsNum;
-    private int typeNum;
+    private Long typeId;
+    private String typeName;
+
+    public String getTypeName() {
+        return typeName;
+    }
+
+    public void setTypeName(String typeName) {
+        this.typeName = typeName;
+    }
 
     public Long getGoodsId() {
         return goodsId;
@@ -69,11 +78,11 @@ public class Goods extends Basepo {
         this.goodsNum = goodsNum;
     }
 
-    public int getTypeNum() {
-        return typeNum;
+    public Long getTypeId() {
+        return typeId;
     }
 
-    public void setTypeNum(int typeNum) {
-        this.typeNum = typeNum;
+    public void setTypeId(Long typeId) {
+        this.typeId = typeId;
     }
 }

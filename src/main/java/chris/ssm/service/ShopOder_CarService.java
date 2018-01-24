@@ -13,7 +13,7 @@ import java.util.List;
 public interface ShopOder_CarService {
 
 
-    ShopCar selectCarByUserId(Long userId);
+    ShopCar selectCarByUserId(Long userId) ;
 
     void registerShopCar(ShopCar shopCar);
 
@@ -24,11 +24,20 @@ public interface ShopOder_CarService {
 
     void registerShopOrder(ShopOrder shopOrder);
 
-    ShopOrder selectOrderByUserGoodsId(Long userId, Long goodsId);
+    ShopOrder selectOrderByUserGoodsId_StateNum(Long userId, Long goodsId,Long stateNum);
+
+    ShopOrder selectOrderByOrderId( Long orderId);
+
+    List<ShopOrder> selectOrderByUserGoodsId_GoodsName_TypeId_StateNum( Long userId, String goodsName, String typeid,Long stateNum);
 
     void updateShopOrder(ShopOrder shopOrder);
 
     List<ShopOrder> listOrderByUserId(Long userId);
 
-    void deleteOrderById(@Param("orderId") Long orderId);
+    void deleteOrderById( Long orderId);
+
+    List<ShopOrder> selectOrderByUserId_OrderNum_Month_StateNum( Long userId,String orderNum, String month, Long stateNum, Long stateNum2);
+
+    List<ShopOrder> selectOrderByIndentNum(String indenNum );
+
 }

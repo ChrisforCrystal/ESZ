@@ -4,12 +4,12 @@ import chris.ssm.dao.GoodsListDao;
 import chris.ssm.model.Orderlist;
 import chris.ssm.model.Goods;
 import chris.ssm.model.QueryInfo;
+import chris.ssm.model.GoodsType;
 import chris.ssm.service.GoodsListService;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import javax.annotation.Resource;
-import java.sql.ResultSet;
 import java.util.List;
 
 /**
@@ -41,4 +41,14 @@ public class GoodsListServiceImpl implements GoodsListService {
     public Goods selectGoodsById(Long goodsId) {
         return goodsListDao.selectGoodsById(goodsId);
     }
+
+    public List<GoodsType> listType() {
+        return goodsListDao.listType();
+    }
+
+    public GoodsType selectTypeById( Long typeId){
+        return goodsListDao.selectTypeById(typeId);
+    };
+
+
 }

@@ -21,7 +21,7 @@ public class ShopOder_CarServiceImp implements ShopOder_CarService {
     private ShopOder_CarDao orderCardao;
 
     //Car
-    public ShopCar selectCarByUserId(Long userId) {
+    public ShopCar selectCarByUserId(Long userId)  {
         return orderCardao.selectCarByUserId(userId);
     }
 
@@ -40,8 +40,16 @@ public class ShopOder_CarServiceImp implements ShopOder_CarService {
 
     }
 
-    public ShopOrder selectOrderByUserGoodsId(Long userId, Long goodsId) {
-        return orderCardao.selectOrderByUserGoodsId(userId, goodsId);
+    public ShopOrder selectOrderByUserGoodsId_StateNum(Long userId, Long goodsId ,Long stateNum) {
+        return orderCardao.selectOrderByUserGoodsId_StateNum(userId, goodsId,stateNum);
+    }
+
+    public ShopOrder selectOrderByOrderId(Long orderId) {
+        return orderCardao.selectOrderByOrderId(orderId);
+    }
+
+    public List<ShopOrder> selectOrderByUserGoodsId_GoodsName_TypeId_StateNum(Long userId,  String goodsName, String typeid,Long stateNum) {
+        return orderCardao.selectOrderByUserGoodsId_GoodsName_TypeId_StateNum(userId,goodsName,typeid,stateNum);
     }
 
     public void updateShopOrder(ShopOrder shopOrder) {
@@ -54,5 +62,13 @@ public class ShopOder_CarServiceImp implements ShopOder_CarService {
 
     public void deleteOrderById(Long orderId) {
         orderCardao.deleteOrderById(orderId);
+    }
+
+    public List<ShopOrder> selectOrderByUserId_OrderNum_Month_StateNum(Long userId, String orderNum, String month, Long stateNum, Long stateNum2) {
+        return orderCardao.selectOrderByUserId_OrderNum_Month_StateNum(userId,orderNum,month,stateNum,stateNum2);
+    }
+
+    public List<ShopOrder> selectOrderByIndentNum(String indenNum) {
+        return orderCardao.selectOrderByIndentNum(indenNum);
     }
 }
