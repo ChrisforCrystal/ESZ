@@ -1,4 +1,6 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ page isELIgnored="false" %>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -69,11 +71,11 @@
 
                                 <div class="widget-toolbar no-border invoice-info">
                                     <span class="invoice-info-label">订单号:</span>
-                                    <span class="red">#121212</span>
+                                    <span class="red">#${indent.indentNum}</span>
 
                                     <br/>
-                                    <span class="invoice-info-label">订单日期:</span>
-                                    <span class="blue">03/03/2013</span>
+                                    <span class="invoice-info-label">订单创建日期:</span>
+                                    <span class="blue">${indent.createTime}</span>
                                 </div>
 
                                 <div class="widget-toolbar hidden-480">
@@ -97,10 +99,10 @@
                                                 <ul class="list-unstyled spaced">
                                                     <li>
                                                         <i class="icon-caret-right blue"></i>
-                                                        地址：西安市邮电大学
+                                                        地址：${indent.address}
                                                     </li>
 
-                                                    <li>
+                                             <%--       <li>
                                                         <i class="icon-caret-right blue"></i>
                                                         邮编：710121
                                                     </li>
@@ -108,11 +110,18 @@
                                                     <li>
                                                         <i class="icon-caret-right blue"></i>
                                                         省市: 陕西省西安市
-                                                    </li>
+                                                    </li>--%>
 
                                                     <li>
                                                         <i class="icon-caret-right blue"></i>
-                                                        订单状态：已支付
+                                                        订单状态：
+                                                        <c:if test="${indent.state==1}">
+                                                            等待发货
+                                                        </c:if>
+                                                        <c:if test="${indent.state==2}">
+                                                           已经发货
+                                                        </c:if>
+
                                                     </li>
                                                 </ul>
                                             </div>
@@ -129,23 +138,23 @@
                                                 <ul class="list-unstyled  spaced">
                                                     <li>
                                                         <i class="icon-caret-right green"></i>
-                                                        姓名：季伟男
+                                                        昵称：${sessionScope.user.nick}
                                                     </li>
+
+                                                 <%--   <li>
+                                                        <i class="icon-caret-right green"></i>
+                                                        英文名：
+                                                    </li>--%>
 
                                                     <li>
                                                         <i class="icon-caret-right green"></i>
-                                                        英文名：Chris
+                                                        手机号：${sessionScope.user.userPhone}
                                                     </li>
 
-                                                    <li>
-                                                        <i class="icon-caret-right green"></i>
-                                                        手机号：153****2645
-                                                    </li>
-
-                                                    <li>
+                                                   <%-- <li>
                                                         <i class="icon-caret-right green"></i>
                                                         身份号码：610429*****1717
-                                                    </li>
+                                                    </li>--%>
                                                 </ul>
                                             </div>
                                         </div><!-- /span -->
@@ -157,7 +166,7 @@
                                         <table class="table table-striped table-bordered">
                                             <thead>
                                             <tr>
-                                                <th class="center">ID</th>
+                                                <%--<th class="center">ID</th>--%>
                                                 <th>购买产品</th>
                                                 <th class="hidden-xs">产品单价</th>
                                                 <th class="hidden-480">数量</th>
@@ -166,20 +175,21 @@
                                             </thead>
 
                                             <tbody>
+                                            <c:forEach var="order" items="${requestScope.order}" varStatus="status">
                                             <tr>
-                                                <td class="center">1</td>
+                                                <%--<td class="center">1</td>--%>
 
                                                 <td>
-                                                    钢笔
+                                                   ${order.goodsName}
                                                 </td>
                                                 <td class="hidden-xs">
-                                                    20元
+                                                    ${order.goodsPrice}
                                                 </td>
-                                                <td class="hidden-480"> 1</td>
-                                                <td>20元</td>
+                                                <td class="hidden-480"> ${order.goodsNum}</td>
+                                                <td>${order.totalPrice}</td>
                                             </tr>
-
-                                            <tr>
+                                            </c:forEach>
+                                           <%-- <tr>
                                                 <td class="center">2</td>
 
                                                 <td>
@@ -190,7 +200,7 @@
                                                 </td>
                                                 <td class="hidden-480"> 10支</td>
                                                 <td>30元</td>
-                                            </tr>
+                                            </tr>--%>
                                             </tbody>
                                         </table>
                                     </div>
@@ -201,7 +211,7 @@
                                         <div class="col-sm-5 pull-right">
                                             <h4 class="pull-right">
                                                 订单总价 :
-                                                <span class="red">￥50</span>
+                                                <span class="red">${indent.price}</span>
                                             </h4>
                                         </div>
                                     </div>

@@ -2,6 +2,7 @@ package chris.ssm.controller;
 
 import chris.ssm.model.*;
 import chris.ssm.service.*;
+import org.apache.ibatis.annotations.Param;
 import org.apache.log4j.Logger;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -153,6 +154,19 @@ public class IndentController {
         return "redirect: shopCarShow";
 
     }*/
+
+   @RequestMapping("/showIndentDetails")
+   public String showIndenDetails(HttpServletRequest request, Model model){
+
+       String id = request.getParameter("indentId");
+       Long indentid = Long.parseLong(id);
+       Indent indent = indentService.selectIndentById(indentid);
+       List<ShopOrder> order = orderCarService.listOrderByIndentNum(indent.getIndentNum());
+       request.setAttribute("order",order);
+       request.setAttribute("indent",indent);
+
+       return "invoice";
+   }
 
 
     @RequestMapping("/orderList")

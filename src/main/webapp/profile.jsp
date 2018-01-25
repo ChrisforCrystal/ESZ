@@ -1,3 +1,4 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ page isELIgnored="false" %>
 <!DOCTYPE html>
@@ -91,7 +92,7 @@
                                                 <div class="space space-4"></div>
 
 
-                                                <a href="#" class="btn btn-sm btn-block btn-primary">
+                                                <a href="./editProfile.jsp" class="btn btn-sm btn-block btn-primary">
                                                     <i class="fa fa-odnoklassniki" ></i>
                                                     <span class="bigger-110">修改信息</span>
                                                 </a>
@@ -131,7 +132,7 @@
                                                         <div class="profile-info-name"> 性别</div>
 
                                                         <div class="profile-info-value">
-                                                            <span>${sessionScope.user.sex}</span>
+                                                            <span><c:if test="${sessionScope.user.sex==1}">男</c:if>  <c:if test="${sessionScope.user.sex==2}">女</c:if>  </span>
                                                         </div>
                                                     </div>
                                                     <div class="profile-info-row">

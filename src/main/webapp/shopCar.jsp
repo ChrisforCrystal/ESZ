@@ -69,174 +69,172 @@
     </div>
 
 
+    <!-- /section:basics/sidebar -->
+    <div class="main-content">
 
+        <div class="breadcrumbs" id="breadcrumbs">
+            <ul class="breadcrumb">
+                <li>
+                    <i class="ace-icon fa fa-home home-icon"></i>
+                    <a href="index.jsp">购物车列表</a>
+                </li>
+                <li>
+                    <a href="javascript:void(0)">购物车</a>
+                </li>
+            </ul><!-- /.breadcrumb -->
 
-        <!-- /section:basics/sidebar -->
-        <div class="main-content">
-
-            <div class="breadcrumbs" id="breadcrumbs">
-                <ul class="breadcrumb">
-                    <li>
-                        <i class="ace-icon fa fa-home home-icon"></i>
-                        <a href="index.jsp">购物车列表</a>
-                    </li>
-                    <li>
-                        <a href="javascript:void(0)">购物车</a>
-                    </li>
-                </ul><!-- /.breadcrumb -->
-
-                <!-- #section:basics/content.searchbox -->
-                <div class="nav-search" id="nav-search">
-                    <form class="form-search">
+            <!-- #section:basics/content.searchbox -->
+            <div class="nav-search" id="nav-search">
+                <form class="form-search">
 							<span class="input-icon">
 								<input type="text" placeholder="请输入关键字 ..." class="nav-search-input"
                                        id="nav-search-input" autocomplete="off"/>
 								<i class="ace-icon fa fa-search nav-search-icon"></i>
 							</span>
-                    </form>
-                </div><!-- /.nav-search -->
-            </div>
-            <div class="page-content">
+                </form>
+            </div><!-- /.nav-search -->
+        </div>
+        <div class="page-content">
 
-                <!-- /section:settings.box -->
-                <div class="page-content-area">
-                    <div>
-                        <div class="col-xs-12">
+            <!-- /section:settings.box -->
+            <div class="page-content-area">
+                <div>
+                    <div class="col-xs-12">
 
-                            <div class="table-header">
-                                购物车管理
-                            </div>
-                            <form action="./shopCar" method="post">
-                                <table width="100%" class="CSSearchTbl" cellpadding="0" cellspacing="0">
+                        <div class="table-header">
+                            购物车管理
+                        </div>
+                        <form action="./shopCar" method="post">
+                            <table width="100%" class="CSSearchTbl" cellpadding="0" cellspacing="0">
+                                <tr>
+                                    <td class="left">物品名称：</td>
+                                    <td class="right"><input id="searchname" name="searchname" type="text"
+                                                             size="16"/>
+                                    </td>
+
+                                    <td class="left">物品类别：</td>
+                                    <td class="right">
+                                        <select id="searchtype" name="searchtype">
+                                            <option value="0">全部</option>
+                                            <option value="1">文具</option>
+                                            <option value="2">电子</option>
+                                            <%-- <option>生活</option>
+                                             <option>工具</option>
+                                             <option>其他</option>--%>
+                                        </select>
+                                    </td>
+                                    <td class="right" colspan="2">
+
+                                        <input type="hidden" name="statenum" value="1"/>
+                                        <input type="submit" class="btn btn-primary pull-left col-sm-12 tbl-search"
+                                               data-dismiss="modal" value="开始搜索">
+
+
+                                        </input>
+
+
+                                    </td>
+                                </tr>
+
+
+                            </table>
+                        </form>
+                    </div>
+                </div>
+                <div class="col-xs-12">
+                    <br>
+                    <div class="hr hr-18 dotted hr-double"></div>
+                    <br>
+                </div>
+                <div class="row">
+                    <div class="col-xs-12">
+                        <!-- PAGE CONTENT BEGINS -->
+                        <div class="row">
+                            <div class="col-xs-12">
+                                <table id="sample-table-1" class="table table-striped table-bordered table-hover">
+                                    <thead>
                                     <tr>
-                                        <td class="left">物品名称：</td>
-                                        <td class="right"><input id="searchname" name="searchname" type="text"
-                                                                 size="16"/>
+                                        <th class="center">
+                                            <label class="position-relative">
+                                                <input type="checkbox" class="ace"
+                                                       onclick="allchecked (this.checked)"
+                                                       name="zongcheck"/>
+                                                <span class="lbl"></span>
+                                            </label>
+                                        </th>
+                                        <th>物品类型</th>
+                                        <th>物品名称</th>
+                                        <th class="hidden-480">单个金额</th>
+                                        <th class="hidden-480">物品数量</th>
+                                        <th class="hidden-480">物品总价</th>
+                                        <th class="hidden-480">操作</th>
+                                    </tr>
+                                    </thead>
+
+                                    <c:forEach var="order" items="${requestScope.orderList}" varStatus="status">
+
+                                    <tbody>
+                                    <tr>
+                                        <td class="center">
+                                            <label class="position-relative">
+                                                <input type="checkbox" class="ace" name="zicheck"
+                                                       id="${order.goodsId}zicheck" value="${order.orderId}"
+                                                       onclick="zichecked(this.checked,${order.goodsId} )"/>
+                                                <span class="lbl"></span>
+                                            </label>
                                         </td>
 
-                                        <td class="left">物品类别：</td>
-                                        <td class="right">
-                                            <select id="searchtype" name="searchtype">
-                                                <option value="0">全部</option>
-                                                <option value="1">文具</option>
-                                                <option value="2">电子</option>
-                                                    <%-- <option>生活</option>
-                                                     <option>工具</option>
-                                                     <option>其他</option>--%>
-                                            </select>
+                                        <td>
+                                            <a href="#">${order.typeName}</a>
                                         </td>
-                                        <td class="right" colspan="2">
+                                        <td id="${order.goodsName}">${order.goodsName}</td>
+                                        <td>￥${order.goodsPrice}</td>
 
-                                            <input type="hidden" name="statenum" value="1"/>
-                                            <input type="submit" class="btn btn-primary pull-left col-sm-12 tbl-search"
-                                                   data-dismiss="modal" value="开始搜索">
+                                        <td class="hidden-480">
+                                            <button onclick="minus('${order.goodsId}',${order.goodsPrice})"><i
+                                                    class="fa fa-minus" aria-hidden="true"></i>
+                                            </button>
+                                            <input
+                                                    id="${order.goodsId}" value="${order.goodsNum}"
+                                                    onchange="changeGoodsNum(this.id,this.value,${order.goodsNum},${order.goodsPrice})">
 
 
-                                            </input>
+                                            <button onclick="plus(${order.goodsId},${order.goodsPrice})"><i
+                                                    class="fa fa-plus" aria-hidden="true"></i>
+                                            </button>
+                                        </td>
+                                        <td id="${order.goodsId}totalPrice" name="goodsTotalPrice"
+                                            value="${order.totalPrice}">${order.totalPrice}</td>
+                                        <td>
+                                            <div class="hidden-sm hidden-xs btn-group">
 
-
+                                                <button class="btn btn-xs btn-danger"
+                                                        onclick="deleteOrder(${order.orderId})">
+                                                    删除订单
+                                                    <i class="ace-icon fa fa-trash-o bigger-120"></i>
+                                                </button>
+                                            </div>
                                         </td>
                                     </tr>
 
-
+                                    </c:forEach>
+                                    </tbody>
                                 </table>
-                            </form>
+                            </div><!-- /.span -->
+                        </div><!-- /.row -->
+                        <div style="text-align: right">
+                            <h4><strong>总价:</strong></h4>
+                            <h4><strong id="sumtotalprice">0<%--${requestScope.shopCar.totalprice}--%></strong></h4>
+                            <h4><strong>元</strong></h4>
+                            <button class="btn btn-danger " onclick="generateOrderList()">提交订单</button>
                         </div>
-                    </div>
-                    <div class="col-xs-12">
-                        <br>
-                        <div class="hr hr-18 dotted hr-double"></div>
-                        <br>
-                    </div>
-                    <div class="row">
-                        <div class="col-xs-12">
-                            <!-- PAGE CONTENT BEGINS -->
-                            <div class="row">
-                                <div class="col-xs-12">
-                                    <table id="sample-table-1" class="table table-striped table-bordered table-hover">
-                                        <thead>
-                                        <tr>
-                                            <th class="center">
-                                                <label class="position-relative">
-                                                    <input type="checkbox" class="ace"
-                                                           onclick="allchecked (this.checked)"
-                                                           name="zongcheck"/>
-                                                    <span class="lbl"></span>
-                                                </label>
-                                            </th>
-                                            <th>物品类型</th>
-                                            <th>物品名称</th>
-                                            <th class="hidden-480">单个金额</th>
-                                            <th class="hidden-480">物品数量</th>
-                                            <th class="hidden-480">物品总价</th>
-                                            <th class="hidden-480">操作</th>
-                                        </tr>
-                                        </thead>
 
-                                        <c:forEach var="order" items="${requestScope.orderList}" varStatus="status">
-
-                                        <tbody>
-                                        <tr>
-                                            <td class="center">
-                                                <label class="position-relative">
-                                                    <input type="checkbox" class="ace" name="zicheck"
-                                                           id="${order.goodsId}zicheck" value="${order.orderId}"
-                                                           onclick="zichecked(this.checked,${order.goodsId} )"/>
-                                                    <span class="lbl"></span>
-                                                </label>
-                                            </td>
-
-                                            <td>
-                                                <a href="#">${order.typeName}</a>
-                                            </td>
-                                            <td id="${order.goodsName}">${order.goodsName}</td>
-                                            <td>￥${order.goodsPrice}</td>
-
-                                            <td class="hidden-480">
-                                                <button onclick="minus('${order.goodsId}',${order.goodsPrice})"><i
-                                                        class="fa fa-minus" aria-hidden="true"></i>
-                                                </button>
-                                                <input
-                                                        id="${order.goodsId}" value="${order.goodsNum}"
-                                                        onchange="changeGoodsNum(this.id,this.value,${order.goodsNum},${order.goodsPrice})">
-
-
-                                                <button onclick="plus(${order.goodsId},${order.goodsPrice})"><i
-                                                        class="fa fa-plus" aria-hidden="true"></i>
-                                                </button>
-                                            </td>
-                                            <td id="${order.goodsId}totalPrice" name="goodsTotalPrice"
-                                                value="${order.totalPrice}">${order.totalPrice}</td>
-                                            <td>
-                                                <div class="hidden-sm hidden-xs btn-group">
-
-                                                    <button class="btn btn-xs btn-danger"
-                                                            onclick="deleteOrder(${order.orderId})">
-                                                        删除订单
-                                                        <i class="ace-icon fa fa-trash-o bigger-120"></i>
-                                                    </button>
-                                                </div>
-                                            </td>
-                                        </tr>
-
-                                        </c:forEach>
-                                        </tbody>
-                                    </table>
-                                </div><!-- /.span -->
-                            </div><!-- /.row -->
-                            <div style="text-align: right">
-                                <h4><strong>总价:</strong></h4>
-                                <h4><strong id="sumtotalprice">0<%--${requestScope.shopCar.totalprice}--%></strong></h4>
-                                <h4><strong>元</strong></h4>
-                                <button class="btn btn-danger " onclick="generateOrderList()">提交订单</button>
-                            </div>
-
-                        </div><!-- /.col -->
-                    </div><!-- /.row -->
-                </div><!-- /.page-content-area -->
-            </div><!-- /.page-content -->
-        </div>
-        <!-- /.main-content -->
+                    </div><!-- /.col -->
+                </div><!-- /.row -->
+            </div><!-- /.page-content-area -->
+        </div><!-- /.page-content -->
+    </div>
+    <!-- /.main-content -->
 
     <div class="footer">
         <jsp:include page="footer.jsp"></jsp:include>
@@ -293,10 +291,6 @@
                     $("#" + id).val(parseInt($("#" + id).val()) + 1);
 
                     $("#" + id + "totalPrice").text(parseFloat($("#" + id + "totalPrice").text()) + price);
-
-                    //document.getElementById(-id).innerText = parseFloat(document.getElementById(-id).innerText) + price;
-                    // $("#sumtotalprice").text(parseFloat($("#sumtotalprice").text()) + price);
-                    //document.getElementById("sumtotalprice").innerText = parseFloat(document.getElementById("sumtotalprice").innerText) + price;
                 } else {
                     alert("抱歉,该货物可购买数量已到达上限.")
                 }
@@ -318,11 +312,6 @@
                 if (result.code == 1000) {
                     $("#" + id).val(parseInt($("#" + id).val()) - 1);
                     $("#" + id + "totalPrice").text(parseFloat($("#" + id + "totalPrice").text()) - price);
-                    //$("#sumtotalprice").text(parseFloat($("#sumtotalprice").text()) - price);
-                    // document.getElementById(id).innerText = parseInt(document.getElementById(id).innerText) - 1;
-                    //document.getElementById(-id).innerText = parseFloat(document.getElementById(-id).innerText) - price;
-                    //document.getElementById("sumtotalprice").innerText = parseFloat(document.getElementById("sumtotalprice").innerText) - price;
-
                 } else {
                     alert("已经到达最小值,如果不需要该物品请直接删除订单");
                 }
@@ -407,11 +396,11 @@
                         order.each(function () {
                             chooseorderid.push($(this).val());
                         });
-                      var totalPrice =   $("#sumtotalprice").text();
+                        var totalPrice = $("#sumtotalprice").text();
                         $.ajax({
                             type: "POST",
                             url: "./putChooseOrder",
-                            data: {chooseorderid: chooseorderid,totalprice:totalPrice},
+                            data: {chooseorderid: chooseorderid, totalprice: totalPrice},
                             dataType: "json",
                             error: function (result) {
                                 alert("错了");

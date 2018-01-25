@@ -202,14 +202,14 @@
 
                 <b class="arrow"></b>
             </li>
-            <li class="" id="orderList">
+            <%--<li class="" id="orderList">
                 <a href="invoice.jsp">
                     <i class="menu-icon fa fa-caret-right"></i>
                     订单详情
                 </a>
 
                 <b class="arrow"></b>
-            </li>
+            </li>--%>
             <%--<li class="">--%>
                 <%--<a href="form-elements.html">--%>
                     <%--<i class="menu-icon fa fa-caret-right"></i>--%>

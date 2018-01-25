@@ -38,6 +38,6 @@ public interface ShopOder_CarService {
 
     List<ShopOrder> selectOrderByUserId_OrderNum_Month_StateNum( Long userId,String orderNum, String month, Long stateNum, Long stateNum2);
 
-    List<ShopOrder> selectOrderByIndentNum(String indenNum );
+    List<ShopOrder> listOrderByIndentNum(String indentNum );
 
 }

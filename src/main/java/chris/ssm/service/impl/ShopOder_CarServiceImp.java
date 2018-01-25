@@ -68,7 +68,7 @@ public class ShopOder_CarServiceImp implements ShopOder_CarService {
         return orderCardao.selectOrderByUserId_OrderNum_Month_StateNum(userId,orderNum,month,stateNum,stateNum2);
     }
 
-    public List<ShopOrder> selectOrderByIndentNum(String indenNum) {
-        return orderCardao.selectOrderByIndentNum(indenNum);
+    public List<ShopOrder> listOrderByIndentNum(String indentNum) {
+        return orderCardao.listOrderByIndentNum(indentNum);
     }
 }

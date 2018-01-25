@@ -37,7 +37,7 @@ public interface ShopOder_CarDao {
 
     List<ShopOrder> selectOrderByUserId_OrderNum_Month_StateNum(@Param("userId") Long userId,@Param("orderNum") String orderNum,@Param("month") String month,@Param("stateNum") Long stateNum,@Param("stateNum2") Long stateNum2);
 
-    List<ShopOrder> selectOrderByIndentNum(@Param("indenNum") String indenNum );
+    List<ShopOrder> listOrderByIndentNum(@Param("indentNum") String indentNum );
 
 
 

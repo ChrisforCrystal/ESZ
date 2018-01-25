@@ -221,7 +221,7 @@ public class UserController {
     @RequestMapping("/updateUser")
     @ResponseBody
     public Result updateUser(HttpServletRequest request, Model model, @RequestParam("update_address") String address ,
-                             @RequestParam("updata_age") String  age, @RequestParam("comment") String comment,@RequestParam("email") String email){
+                             @RequestParam("updata_age") String  age, @RequestParam("comment") String comment,@RequestParam("email") String email,@RequestParam("gender") String gender){
         System.out.println(22222);
         Result result =new Result();
         User user = userService.selectUserByUserEmail(email);
@@ -229,6 +229,7 @@ public class UserController {
         user.setAddress(address);
         user.setAge(age);
         user.setIntroduceSelf(comment);
+        user.setSex(gender);
 
         userService.updateUser(user);
         request.getSession().setAttribute("user",user);

@@ -5,7 +5,7 @@ package chris.ssm.model;
  */
 public class ShopOrder extends Basepo {
     private int orderId;
-    private Long orderNum;//订单编号
+    private Long orderNum;//订单编号,无用
 
     private Long userId; //用户id
     private Long shopcarId;  //购物车id

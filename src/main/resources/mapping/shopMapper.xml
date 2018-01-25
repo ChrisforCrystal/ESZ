@@ -92,8 +92,8 @@
         SELECT * FROM shop_order WHERE user_id=#{userId}   AND order_num LIKE #{orderNum} AND month(modify_time) LIKE #{month} AND state_num>=#{stateNum} AND state_num &lt;= #{stateNum2} ORDER BY state_num
     </select>
 
-    <select id="selectOrderByIndentNum" resultMap="shopOrderMap">
-        SELECT * FROM shop_order WHERE inden_num = #{indenNum}
+    <select id="listOrderByIndentNum" resultMap="shopOrderMap">
+        SELECT * FROM shop_order WHERE indent_num = #{indentNum}
     </select>
 
 

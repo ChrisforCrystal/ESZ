@@ -171,7 +171,7 @@
 
 
                                         <td>
-                                            <a href="#">${indent.indentNum}</a>
+                                            <a href="#" >${indent.indentNum}</a>
                                         </td>
                                         <td>${indent.name}</td>
 
@@ -183,10 +183,14 @@
                                         <td>
                                             <div class="hidden-sm hidden-xs btn-group">
 
-                                                <button class="btn btn-xs btn-danger">
-                                                    <i class="ace-icon  bigger-120">等待发货</i>
-                                                </button>
+                                                <form method="post" action="./showIndentDetails">
+                                                    <input type="hidden" name ="indentId" value="${indent.indentId}">
+                                                    <input type="submit"  class="btn btn-xs btn-danger ace-icon  bigger-120" value="显示详情">
+                                                    <%--<button class="btn btn-xs btn-danger">
+                                                        <i class="ace-icon  bigger-120">显示详情</i>
+                                                    </button>--%>
 
+                                                </form>
 
                                                 <button class="btn btn-xs btn-success">
                                                     <i class="ace-icon fa fa-check bigger-120"></i>
@@ -339,6 +343,7 @@
 <!--[if IE]>
 <script type="text/javascript">
     window.jQuery || document.write("<script src='assets/js/jquery1x.min.js'>" + "<" + "/script>");
+
 </script>
 <![endif]-->
 <script type="text/javascript">
@@ -353,7 +358,12 @@
 <script src="assets/js/ace-elements.min.js"></script>
 <script src="assets/js/ace.min.js"></script>
 
-<script type="text/javascript"></script>
+<script type="text/javascript">
+
+
+
+
+</script>
 
 
 </body>
