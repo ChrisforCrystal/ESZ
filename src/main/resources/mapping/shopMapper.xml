@@ -3,20 +3,17 @@
 <mapper namespace="chris.ssm.dao.ShopOder_CarDao">
 
 
-
-
-
     <resultMap id="shopCarMap" type="chris.ssm.model.ShopCar">
-        <id column="shopcar_id" property="shopcarId" jdbcType="BIGINT" ></id>
-        <result column="user_id" property="userId" jdbcType="BIGINT" ></result>
-        <result column="total_price" property="totalprice" jdbcType="BIGINT" ></result>
-        <result column="user_nick" property="userNick" jdbcType="VARCHAR" ></result>
-        <result column="modify_time" property="modifyTime" jdbcType="DATE" ></result>
-        <result column="create_time" property="createTime" jdbcType="DATE" ></result>
+        <id column="shopcar_id" property="shopcarId" jdbcType="BIGINT"></id>
+        <result column="user_id" property="userId" jdbcType="BIGINT"></result>
+        <result column="total_price" property="totalprice" jdbcType="BIGINT"></result>
+        <result column="user_nick" property="userNick" jdbcType="VARCHAR"></result>
+        <result column="modify_time" property="modifyTime" jdbcType="DATE"></result>
+        <result column="create_time" property="createTime" jdbcType="DATE"></result>
 
     </resultMap>
 
-    <insert id="registerShopCar" parameterType="chris.ssm.model.ShopCar" >
+    <insert id="registerShopCar" parameterType="chris.ssm.model.ShopCar">
         insert into shop_car (user_id,total_price,user_nick,modify_time,create_time ) values(#{userId},#{totalprice},#{userNick},#{modifyTime},#{createTime})
     </insert>
 
@@ -25,31 +22,26 @@
         WHERE user_id = #{userId}
     </select>
 
-    <update id = "updateShopCar" parameterType="chris.ssm.model.ShopCar">
+    <update id="updateShopCar" parameterType="chris.ssm.model.ShopCar">
         UPDATE  shop_car SET   total_price=#{totalprice} , modify_time=#{modifyTime} WHERE shopcar_id = #{shopcarId}
     </update>
 
 
-
-
-
-
-
     <resultMap id="shopOrderMap" type="chris.ssm.model.ShopOrder">
-        <id column="order_id" property="orderId" jdbcType="BIGINT" ></id>
-        <result column="order_num" property="orderNum" jdbcType="BIGINT" ></result>
-        <result column="user_id" property="userId" jdbcType="BIGINT" ></result>
-        <result column="shopcar_id" property="shopcarId" jdbcType="BIGINT" ></result>
-        <result column="goods_id"  property="goodsId" jdbcType="BIGINT"></result>
-        <result column="goods_name" property="goodsName" jdbcType="VARCHAR" ></result>
+        <id column="order_id" property="orderId" jdbcType="BIGINT"></id>
+        <result column="order_num" property="orderNum" jdbcType="BIGINT"></result>
+        <result column="user_id" property="userId" jdbcType="BIGINT"></result>
+        <result column="shopcar_id" property="shopcarId" jdbcType="BIGINT"></result>
+        <result column="goods_id" property="goodsId" jdbcType="BIGINT"></result>
+        <result column="goods_name" property="goodsName" jdbcType="VARCHAR"></result>
         <result column="goods_type_id" property="typeid" jdbcType="BIGINT"/>
         <result column="goods_type_name" property="typeName" jdbcType="VARCHAR"/>
-        <result column="goods_num" property="goodsNum" jdbcType="BIGINT" ></result>
-        <result column="goods_price" property="goodsPrice" jdbcType="BIGINT" ></result>
-        <result column="total_price" property="totalPrice" jdbcType="BIGINT" ></result>
-        <result column="modify_time" property="modifyTime" jdbcType="DATE" ></result>
-        <result column="create_time" property="createTime" jdbcType="DATE" ></result>
-        <result column="state_num" property="stateNum" jdbcType="BIGINT" ></result>
+        <result column="goods_num" property="goodsNum" jdbcType="BIGINT"></result>
+        <result column="goods_price" property="goodsPrice" jdbcType="BIGINT"></result>
+        <result column="total_price" property="totalPrice" jdbcType="BIGINT"></result>
+        <result column="modify_time" property="modifyTime" jdbcType="DATE"></result>
+        <result column="create_time" property="createTime" jdbcType="DATE"></result>
+        <result column="state_num" property="stateNum" jdbcType="BIGINT"></result>
         <result column="indent_num" property="indentNum" jdbcType="VARCHAR"></result>
 
 
@@ -60,11 +52,15 @@
         INSERT INTO shop_order (user_id,order_num,shopcar_id,goods_id,goods_name,goods_type_id,goods_type_name,goods_num,goods_price,total_price,modify_time,create_time,state_num) VALUES (#{userId},#{orderNum},#{shopcarId},#{goodsId},#{goodsName},#{typeid},#{typeName},#{goodsNum},#{goodsPrice},#{totalPrice},#{modifyTime},#{createTime},#{stateNum})
     </insert>
 
-    <select id="selectOrderByUserGoodsId_GoodsName_TypeId_StateNum"  resultMap="shopOrderMap" >
-        SELECT * FROM shop_order WHERE user_id=#{userId}   AND goods_name LIKE #{goodsName} AND goods_type_id LIKE #{typeid} AND state_num=#{stateNum}
+    <select id="selectOrderByUserGoodsId_GoodsName_TypeId_StateNum" resultMap="shopOrderMap">
+        SELECT * FROM shop_order WHERE user_id=#{userId}
+        <if test="goodsName != null and  goodsName != ''">AND goods_name LIKE #{goodsName}</if>
+        <if test="typeid != null and  typeid != ''">AND goods_type_id = #{typeid}</if>
+        <if test="stateNum == null or stateNum =='' ">AND  state_num = 1</if>
+        <if test="stateNum != null and stateNum !='' "> AND state_num=#{stateNum}</if>
     </select>
 
-    <select id="selectOrderByUserGoodsId_StateNum" parameterType="java.lang.Long" resultMap="shopOrderMap" >
+    <select id="selectOrderByUserGoodsId_StateNum" parameterType="java.lang.Long" resultMap="shopOrderMap">
         SELECT * FROM shop_order WHERE user_id=#{userId}  AND goods_id=#{goodsId} AND state_num = #{stateNum}
     </select>
 
@@ -72,11 +68,11 @@
          SELECT * FROM shop_order WHERE order_id=#{orderId}
     </select>
 
-    <update id="updateShopOrder"  parameterType="chris.ssm.model.ShopOrder">
+    <update id="updateShopOrder" parameterType="chris.ssm.model.ShopOrder">
         UPDATE  shop_order set user_id=#{userId},shopcar_id=#{shopcarId},goods_id=#{goodsId},goods_type_id=#{typeid},goods_type_name=#{typeName},goods_name=#{goodsName},goods_num=#{goodsNum},goods_price=#{goodsPrice},total_price=#{totalPrice},modify_time=#{modifyTime},state_num=#{stateNum},indent_num=#{indentNum} WHERE order_id=#{orderId}
     </update>
 
-    <select id="listOrderByUserId" parameterType="java.lang.Long" resultMap = "shopOrderMap">
+    <select id="listOrderByUserId" parameterType="java.lang.Long" resultMap="shopOrderMap">
         SELECT * FROM shop_order WHERE user_id =#{userId}
     </select>
 
@@ -84,12 +80,15 @@
         DELETE  FROM shop_order WHERE order_id =#{orderId}
     </delete>
 
-    <delete id="deleteOrderByIndentNum" >
+    <delete id="deleteOrderByIndentNum">
          DELETE  FROM shop_order WHERE indent_num =#{indentNum}
     </delete>
 
-    <select id="selectOrderByUserId_OrderNum_Month_StateNum"  resultMap="shopOrderMap" >
-        SELECT * FROM shop_order WHERE user_id=#{userId}   AND order_num LIKE #{orderNum} AND month(modify_time) LIKE #{month} AND state_num>=#{stateNum} AND state_num &lt;= #{stateNum2} ORDER BY state_num
+    <select id="selectOrderByUserId_OrderNum_Month_StateNum" resultMap="shopOrderMap">
+        SELECT * FROM shop_order WHERE user_id=#{userId}
+        <if test="orderNum != null and orderNum !='' ">AND order_num = #{orderNum}</if>
+        <if test="month != null and month !='' ">AND month(modify_time) LIKE #{month}</if>
+        AND state_num>=#{stateNum} AND state_num &lt;= #{stateNum2} ORDER BY state_num
     </select>
 
     <select id="listOrderByIndentNum" resultMap="shopOrderMap">

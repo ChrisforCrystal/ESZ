@@ -21,8 +21,11 @@
         INSERT INTO indent (user_id,indent_num,price,name,address,state,modify_time,create_time) VALUES (#{userId},#{indentNum},#{price},#{name},#{address},#{state},#{modifyTime},#{createTime})
     </insert>
 
+
     <select id="selectIndentByUserId_IndentNum_Month" resultMap="IndentBaseMap">
-       SELECT * FROM indent WHERE user_id = #{userId} AND indent_num LIKE #{indentNum} AND month(modify_time) LIKE #{month}
+       SELECT * FROM indent WHERE user_id = #{userId}
+        <if test="indentNum != null and indentNum != '' ">AND indent_num LIKE #{indentNum}</if>
+        <if test="month != null and month != '' ">AND month(modify_time) = #{month}</if>
     </select>
 
     <select id="selectIndentById" parameterType="java.lang.Long" resultMap="IndentBaseMap">

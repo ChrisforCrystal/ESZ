@@ -115,10 +115,10 @@
                                     <td class="left">物品类别：</td>
                                     <td class="right">
                                         <select id="searchtype" name="searchtype">
-                                            <option value="0">全部</option>
+                                            <option value="">全部</option>
                                             <option value="1">文具</option>
                                             <option value="2">电子</option>
-                                            <%-- <option>生活</option>
+                                            <option value="3">医护</option><%--
                                              <option>工具</option>
                                              <option>其他</option>--%>
                                         </select>

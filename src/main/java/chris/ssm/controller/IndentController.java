@@ -174,26 +174,13 @@ public class IndentController {
     public String listIndent(HttpServletRequest request, Model model) {
 
 
-        String indenNum = request.getParameter("indennum");
+        String indentNum = request.getParameter("indennum");
         String month = request.getParameter("month");
 //        String state = request.getParameter("statenum");
-//
-//
-//        if (state == null) {
-//            state = "2";
-//        }
-        //Long stateNum = Long.parseLong(state);
-       // Long stateNum2 = stateNum+1;
-        if (month == null || month.equals("0")) {
-            month = "%";
-        }
-        if (indenNum == null) {
-            indenNum = "%%%%";
-        } else {
-            indenNum = "%%" + indenNum + "%%";
-        }
+
+
         User user = (User) request.getSession().getAttribute("user");
-        List<Indent> indent = indentService.selectIndentByUserId_IndentNum_Month(user.getId(),indenNum,month);
+        List<Indent> indent = indentService.selectIndentByUserId_IndentNum_Month(user.getId(),indentNum,month);
        // List<ShopOrder> orderList = orderCarService.selectOrderByUserId_OrderNum_Month_StateNum(user.getId(), indenNum, month, stateNum ,stateNum2);
         //request.setAttribute("orderList", orderList);
         request.setAttribute("indent",indent);

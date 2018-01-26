@@ -115,7 +115,7 @@
                                 <td class="left">按月查询</td>
                                 <td class="right">
                                     <select name="month">
-                                        <option value="0">全部</option>
+                                        <option value="">全部</option>
                                         <option>1</option>
                                         <option>2</option>
                                         <option>3</option>

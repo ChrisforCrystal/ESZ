@@ -95,19 +95,25 @@ public class ShopOder_CarController {
         String searchname = request.getParameter("searchname");
         String searchtype = request.getParameter("searchtype");
         String state =  request.getParameter("statenum");
+        Long stateNum;
+        if (state == null || state.equals("")){
+                 stateNum = null;
+        }else{
+             stateNum =  Long.parseLong(state);
+        }
 
-        if (state == null){
-            state="1";
-        }
-        Long stateNum =  Long.parseLong(state);
-        if (searchtype == null || searchtype.equals("0")) {
-            searchtype = "%";
-        }
-        if (searchname == null) {
-            searchname = "%%%%";
-        } else {
-            searchname = "%%" + searchname + "%%";
-        }
+//        if (state == null){
+//            state="1";
+//        }
+//        Long stateNum =  Long.parseLong(state);
+//        if (searchtype == null || searchtype.equals("0")) {
+//            searchtype = "%";
+//        }
+//        if (searchname == null) {
+//            searchname = "%%%%";
+//        } else {
+//            searchname = "%%" + searchname + "%%";
+//        }
 
         double carTotalPrice = 0;
         User user = (User) request.getSession().getAttribute("user");

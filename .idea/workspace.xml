@@ -7,20 +7,16 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1907af34-dbfd-49a3-9d56-ef3287688c92" name="Default" comment="2018-1-25&#10;更改了数据库.&#10;订单详细信息显示制作完毕&#10;&#10;还需要做的:&#10;1.订单详情没有制作.(以完成)&#10;2.搜索中sql使用的like.可能导致搜索1月份的时候10,11,12月份也会出现的问题(还未看,后期看mybatis一些案例后解决)&#10;3.性别等方面没有具体制作.&#10;4.判定登录条件&#10;5.订单和购物车的分页没有制作.&#10;6.购物车目前暂时无用">
+    <list default="true" id="1907af34-dbfd-49a3-9d56-ef3287688c92" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/ESZ/WEB-INF/classes/chris/ssm/controller/UserController.class" afterPath="$PROJECT_DIR$/target/ESZ/WEB-INF/classes/chris/ssm/controller/UserController.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/chris/ssm/controller/UserController.class" afterPath="$PROJECT_DIR$/target/classes/chris/ssm/controller/UserController.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/chris/ssm/controller/IndentController.java" afterPath="$PROJECT_DIR$/src/main/java/chris/ssm/controller/IndentController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/chris/ssm/controller/UserController.java" afterPath="$PROJECT_DIR$/src/main/java/chris/ssm/controller/UserController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/chris/ssm/dao/ShopOder_CarDao.java" afterPath="$PROJECT_DIR$/src/main/java/chris/ssm/dao/ShopOder_CarDao.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/chris/ssm/model/ShopOrder.java" afterPath="$PROJECT_DIR$/src/main/java/chris/ssm/model/ShopOrder.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/chris/ssm/service/ShopOder_CarService.java" afterPath="$PROJECT_DIR$/src/main/java/chris/ssm/service/ShopOder_CarService.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/chris/ssm/service/impl/ShopOder_CarServiceImp.java" afterPath="$PROJECT_DIR$/src/main/java/chris/ssm/service/impl/ShopOder_CarServiceImp.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/chris/ssm/controller/ShopOder_CarController.java" afterPath="$PROJECT_DIR$/src/main/java/chris/ssm/controller/ShopOder_CarController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/mapping/indentMapper.xml" afterPath="$PROJECT_DIR$/src/main/resources/mapping/indentMapper.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/mapping/shopMapper.xml" afterPath="$PROJECT_DIR$/src/main/resources/mapping/shopMapper.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/invoice.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/invoice.jsp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/orderList.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/orderList.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/profile.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/profile.jsp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/shopCar.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/shopCar.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/sidebar.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/sidebar.jsp" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -36,8 +32,30 @@
       <file leaf-file-name="ShopOder_CarController.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/chris/ssm/controller/ShopOder_CarController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="871">
-              <caret line="158" column="37" lean-forward="false" selection-start-line="158" selection-start-column="22" selection-end-line="158" selection-end-column="37" />
+            <state relative-caret-position="215">
+              <caret line="101" column="12" lean-forward="false" selection-start-line="101" selection-start-column="12" selection-end-line="101" selection-end-column="12" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="shopCar.jsp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/shopCar.jsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="414">
+              <caret line="117" column="59" lean-forward="false" selection-start-line="117" selection-start-column="59" selection-end-line="117" selection-end-column="59" />
+              <folding>
+                <marker date="1516981839705" expanded="true" signature="10613:10723" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ShopOder_CarService.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/chris/ssm/service/ShopOder_CarService.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="300">
+              <caret line="30" column="117" lean-forward="false" selection-start-line="30" selection-start-column="117" selection-end-line="30" selection-end-column="117" />
               <folding />
             </state>
           </provider>
@@ -46,40 +64,8 @@
       <file leaf-file-name="IndentController.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/chris/ssm/controller/IndentController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="377">
-              <caret line="167" column="0" lean-forward="false" selection-start-line="167" selection-start-column="0" selection-end-line="167" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Indent.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/chris/ssm/model/Indent.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="323">
-              <caret line="21" column="31" lean-forward="false" selection-start-line="21" selection-start-column="31" selection-end-line="21" selection-end-column="31" />
-              <folding>
-                <element signature="e#484#485#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="sidebar.jsp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/sidebar.jsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-332">
-              <caret line="211" column="21" lean-forward="true" selection-start-line="211" selection-start-column="21" selection-end-line="211" selection-end-column="21" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="UserController.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/chris/ssm/controller/UserController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="421">
-              <caret line="231" column="26" lean-forward="false" selection-start-line="231" selection-start-column="26" selection-end-line="231" selection-end-column="26" />
+            <state relative-caret-position="352">
+              <caret line="183" column="54" lean-forward="false" selection-start-line="183" selection-start-column="54" selection-end-line="183" selection-end-column="54" />
               <folding />
             </state>
           </provider>
@@ -88,7 +74,7 @@
       <file leaf-file-name="invoice.jsp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/invoice.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="525">
+            <state relative-caret-position="-133">
               <caret line="131" column="22" lean-forward="false" selection-start-line="131" selection-start-column="22" selection-end-line="131" selection-end-column="22" />
               <folding>
                 <marker date="1516872018727" expanded="true" signature="11632:11742" ph="..." />
@@ -97,35 +83,33 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="profile.jsp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/profile.jsp">
+      <file leaf-file-name="orderList.jsp" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/orderList.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="209">
-              <caret line="134" column="155" lean-forward="false" selection-start-line="134" selection-start-column="155" selection-end-line="134" selection-end-column="155" />
+            <state relative-caret-position="150">
+              <caret line="117" column="55" lean-forward="false" selection-start-line="117" selection-start-column="55" selection-end-line="117" selection-end-column="55" />
               <folding>
-                <marker date="1516872678533" expanded="true" signature="31285:31395" ph="..." />
+                <marker date="1516981886303" expanded="true" signature="13996:14107" ph="..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="editProfile.jsp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/editProfile.jsp">
+      <file leaf-file-name="OrderHelpController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/chris/ssm/controller/OrderHelpController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="70">
-              <caret line="185" column="61" lean-forward="true" selection-start-line="185" selection-start-column="61" selection-end-line="185" selection-end-column="61" />
-              <folding>
-                <marker date="1514519182544" expanded="true" signature="13499:13609" ph="..." />
-              </folding>
+            <state relative-caret-position="-9">
+              <caret line="20" column="13" lean-forward="false" selection-start-line="20" selection-start-column="13" selection-end-line="20" selection-end-column="13" />
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="UserMapper.xml" pinned="false" current-in-tab="true">
+      <file leaf-file-name="UserMapper.xml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/resources/mapping/UserMapper.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="513">
-              <caret line="27" column="54" lean-forward="true" selection-start-line="27" selection-start-column="54" selection-end-line="27" selection-end-column="54" />
+            <state relative-caret-position="285">
+              <caret line="27" column="54" lean-forward="false" selection-start-line="27" selection-start-column="54" selection-end-line="27" selection-end-column="54" />
               <folding>
                 <marker date="1515419720641" expanded="true" signature="1406:1598" ph="insert into t_user... " />
                 <marker date="1515419720641" expanded="true" signature="1687:1733" ph="insert into t_user... " />
@@ -143,12 +127,46 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="User.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/chris/ssm/model/User.java">
+      <file leaf-file-name="indentMapper.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/mapping/indentMapper.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="57">
-              <caret line="12" column="28" lean-forward="false" selection-start-line="12" selection-start-column="19" selection-end-line="12" selection-end-column="28" />
-              <folding />
+            <state relative-caret-position="275">
+              <caret line="23" column="0" lean-forward="false" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
+              <folding>
+                <marker date="1516981045719" expanded="true" signature="1027:1212" ph="INSERT INTO shop_order... " />
+                <marker date="1516981045719" expanded="true" signature="1317:1543" ph="SELECT * FRO... indent" />
+                <marker date="1516981045719" expanded="true" signature="1317:1548" ph="SELECT * FRO... indent" />
+                <marker date="1516981045719" expanded="true" signature="1664:1714" ph="SELECT * FRO... indent" />
+                <marker date="1516981045719" expanded="true" signature="1809:2009" ph="UPDATE shop_... " />
+                <marker date="1516981045719" expanded="true" signature="2100:2150" ph="DELETE FROM " />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="shopMapper.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/mapping/shopMapper.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="442">
+              <caret line="59" column="86" lean-forward="false" selection-start-line="59" selection-start-column="86" selection-end-line="59" selection-end-column="86" />
+              <folding>
+                <marker date="1516981194446" expanded="true" signature="862:1011" ph="insert into shopcar... " />
+                <marker date="1516981194446" expanded="true" signature="1125:1181" ph="SELECT * FRO... shopcar" />
+                <marker date="1516981194446" expanded="true" signature="1277:1385" ph="UPDATE shop_... " />
+                <marker date="1516981194446" expanded="true" signature="2818:3159" ph="INSERT INTO shoporder... " />
+                <marker date="1516981194446" expanded="true" signature="3277:3503" ph="SELECT * FRO... shop_order" />
+                <marker date="1516981194446" expanded="true" signature="3277:3668" ph="SELECT * FRO... shop_order" />
+                <marker date="1516981194446" expanded="true" signature="3805:3878" ph="SELECT * FRO... shoporder" />
+                <marker date="1516981194446" expanded="true" signature="3805:3906" ph="SELECT * FRO... shop_order" />
+                <marker date="1516981194446" expanded="true" signature="4026:4076" ph="SELECT * FRO... shop_order" />
+                <marker date="1516981194446" expanded="true" signature="4176:4508" ph="UPDATE shop_... " />
+                <marker date="1516981194446" expanded="true" signature="4624:4673" ph="SELECT * FRO... shop_order" />
+                <marker date="1516981194446" expanded="true" signature="4762:4812" ph="DELETE FROM " />
+                <marker date="1516981194446" expanded="true" signature="4878:4932" ph="DELETE FROM " />
+                <marker date="1516981194446" expanded="true" signature="5043:5305" ph="SELECT * FRO... shop_order" />
+                <marker date="1516981194446" expanded="true" signature="5043:5357" ph="SELECT * FRO... shop_order" />
+                <marker date="1516981194446" expanded="true" signature="5445:5501" ph="SELECT * FRO... shop_order" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -168,8 +186,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>zicheck</find>
-      <find>putintheo</find>
       <find>statanum</find>
       <find>cutGoodsInOrder</find>
       <find>changeGoodsNumInOrder</find>
@@ -198,6 +214,8 @@
       <find>订单号</find>
       <find>changePassword</find>
       <find>updata_age</find>
+      <find>selectOrderByUserId_OrderNum_Month_StateNum</find>
+      <find>%%</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -254,20 +272,20 @@
         <option value="$PROJECT_DIR$/src/main/java/chris/ssm/model/Indent.java" />
         <option value="$PROJECT_DIR$/src/main/java/chris/ssm/service/IndentService.java" />
         <option value="$PROJECT_DIR$/src/main/java/chris/ssm/service/impl/IndentServiceImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/chris/ssm/controller/ShopOder_CarController.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/mapping/indentMapper.xml" />
         <option value="$PROJECT_DIR$/src/main/java/chris/ssm/dao/ShopOder_CarDao.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/mapping/shopMapper.xml" />
         <option value="$PROJECT_DIR$/src/main/java/chris/ssm/service/impl/ShopOder_CarServiceImp.java" />
-        <option value="$PROJECT_DIR$/src/main/java/chris/ssm/service/ShopOder_CarService.java" />
         <option value="$PROJECT_DIR$/src/main/java/chris/ssm/model/ShopOrder.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/shopCar.jsp" />
-        <option value="$PROJECT_DIR$/src/main/webapp/orderList.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/sidebar.jsp" />
-        <option value="$PROJECT_DIR$/src/main/java/chris/ssm/controller/IndentController.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/invoice.jsp" />
         <option value="$PROJECT_DIR$/src/main/java/chris/ssm/controller/UserController.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/profile.jsp" />
+        <option value="$PROJECT_DIR$/src/main/java/chris/ssm/controller/IndentController.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/mapping/indentMapper.xml" />
+        <option value="$PROJECT_DIR$/src/main/resources/mapping/shopMapper.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/chris/ssm/service/ShopOder_CarService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/chris/ssm/controller/ShopOder_CarController.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/shopCar.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/orderList.jsp" />
       </list>
     </option>
   </component>
@@ -320,7 +338,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="AndroidView" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -440,8 +457,9 @@
         </subPane>
       </pane>
       <pane id="Scope" />
-      <pane id="Scratches" />
       <pane id="PackagesPane" />
+      <pane id="AndroidView" />
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -834,7 +852,9 @@
       <workItem from="1516599066340" duration="13997000" />
       <workItem from="1516679201657" duration="16990000" />
       <workItem from="1516765802431" duration="1366000" />
-      <workItem from="1516853678929" duration="7448000" />
+      <workItem from="1516853678929" duration="8477000" />
+      <workItem from="1516954936656" duration="390000" />
+      <workItem from="1516980135880" duration="1786000" />
     </task>
     <task id="LOCAL-00001" summary="上传代码">
       <created>1510204240319</created>
@@ -899,11 +919,18 @@
       <option name="project" value="LOCAL" />
       <updated>1516767141964</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="2018-1-25&#10;更改了数据库.&#10;订单详细信息显示制作完毕&#10;&#10;还需要做的:&#10;1.订单详情没有制作.(已完成)&#10;2.搜索中sql使用的like.可能导致搜索1月份的时候10,11,12月份也会出现的问题(还未看,后期看mybatis一些案例后解决)&#10;3.性别等方面没有具体制作.(完成判定数据,为完成根据性别默认值的确定)&#10;4.判定登录条件,拦截器还没有做&#10;5.订单和购物车的分页没有制作.&#10;6.购物车目前暂时无用">
+      <created>1516873261366</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1516873261366</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="349250000" />
+    <option name="totallyTimeSpent" value="352455000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -941,7 +968,7 @@
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32936078" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32936078" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32936078" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16185898" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16346154" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="true" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.18596882" sideWeight="0.4978678" order="1" side_tool="false" content_ui="tabs" />
@@ -965,19 +992,12 @@
     <MESSAGE value="上传代码" />
     <MESSAGE value="2018-1-12" />
     <MESSAGE value="2018-1-24&#10;更改了数据库.&#10;新增加了ident(订单)相关的属性(order为订单项,即购物车中的小条条)&#10;&#10;还需要做的:&#10;1.订单详情没有制作.&#10;2.搜索中sql使用的like.可能导致搜索1月份的时候10,11,12月份也会出现的问题&#10;3.性别等方面没有具体制作.&#10;4.判定登录条件&#10;5.订单和购物车的分页没有制作.&#10;6.购物车目前暂时无用" />
-    <option name="LAST_COMMIT_MESSAGE" value="2018-1-24&#10;更改了数据库.&#10;新增加了ident(订单)相关的属性(order为订单项,即购物车中的小条条)&#10;&#10;还需要做的:&#10;1.订单详情没有制作.&#10;2.搜索中sql使用的like.可能导致搜索1月份的时候10,11,12月份也会出现的问题&#10;3.性别等方面没有具体制作.&#10;4.判定登录条件&#10;5.订单和购物车的分页没有制作.&#10;6.购物车目前暂时无用" />
+    <MESSAGE value="2018-1-25&#10;更改了数据库.&#10;订单详细信息显示制作完毕&#10;&#10;还需要做的:&#10;1.订单详情没有制作.(已完成)&#10;2.搜索中sql使用的like.可能导致搜索1月份的时候10,11,12月份也会出现的问题(还未看,后期看mybatis一些案例后解决)&#10;3.性别等方面没有具体制作.(完成判定数据,为完成根据性别默认值的确定)&#10;4.判定登录条件,拦截器还没有做&#10;5.订单和购物车的分页没有制作.&#10;6.购物车目前暂时无用" />
+    <option name="LAST_COMMIT_MESSAGE" value="2018-1-25&#10;更改了数据库.&#10;订单详细信息显示制作完毕&#10;&#10;还需要做的:&#10;1.订单详情没有制作.(已完成)&#10;2.搜索中sql使用的like.可能导致搜索1月份的时候10,11,12月份也会出现的问题(还未看,后期看mybatis一些案例后解决)&#10;3.性别等方面没有具体制作.(完成判定数据,为完成根据性别默认值的确定)&#10;4.判定登录条件,拦截器还没有做&#10;5.订单和购物车的分页没有制作.&#10;6.购物车目前暂时无用" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/chris/ssm/controller/IndentController.java</url>
-          <line>167</line>
-          <properties />
-          <option name="timeStamp" value="312" />
-        </line-breakpoint>
-      </breakpoints>
-      <option name="time" value="313" />
+      <option name="time" value="314" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -1095,14 +1115,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/chris/ssm/controller/OrderHelpController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-418">
-          <caret line="20" column="13" lean-forward="false" selection-start-line="20" selection-start-column="13" selection-end-line="20" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/chris/ssm/model/PageBean.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="19">
@@ -1188,20 +1200,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/mapping/indentMapper.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="529">
-          <caret line="38" column="0" lean-forward="true" selection-start-line="38" selection-start-column="0" selection-end-line="38" selection-end-column="0" />
-          <folding>
-            <marker date="1516704992087" expanded="true" signature="1027:1212" ph="INSERT INTO shop_order... " />
-            <marker date="1516704992087" expanded="true" signature="1316:1432" ph="SELECT * FRO... indent" />
-            <marker date="1516704992087" expanded="true" signature="1548:1598" ph="SELECT * FRO... indent" />
-            <marker date="1516704992087" expanded="true" signature="1693:1893" ph="UPDATE shop_... " />
-            <marker date="1516704992087" expanded="true" signature="1984:2034" ph="DELETE FROM " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/chris/ssm/model/Goods.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="912">
@@ -1242,47 +1240,14 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/mapping/shopMapper.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="415">
-          <caret line="94" column="37" lean-forward="false" selection-start-line="94" selection-start-column="37" selection-end-line="94" selection-end-column="37" />
-          <folding>
-            <marker date="1516869828993" expanded="true" signature="872:1021" ph="insert into shopcar... " />
-            <marker date="1516869828993" expanded="true" signature="1135:1191" ph="SELECT * FRO... shopcar" />
-            <marker date="1516869828993" expanded="true" signature="1289:1397" ph="UPDATE shop_... " />
-            <marker date="1516869828993" expanded="true" signature="2847:3188" ph="INSERT INTO shoporder... " />
-            <marker date="1516869828993" expanded="true" signature="3308:3424" ph="SELECT * FRO... shop_order" />
-            <marker date="1516869828993" expanded="true" signature="3308:3450" ph="SELECT * FRO... shop_order" />
-            <marker date="1516869828993" expanded="true" signature="3583:3656" ph="SELECT * FRO... shoporder" />
-            <marker date="1516869828993" expanded="true" signature="3583:3684" ph="SELECT * FRO... shop_order" />
-            <marker date="1516869828993" expanded="true" signature="3804:3854" ph="SELECT * FRO... shop_order" />
-            <marker date="1516869828993" expanded="true" signature="3955:4287" ph="UPDATE shop_... " />
-            <marker date="1516869828993" expanded="true" signature="4405:4454" ph="SELECT * FRO... shop_order" />
-            <marker date="1516869828993" expanded="true" signature="4543:4593" ph="DELETE FROM " />
-            <marker date="1516869828993" expanded="true" signature="4660:4714" ph="DELETE FROM " />
-            <marker date="1516869828993" expanded="true" signature="4827:4972" ph="SELECT * FRO... shop_order" />
-            <marker date="1516869828993" expanded="true" signature="4827:5024" ph="SELECT * FRO... shop_order" />
-            <marker date="1516869828993" expanded="true" signature="5112:5168" ph="SELECT * FRO... shop_order" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/chris/ssm/service/impl/ShopOder_CarServiceImp.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="472">
           <caret line="71" column="54" lean-forward="false" selection-start-line="71" selection-start-column="54" selection-end-line="71" selection-end-column="54" />
           <folding>
-            <element signature="e#2278#2279#0" expanded="true" />
-            <element signature="e#2344#2345#0" expanded="true" />
+            <element signature="e#2278#2279#0" expanded="false" />
+            <element signature="e#2344#2345#0" expanded="false" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/chris/ssm/service/ShopOder_CarService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="472">
-          <caret line="40" column="60" lean-forward="true" selection-start-line="40" selection-start-column="60" selection-end-line="40" selection-end-column="60" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1302,41 +1267,13 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/login.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="271">
-          <caret line="288" column="23" lean-forward="false" selection-start-line="288" selection-start-column="19" selection-end-line="288" selection-end-column="23" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/shopCar.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="717">
-          <caret line="140" column="30" lean-forward="false" selection-start-line="140" selection-start-column="26" selection-end-line="140" selection-end-column="30" />
-          <folding>
-            <marker date="1516870543979" expanded="true" signature="10605:10715" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/orderList.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="264">
-          <caret line="186" column="86" lean-forward="false" selection-start-line="186" selection-start-column="86" selection-end-line="186" selection-end-column="86" />
-          <folding>
-            <marker date="1516871356908" expanded="true" signature="13997:14108" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/chris/ssm/model/Basepo.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="285">
           <caret line="19" column="30" lean-forward="false" selection-start-line="19" selection-start-column="30" selection-end-line="19" selection-end-column="30" />
           <folding>
-            <element signature="e#366#367#0" expanded="true" />
-            <element signature="e#399#400#0" expanded="true" />
+            <element signature="e#366#367#0" expanded="false" />
+            <element signature="e#399#400#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1354,38 +1291,22 @@
         <state relative-caret-position="323">
           <caret line="21" column="31" lean-forward="false" selection-start-line="21" selection-start-column="31" selection-end-line="21" selection-end-column="31" />
           <folding>
-            <element signature="e#484#485#0" expanded="true" />
+            <element signature="e#484#485#0" expanded="false" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/chris/ssm/controller/ShopOder_CarController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="871">
-          <caret line="158" column="37" lean-forward="false" selection-start-line="158" selection-start-column="22" selection-end-line="158" selection-end-column="37" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/chris/ssm/controller/IndentController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="377">
-          <caret line="167" column="0" lean-forward="false" selection-start-line="167" selection-start-column="0" selection-end-line="167" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/sidebar.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-332">
-          <caret line="211" column="21" lean-forward="true" selection-start-line="211" selection-start-column="21" selection-end-line="211" selection-end-column="21" />
+        <state relative-caret-position="4009">
+          <caret line="211" column="21" lean-forward="false" selection-start-line="211" selection-start-column="21" selection-end-line="211" selection-end-column="21" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/chris/ssm/model/User.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="57">
+        <state relative-caret-position="228">
           <caret line="12" column="28" lean-forward="false" selection-start-line="12" selection-start-column="19" selection-end-line="12" selection-end-column="28" />
           <folding />
         </state>
@@ -1393,25 +1314,33 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/chris/ssm/controller/UserController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="421">
+        <state relative-caret-position="4104">
           <caret line="231" column="26" lean-forward="false" selection-start-line="231" selection-start-column="26" selection-end-line="231" selection-end-column="26" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/invoice.jsp">
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/editProfile.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="525">
-          <caret line="131" column="22" lean-forward="false" selection-start-line="131" selection-start-column="22" selection-end-line="131" selection-end-column="22" />
+        <state relative-caret-position="3515">
+          <caret line="185" column="61" lean-forward="false" selection-start-line="185" selection-start-column="61" selection-end-line="185" selection-end-column="61" />
           <folding>
-            <marker date="1516872018727" expanded="true" signature="11632:11742" ph="..." />
+            <marker date="1514519182544" expanded="true" signature="13499:13609" ph="..." />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/login.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="808">
+          <caret line="288" column="23" lean-forward="false" selection-start-line="288" selection-start-column="19" selection-end-line="288" selection-end-column="23" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/profile.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="209">
+        <state relative-caret-position="19">
           <caret line="134" column="155" lean-forward="false" selection-start-line="134" selection-start-column="155" selection-end-line="134" selection-end-column="155" />
           <folding>
             <marker date="1516872678533" expanded="true" signature="31285:31395" ph="..." />
@@ -1419,20 +1348,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/editProfile.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="70">
-          <caret line="185" column="61" lean-forward="true" selection-start-line="185" selection-start-column="61" selection-end-line="185" selection-end-column="61" />
-          <folding>
-            <marker date="1514519182544" expanded="true" signature="13499:13609" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/mapping/UserMapper.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="513">
-          <caret line="27" column="54" lean-forward="true" selection-start-line="27" selection-start-column="54" selection-end-line="27" selection-end-column="54" />
+        <state relative-caret-position="285">
+          <caret line="27" column="54" lean-forward="false" selection-start-line="27" selection-start-column="54" selection-end-line="27" selection-end-column="54" />
           <folding>
             <marker date="1515419720641" expanded="true" signature="1406:1598" ph="insert into t_user... " />
             <marker date="1515419720641" expanded="true" signature="1687:1733" ph="insert into t_user... " />
@@ -1445,6 +1364,108 @@
             <marker date="1515419720641" expanded="true" signature="2998:3127" ph="SELECT * FRO... t_user" />
             <marker date="1515419720641" expanded="true" signature="3207:3227" ph="SELECT * FRO... t_user" />
             <marker date="1515419720641" expanded="true" signature="3338:3415" ph="SELECT * FRO... t_user" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/chris/ssm/controller/IndentController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="352">
+          <caret line="183" column="54" lean-forward="false" selection-start-line="183" selection-start-column="54" selection-end-line="183" selection-end-column="54" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/chris/ssm/controller/OrderHelpController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-9">
+          <caret line="20" column="13" lean-forward="false" selection-start-line="20" selection-start-column="13" selection-end-line="20" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/chris/ssm/service/ShopOder_CarService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="30" column="117" lean-forward="false" selection-start-line="30" selection-start-column="117" selection-end-line="30" selection-end-column="117" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/chris/ssm/controller/ShopOder_CarController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="215">
+          <caret line="101" column="12" lean-forward="false" selection-start-line="101" selection-start-column="12" selection-end-line="101" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/mapping/indentMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="275">
+          <caret line="23" column="0" lean-forward="false" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
+          <folding>
+            <marker date="1516981045719" expanded="true" signature="1027:1212" ph="INSERT INTO shop_order... " />
+            <marker date="1516981045719" expanded="true" signature="1317:1543" ph="SELECT * FRO... indent" />
+            <marker date="1516981045719" expanded="true" signature="1317:1548" ph="SELECT * FRO... indent" />
+            <marker date="1516981045719" expanded="true" signature="1664:1714" ph="SELECT * FRO... indent" />
+            <marker date="1516981045719" expanded="true" signature="1809:2009" ph="UPDATE shop_... " />
+            <marker date="1516981045719" expanded="true" signature="2100:2150" ph="DELETE FROM " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/mapping/shopMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="442">
+          <caret line="59" column="86" lean-forward="false" selection-start-line="59" selection-start-column="86" selection-end-line="59" selection-end-column="86" />
+          <folding>
+            <marker date="1516981194446" expanded="true" signature="862:1011" ph="insert into shopcar... " />
+            <marker date="1516981194446" expanded="true" signature="1125:1181" ph="SELECT * FRO... shopcar" />
+            <marker date="1516981194446" expanded="true" signature="1277:1385" ph="UPDATE shop_... " />
+            <marker date="1516981194446" expanded="true" signature="2818:3159" ph="INSERT INTO shoporder... " />
+            <marker date="1516981194446" expanded="true" signature="3277:3503" ph="SELECT * FRO... shop_order" />
+            <marker date="1516981194446" expanded="true" signature="3277:3668" ph="SELECT * FRO... shop_order" />
+            <marker date="1516981194446" expanded="true" signature="3805:3878" ph="SELECT * FRO... shoporder" />
+            <marker date="1516981194446" expanded="true" signature="3805:3906" ph="SELECT * FRO... shop_order" />
+            <marker date="1516981194446" expanded="true" signature="4026:4076" ph="SELECT * FRO... shop_order" />
+            <marker date="1516981194446" expanded="true" signature="4176:4508" ph="UPDATE shop_... " />
+            <marker date="1516981194446" expanded="true" signature="4624:4673" ph="SELECT * FRO... shop_order" />
+            <marker date="1516981194446" expanded="true" signature="4762:4812" ph="DELETE FROM " />
+            <marker date="1516981194446" expanded="true" signature="4878:4932" ph="DELETE FROM " />
+            <marker date="1516981194446" expanded="true" signature="5043:5305" ph="SELECT * FRO... shop_order" />
+            <marker date="1516981194446" expanded="true" signature="5043:5357" ph="SELECT * FRO... shop_order" />
+            <marker date="1516981194446" expanded="true" signature="5445:5501" ph="SELECT * FRO... shop_order" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/shopCar.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="414">
+          <caret line="117" column="59" lean-forward="false" selection-start-line="117" selection-start-column="59" selection-end-line="117" selection-end-column="59" />
+          <folding>
+            <marker date="1516981839705" expanded="true" signature="10613:10723" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/invoice.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-133">
+          <caret line="131" column="22" lean-forward="false" selection-start-line="131" selection-start-column="22" selection-end-line="131" selection-end-column="22" />
+          <folding>
+            <marker date="1516872018727" expanded="true" signature="11632:11742" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/orderList.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="117" column="55" lean-forward="false" selection-start-line="117" selection-start-column="55" selection-end-line="117" selection-end-column="55" />
+          <folding>
+            <marker date="1516981886303" expanded="true" signature="13996:14107" ph="..." />
           </folding>
         </state>
       </provider>
