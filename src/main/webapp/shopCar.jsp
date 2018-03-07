@@ -291,6 +291,11 @@
                     $("#" + id).val(parseInt($("#" + id).val()) + 1);
 
                     $("#" + id + "totalPrice").text(parseFloat($("#" + id + "totalPrice").text()) + price);
+
+
+                    if($("#"+id+"zicheck").prop('checked')){
+                        $("#sumtotalprice").text(parseFloat($("#sumtotalprice").text()) + price);
+                    }
                 } else {
                     alert("抱歉,该货物可购买数量已到达上限.")
                 }
@@ -312,6 +317,9 @@
                 if (result.code == 1000) {
                     $("#" + id).val(parseInt($("#" + id).val()) - 1);
                     $("#" + id + "totalPrice").text(parseFloat($("#" + id + "totalPrice").text()) - price);
+                    if($("#"+id+"zicheck").prop('checked')){
+                        $("#sumtotalprice").text(parseFloat($("#sumtotalprice").text())  - price);
+                    }
                 } else {
                     alert("已经到达最小值,如果不需要该物品请直接删除订单");
                 }
@@ -344,6 +352,10 @@
                     if (result.code == 1000) {
                         $("#" + id).val(goodsnum);
                         $("#" + id + "totalPrice").text(parseFloat($("#" + id + "totalPrice").text()) + (goodsnum - oldnum) * price);
+
+                        if($("#"+id+"zicheck").prop('checked')){
+                            $("#sumtotalprice").text(parseFloat($("#sumtotalprice").text()) + (goodsnum - oldnum) * price);
+                        }
                         // $("#sumtotalprice").text(parseFloat($("#sumtotalprice").text()) + (goodsnum - oldnum) * price);
                     } else {
                         alert("输入的货物数目大于现有库存总数,请检查后重新输入");
