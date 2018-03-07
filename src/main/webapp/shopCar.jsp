@@ -303,7 +303,7 @@
         });
 
     }
-
+        //测试
     function minus(id, price) {
         $.ajax({
             type: "POST",
@@ -334,6 +334,7 @@
 
     }
 
+    //测试
     function changeGoodsNum(id, goodsnum, oldnum, price) {
         if (goodsnum / 1 != goodsnum || goodsnum < 1) {
             alert("请输入正确的数字")
